@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторная работа 3</title>
+	<style>
+		#canvas {
+			/*margin: auto;*/
+			display: block;
+			border: 1px solid red;
+		}
+	</style>
+
+</head>
+<body>
+	<canvas id="canvas" height="720" width="1280"></canvas>
+	<script>
+		window.onload = function() {
+			var canvas = document.getElementById('canvas'),
+				ctx = canvas.getContext('2d'),
+				clickCount = 0,
+				coords = [];
+			
+			function Point(x, y) {
+				this.x = x;
+				this.y = y;
+			}
+
+			canvas.onclick = function(e) {
+				var e = e || event,
+					target = e.target || e.srcElement;
+				coords.push(new Point(e.pageX, e.pageY));
+				ctx.fillRect(e.pageX, e.pageY, 2, 2);
+				++clickCount;
+				if (clickCount == 2) {
+					calcStraightLine(coords[0], coords[1]);
+					
+					
+					clickCount = 0;
+					coords.length = 0;
+				}
+				console.log(clickCount)
+				
+
+			}
+			
+			function calcStraightLine (start, end) {
+			    var x0 = start.x,
+			    	y0 = start.y,
+			    	x1 = end.x,
+			    	y1 = end.y,
+			    	dX = Math.abs(x1 - x0),
+			 		dY = Math.abs(y1 - y0),
+					signX = x0 < x1 ? 1 : -1,
+					signY = y0 < y1 ? 1 : -1,
+					error = dX - dY;
+				ctx.fillRect(x1, y1, 1, 1);
+				while(x0 != x1 || y0 != y1) 
+				{
+					ctx.fillRect(x0, y0, 1, 1);
+					var error2 = error * 2;
+					
+					if(error2 > -dY) 
+					{
+					    error -= dY;
+					    x0 += signX;
+					}
+					if(error2 < dX) 
+					{
+					    error += dX;
+					    y0 += signY;
+					}
+				}
+			  }
+
+		 
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Лабораторная работа №1</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Notable|Roboto" rel="stylesheet">
+	<style>
+		#stop {
+			border: none;
+			width: 200px;
+			height: 60px;
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			text-align: center;
+			background: #12c2e9;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(left, #f64f59, #c471ed, #12c2e9);
+			background: -o-linear-gradient(left, #f64f59, #c471ed, #12c2e9);
+			background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			display: block;
+			text-transform: uppercase;
+			font-size: 18px;
+			font-weight: bold;
+			border-radius: 20px;
+			box-shadow: 0 0 10px 1px rgba(0,0,200,0.4);
+			outline: none;
+			cursor: pointer;
+			margin: 50px auto;
+			transition: 0.3s ease-in;
+			box-sizing: border-box;
+		}	
+		#stop:hover {
+			box-shadow: 5px 5px 20px 1px rgba(0,0,200,0.3);
+		}
+	</style>
+</head>
+<body>
+
+
+<img style="display: none; width: 100px; height: auto;" id="scream"  src="car.png" alt="The Scream">
+
+<h1 style="text-align: center; font-family: Arial; color: dodgerblue; font-size: 50px; padding: 50px;">My car</h1>
+<canvas id="myCanvas" width="1280" height="120" style="margin: auto; display: block; border: 10px solid dodgerblue; box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);">
+</canvas>
+<button id="stop">Pause</button>
+<script>
+window.onload = function() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var stop = false;
+    var img = document.getElementById("scream");
+    ctx.drawImage(img, 10, 10, 100, 43);
+    var i = 0, j = 0;
+    setInterval(function() {
+    	if (stop == false) {
+    		ctx.clearRect(0, 0, c.width, c.height);
+    		if (i > c.width) i = -600;
+    		i += 10;
+    		ctx.drawImage(img, i, 10, 200, 86);
+    	}
+    }, 10);
+    var pause = document.getElementById('stop');
+    pause.addEventListener('click', function() {
+    	stop = stop == true ? false : true;
+    });
+    function ride(pause) {
+
+    }
+}
+</script>
+</body>
+</html>

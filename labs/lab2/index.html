@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Blur</title>
+	<style>
+		#img {
+			width: 640px;
+			height: auto;
+		}
+		#blur {
+			border: none;
+			background-color: dodgerblue;
+			width: 100px;
+			height: 40px;
+			display: block;
+			margin: 30px auto;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			box-shadow: 2px 2px 10px 1px rgba(0,0,200, 0.3);
+			outline: none;
+			cursor: pointer;
+			transition: 0.3s ease-in;
+		}
+		#blur:hover {
+			box-shadow: 5px 5px 5px 2px rgba(0,0,200,0.3);
+		}
+		#blur:active {
+			box-shadow: 5px 5px 5px 2px rgba(0,0,200,0.6);
+		}
+		.container {
+			margin: auto;
+			width: 1300px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<img id="image" src="img.jpeg">
+		<canvas id="canvas"  width="640" height="425"></canvas>
+		<button id="blur">Blur</button>
+	</div>
+	<script>
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d'),
+				img = new Image();
+		    img.src = document.getElementById('image').src;
+		    
+		    
+		    document.getElementById('blur').addEventListener('click', function() {
+		    	blur(ctx, img);
+		    });
+		    img.crossOrigin = "Anonymous";
+		   
+		    
+		}
+		
+		function blur(ctx, img) {
+			ctx.drawImage(img, 0, 0);
+			var imageData = ctx.getImageData(0,0,img.width,img.height);
+			for(let i = 1; i < img.width-1; i++) {
+				for(let j = 1; j < img.height-1; j++) {
+					var red = 0, 
+						green = 0, 
+						blue = 0, 
+						alpha = 0,
+						smallSquares = ctx.getImageData(i-1,j-1,3,3);
+					for(let k = 0; k < smallSquares.data.length; k+=4) {
+						red += smallSquares.data[k];
+						green += smallSquares.data[k+1];
+						blue += smallSquares.data[k+2];
+						alpha += smallSquares.data[k+3];
+					}
+					imageData.data[(j*img.width+i)*4] = Math.floor(red/9);
+					imageData.data[(j*img.width+i)*4 + 1] = Math.floor(green/9);
+					imageData.data[(j*img.width+i)*4 + 2] = Math.floor(blue/9);
+					imageData.data[(j*img.width+i)*4 + 3] = Math.floor(alpha/9);
+				}
+			}
+			ctx.putImageData(imageData,0,0);
+		}
+	</script>
+</body>
+</html>

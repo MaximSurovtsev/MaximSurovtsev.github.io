@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Лабораторная работа 5</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			#canvas {
+				display: block;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" height="600" width="1200"></canvas>
+		<button id="line">Отрезок</button>
+		<button id="rect">Прямоугольник</button>
+		<button id="clear">Очистить</button>
+		<script>
+			window.onload = function() {
+				var cvs = document.getElementById('canvas'),
+					line = document.getElementById('line'),
+					rect = document.getElementById('rect'),
+					clear = document.getElementById('clear'),
+					lines = [],
+					ctx = canvas.getContext('2d'),
+					clickCount = 0,
+					coords = [];
+				clear.addEventListener('click',clear,false);
+				function Point(x, y) {
+					this.x = x;
+					this.y = y;
+				}
+				
+				function getCoords(cvs) {
+					if (!clickCount)
+						coords.length = 0;
+					coords.push(new Point(event.pageX, event.pageY));
+					ctx.strokeStyle = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+					ctx.fillRect(event.pageX, event.pageY, 2, 2);
+					++clickCount;
+					if (clickCount == 2) {
+						clickCount = 0;
+							return coords;
+					}
+					console.log(clickCount);
+				}
+				line.onclick = function() {
+					cvs.removeEventListener('click', rectListener,false);
+					cvs.addEventListener('click',lineListener,false);
+				}
+				rect.onclick = function() {
+					cvs.removeEventListener('click', lineListener,false);
+					cvs.addEventListener('click',rectListener,false);
+				}
+				clear.onclick = function() {
+					clickCounter = 0;
+					coords.length = 0;
+					line.removeEventListener('click', lineListener,false);
+					rect.removeEventListener('click', rectListener,false);
+					ctx.clearRect(0,0,1200,600);
+					lines = [];
+				}
+				function lineListener(event) {
+					var coords = getCoords(cvs);
+					if (coords && coords.length == 2) {
+						lines.push(coords[0].x);
+						lines.push(coords[0].y);
+						lines.push(coords[1].x);
+						lines.push(coords[1].y);
+						draw__line(coords[0].x,coords[0].y,coords[1].x,coords[1].y);
+					}
+				}
+				function rectListener(event) {
+					var coords = getCoords(cvs);
+					if (coords && coords.length == 2) {
+						draw__rect(coords[0].x,coords[0].y,coords[1].x,coords[1].y);
+					}
+				}
+				function draw__line(x0,y0,x1,y1) {
+					ctx.beginPath();
+					ctx.lineWidth = 1;
+					ctx.strokeStyle = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+					ctx.moveTo(x0+1,y0+1);
+					ctx.lineTo(x1+1,y1+1);
+					ctx.stroke();
+				}
+				function draw__rect(x0,y0,x1,y1) {
+					if(x0<x1 && y0<y1)
+						liang__barsky(x0,y0,x1,y1);
+					else if(x0<x1&&y0>y1)
+						liang__barsky(x0,y1,x1,y0);
+					else if(x0>x1&&y0>y1)
+						liang__barsky(x1,y1,x0,y0);
+					else if(x0>x1&&y0<y1)
+						liang__barsky(x1,y0,x0,y1);
+				}
+				function liang__barsky(Xmin,Ymin,Xmax,Ymax) {
+					
+					ctx.clearRect(0,0,1200,600);
+					
+					for(var i = 0; i < lines.length; i+=4) {
+						
+						var flag = true,
+							t0 = 0, t1 = 1,
+							x0 = lines[i],
+							y0 = lines[i+1],
+							x1 = lines[i+2],
+							y1 = lines[i+3],
+							m = [-(x1 - x0),x1 - x0,-(y1 - y0),y1 - y0],
+							q = [x0 - Xmin,Xmax - x0,y0 - Ymin,Ymax  - y0];
+						
+						for(var k = 0; k < 4; k++) {
+							var r = q[k]/m[k];
+							if(m[k] < 0) {
+								if(t1 < r)
+									flag = false;
+								else if(t0 < r)
+									t0 = r;
+							}
+							else if (m[k] > 0) {
+								if(t0 > r)
+									flag = false;
+								else if(t1 > r)
+									t1 = r;
+							}
+							else if(q[k] < 0)
+												flag = false;
+							if(t0 > t1)
+								flag = false;
+						}
+						if (flag) {
+							draw__line(x0 + t0*(x1 - x0), y0 + t0*(y1 - y0),
+									x0 + t1*(x1 - x0), y0 + t1*(y1 - y0));
+						}
+					}
+					ctx.strokeRect(Xmin,Ymin,Xmax - Xmin,Ymax - Ymin);
+				}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторная работа 3</title>
+	<style>
+		#canvas {
+			/*margin: auto;*/
+			display: block;
+			border: 1px solid red;
+		}
+	</style>
+
+</head>
+<body>
+	<canvas id="canvas" height="720" width="1280"></canvas>
+	<script>
+		window.onload = function() {
+			var canvas = document.getElementById('canvas'),
+				ctx = canvas.getContext('2d'),
+				clickCount = 0,
+				coords = [];
+			
+			function Point(x, y) {
+				this.x = x;
+				this.y = y;
+			}
+
+			canvas.onclick = function(e) {
+				var e = e || event,
+					target = e.target || e.srcElement;
+				coords.push(new Point(e.pageX, e.pageY));
+				ctx.fillRect(e.pageX, e.pageY, 2, 2);
+				++clickCount;
+				if (clickCount == 2) {
+					calcCircle(coords[0], coords[1]);
+					
+					
+					clickCount = 0;
+					coords.length = 0;
+				}
+				console.log(clickCount)
+				
+
+			}
+			
+			function calcCircle(start, end) {
+			    var x0 = start.x,
+			    	y0 = start.y,
+			    	x1 = end.x,
+			    	y1 = end.y,
+			    	dY = Math.sqrt(Math.pow((x1 - x0),2) + Math.pow((y1 - y0),2)),
+					gap = 0,
+					delta = (2 - 2 * dY),
+					dX = 0;
+					while (dY >= 0)
+					{
+						ctx.fillRect(x0 + dX, y0 - dY, 1, 1);
+						ctx.fillRect(x0 - dX, y0 - dY, 1, 1);
+						ctx.fillRect(x0 - dX, y0 + dY, 1, 1);
+						ctx.fillRect(x0 + dX, y0 + dY, 1, 1);
+						gap = 2 * (delta + dY) - 1;
+						if (delta < 0 && gap <= 0)
+						{
+						    dX++;
+						    delta += 2 * dX + 1;
+						    continue;
+						}
+						if (delta > 0 && gap > 0)
+						{
+						    dY--;
+						    delta -= 2 * dY + 1;
+						    continue;
+						}
+						dX++;
+						delta += 2 * (dX - dY);
+						dY--;
+					}
+			  }
+		}
+	</script>
+</body>
+</html>

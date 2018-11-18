@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторная работа 4</title>
+</head>
+<body>
+	<img id="img" src="img2.jpeg" height="266" width="400">
+	<canvas id="cvs" height="266" width="400"></canvas>
+
+	<script>
+		window.onload = function() {
+			var ctx = document.getElementById('cvs').getContext('2d'),
+				img = new Image();
+			img.src = document.getElementById('img').src;
+
+			img.onload = function() {
+				ctx.drawImage(this, 0, 0);
+				var imageData = ctx.getImageData(0,0,img.width,img.height),
+					sobelData = ctx.getImageData(0,0,img.width,img.height);
+
+				ctx.putImageData(grayscale(imageData),0,0);
+
+				for (var x = 1; x < img.width-1; x++) {
+					for(var y = 1; y < img.height-1; y++) {
+						var sq = ctx.getImageData(x-1,y-1,3,3),
+							Gx = -1*sq.data[0] + 1*sq.data[8] - 2*sq.data[12] 
+								 + 2*sq.data[20] - 1*sq.data[24] + 1*sq.data[32];
+							Gy = 1*sq.data[0] + 2*sq.data[4] + 1*sq.data[8] 
+								 - 1*sq.data[24] - 2*sq.data[28] - 1*sq.data[32];
+
+						for(var i = 0; i < 3; i++) 
+							sobelData.data[(y*img.width+x)*4 + i] = Math.sqrt(Gx*Gx + Gy*Gy);
+					}
+				}
+			
+				ctx.putImageData(sobelData,0,0);
+			}
+
+			img.crossOrigin = "Anonymous";
+		}
+		
+		function grayscale(data) {
+			for(var i = 0; i < data.data.length; i+=4) {
+				var grayscale = Math.floor((data.data[i] + data.data[i+1] + data.data[i+2])/3);
+				data.data[i] = grayscale;
+				data.data[i+1] = grayscale;
+				data.data[i+2] = grayscale;
+	    	}
+	    	return data;
+		}
+
+	</script>
+</body>
+</html>
