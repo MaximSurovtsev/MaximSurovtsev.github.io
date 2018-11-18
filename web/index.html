@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Веб-разработка</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			main {
+				width: 60%;
+				margin: auto;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+				margin: 20px auto;
+				display: block;
+			}
+			p, a, h2, li{
+				font-size: 24px;
+				font-family: 'Roboto', serif;
+				line-height: 1.5;
+			}
+			h2 {
+				font-size: 40px;
+			}
+			.code {
+				background-color: #eee;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h2>Архив с файлами:</h2>
+			<a href="citrus.zip">Ссылка на скачивание примера сайта</a>
+			<h2>Краткие теоретические сведения:</h2>
+			<p>Веб-разработка – процесс создания веб-сайта или веб-приложения. Основными этапами процесса являются веб-дизайн, вёрстка страниц, программирование для веб на стороне клиента и сервера, а также конфигурирование веб-сервера.</p>
+			<p>HTML или Hyper Text Markup Language — язык разметки документов в Интернете.</p>
+			<p>CSS или каскадные таблицы стилей, используются для описания внешнего вида html-страницы.</p>
+			<p>HTML-тег -- структурная единица веб-страницы. Любая веб-страница состоит из тегов, как дом из кирпичей.</p>
+			<p>Мы с вами уже знаем несколько тегов:</p>
+			<ul>
+				<li>html - главный тег веб-страницы</li>
+				<li>head - голова веб-страницы</li>
+				<li>title - заголовок страницы во вкладке браузера</li>
+				<li>body - тело страницы. Именно там находится все содержимое сайта</li>
+				<li>p - текстовый тег</li>
+				<li>img - тег для подключения изображений</li>
+			</ul>
+			
+			<h2>Установка и настройка Sublime Text 3</h2>
+			<p>Вот ссылка на скачивание дистрибутива: <a href="http://www.sublimetext.com/3">http://www.sublimetext.com/3</a></p>
+			
+			<p>Скачиваем нужную нам версию и открываем программу;</p>
+			<p>Устанавливаем плагин Package Control</p>
+			<p>Выбираем пункт View -> Show Console</p>
+			<img src="img1.jpg" alt="">
+			<img src="img2.png" alt="">
+			<p>Копируем этот код, вставляем его в консоль и нажимаем Enter</p>
+			<p class='code'>import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</p>
+			<img src="img3.jpg" alt="">
+			<p>Выбираем пункт Package Control</p>
+			<img src="img4.jpg" alt="">
+			<p>Пишем в открывшемся окне Install Package и нажимаем Enter</p>
+			<img src="img5.jpg" alt="">
+			<p>Пишем в открывшемся окне Emmet и нажимаем Enter</p>
+			<img src="img6.jpg" alt="">
+			<p>Если всё прошло успешно, то появится такое окошко</p>
+			<img src="img7.jpg" alt="">
+			<p>Прячем консоль</p>
+			<img src="img8.jpg" alt="">
+			<p>Нажимаем сочетание клавиш Ctrl S, чтобы сохранить файл. Называем файл index.html и сохраняем его на рабочий стол</p>
+			<img src="img9.jpg" alt="">
+			<p>Пишем восклицательный знак и нажимаем клавишу TAB</p>
+			<img src="img10.jpg" alt="">
+			<p>Меняем атрибут en на ru в теге html. Сохраняем файл (Ctrl S)</p>
+			<p>Для того чтобы изменить название нашей страницы во вкладке браузера меняем текст в теге title. Сохраняем файл (Ctrl S)</p>
+			<img src="img11.jpg" alt="">
+			<img src="img12.jpg" alt="">
+			<p>Открываем нашу страницу в браузере. Для этого находим на рабочем столе файл index.html и дважды щелкаем на него.</p>
+			<img src="img13.jpg" alt="">
+			<p>Нажимаем английскую букву p и жмем клавишу TAB. Сохраняем файл (Ctrl S)</p>
+			<img src="img14.jpg" alt="">
+			<img src="img15.jpg" alt="">
+			<p>Между тегами p пишем произвольный текст. Сохраняем файл (Ctrl S)</p>
+			<img src="img16.jpg" alt="">
+			<p>Заходим в браузер и обновляем страницу (нужно нажать Ctrl R)</p>
+			<img src="img17.jpg" alt="">
+			<p>В теге head создаем новую строчку и пишем style</p>
+			<img src="img18.jpg" alt="">
+			<p>Нажимаем TAB. Сохраняем файл (Ctrl S)</p>
+			<img src="img19.jpg" alt="">
+			<p>Пишем следующий текст. Сохраняем файл (Ctrl S)</p>
+			<img src="img20.jpg" alt="">
+			<p>Заходим в браузер и обновляем страницу (нужно нажать Ctrl R)</p>
+			<img src="img21.jpg" alt="">
+			<img src="img22.jpg" alt="">
+			<p>Нажимаем TAB. Сохраняем файл (Ctrl S)</p>
+			<img src="img23.jpg" alt="">
+			<p>Заходим в браузер и обновляем страницу (нужно нажать Ctrl R)</p>
+			<img src="img24.jpg" alt="">
+			<p>Нажимаем клавишу F12. Находим тег p в веб-инспекторе</p>
+			<img src="img25.jpg" alt="">
+			<p>Меняем цвет текста. Обратите внимание, если мы обновим страницу (Ctrl R), то цвет текста не изменится. Поэтому копируем выбранный цвет (Ctrl С) и вставляем его в свойство color. Сохраняем файл (Ctrl S)</p>
+			<img src="img26.jpg" alt="">
+			<img src="img27.jpg" alt="">
+			<img src="img28.jpg" alt="">
+			<img src="img29.jpg" alt="">
+			<p>Сохраняем изображение на рабочий стол и переименовываем его</p>
+			<img src="img30.jpg" alt="">
+			<p>Нажимаем правой кнопкой мыши по изображению и выбираем пункт Свойства</p>
+			<img src="img31.jpg" alt="">
+			<p>Смотрим расширение изображения и запоминаем его. Всего есть три варианта: .jpg .png .jpeg</p>
+			<img src="img32.jpg" alt="">
+			<p>Пишем тег img в теге body. Этот тег подключает изображения к нашей странице</p>
+			<img src="img33.jpg" alt="">
+			<p>Жмем TAB и пишем имя и его расширение. В моем случае, имя файла - image, расширение - .jpg. Сохраняем файл (Ctrl S)</p>
+			<img src="img34.jpg" alt="">
+			<img src="img35.jpg" alt="">
+		</main>
+	</body>
+</html>
