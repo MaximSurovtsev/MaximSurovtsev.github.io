@@ -109,6 +109,7 @@
 	<div class="wrap">
 		<div class="fullscreen ">
 			<div class="content">
+				<p class="counter"></p>
 				<img src="pic2.jpg" alt="">
 				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
 				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
@@ -151,16 +152,19 @@
 		btn.addEventListener('click', function() {
 			test.classList.toggle('transf');
 		})
-
+		const count = document.querySelector('.counter');
 		let height = window.outerHeight;
 		console.log(height);
 		document.body.style.height = height;
+		count.innerHTML = height;
 		window.addEventListener('resize', function() {
 			height = window.outerHeight;
 			console.log('resize', height);
 			document.body.style.height = height;
+			count.innerHTML = height;
 		})
 		
+
 	</script>
 </body>
 </html>
