@@ -145,11 +145,21 @@
 		test.addEventListener("mousewheel", wheel);
 		test.addEventListener("DOMMouseScroll", wheel);
 		test.addEventListener("MozMousePixelScroll", wheel);
+		
+
 		const btn = document.querySelector(".button");
 		btn.addEventListener('click', function() {
 			test.classList.toggle('transf');
 		})
 
+		let height = window.outerHeight;
+		console.log(height);
+		document.body.style.height = height;
+		window.addEventListener('resize', function() {
+			height = window.outerHeight;
+			console.log('resize', height);
+			document.body.style.height = height;
+		})
 		
 	</script>
 </body>
