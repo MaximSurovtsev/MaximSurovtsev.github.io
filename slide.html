@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: monospace;
+			font-size: 20px;
+			line-height: 1.5;
+			color: #fff;
+			background-color: #8ec0ffe0;
+			overflow: hidden;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.fullscreen {
+			background-color: dodgerblue;
+			
+			
+			width: 100%;
+		}
+
+		.content {
+			max-width: 900px;
+			padding: 50px 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: auto;
+			width: 92%;
+		}
+		html, body {
+			height: 100%;
+		}
+		.wrap {
+			position: absolute;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 100%;
+			width: 100%;
+			transition: 0.5s;
+			
+		}
+
+		
+
+		.transf {
+			transform: translate(-15vmin,-15vmin);
+			transition: 0.5s;
+		}
+
+
+
+		.ripple {
+		  background-position: center;
+		  transition: background 0.8s;
+		}
+		.ripple:hover {
+		  background:#f39621 radial-gradient(circle, transparent 1%, #ffd9a9 1%) center/15000%;
+		}
+		.ripple:active {
+		  background-color: #ffbe6d;
+		  background-size: 100%;
+		  transition: background 0s;
+		  outline: none;
+		}
+
+	
+	button {
+	  border: none;
+	  border-radius: 2px;
+	  
+	  width: 50px;
+	  height: 50px;
+	  border-radius: 50%;
+	  display: block;
+	  
+	  z-index: 200;
+	  position: absolute;
+	  bottom: 25px;
+	  right: 5vmin	;
+	  text-transform: uppercase;
+	  cursor: pointer;
+	  color: white;
+	  background-color: #f39621;
+	  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	  outline: none;
+	}
+
+
+		
+	</style>
+</head>
+<body>
+	
+	  <button class="button ripple">
+	    
+	  </button>
+	
+	<div class="wrap">
+		<div class="fullscreen ">
+			<div class="content">
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+				<img src="pic2.jpg" alt="">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nam consectetur, minima nostrum culpa, reprehenderit accusamus. Incidunt aspernatur veritatis ratione ducimus delectus optio? Fugit, labore cumque nemo numquam culpa ab.</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		const test = document.querySelector(".wrap");
+
+		function wheel(event) {
+			const { wheelDeltaY } = event;
+			const { scrollTop, clientHeight, scrollHeight } = test;
+
+			if (
+				(wheelDeltaY > 0 && scrollTop === 0) ||
+				(wheelDeltaY < 0 && scrollTop + clientHeight === scrollHeight)
+			) {
+				event.preventDefault();
+				console.log("preventDefault");
+			}
+		}
+
+		test.addEventListener("mousewheel", wheel);
+		test.addEventListener("DOMMouseScroll", wheel);
+		test.addEventListener("MozMousePixelScroll", wheel);
+		const btn = document.querySelector(".button");
+		btn.addEventListener('click', function() {
+			test.classList.toggle('transf');
+		})
+
+		
+	</script>
+</body>
+</html>
