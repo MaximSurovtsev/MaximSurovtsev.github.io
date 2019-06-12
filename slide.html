@@ -154,8 +154,13 @@
 		})
 		const count = document.querySelector('.counter');
 		let height = window.innerHeight;
+		let width = window.innerWidth;
 		console.log(height);
 		btn.style.bottom = 0.05*height + 'px';
+		btn.style.right = 0.05*height + 'px';
+		btn.style.width = 0.1*width + 'px';
+		btn.style.height = 0.1*width + 'px';
+
 		document.body.style.height = height;
 		count.innerHTML = height;
 		window.addEventListener('resize', function() {
