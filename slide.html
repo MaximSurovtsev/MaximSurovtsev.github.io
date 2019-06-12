@@ -153,12 +153,12 @@
 			test.classList.toggle('transf');
 		})
 		const count = document.querySelector('.counter');
-		let height = window.outerHeight;
+		let height = window.innerHeight;
 		console.log(height);
 		document.body.style.height = height;
 		count.innerHTML = height;
 		window.addEventListener('resize', function() {
-			height = window.outerHeight;
+			height = window.innerHeight;
 			console.log('resize', height);
 			document.body.style.height = height;
 			count.innerHTML = height;
