@@ -155,6 +155,7 @@
 		const count = document.querySelector('.counter');
 		let height = window.innerHeight;
 		console.log(height);
+		btn.style.bottom = 0.05*height + 'px';
 		document.body.style.height = height;
 		count.innerHTML = height;
 		window.addEventListener('resize', function() {
@@ -162,6 +163,7 @@
 			console.log('resize', height);
 			document.body.style.height = height;
 			count.innerHTML = height;
+			btn.style.bottom = 0.05*height + 'px';
 		})
 		
 
