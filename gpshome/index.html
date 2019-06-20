@@ -12,6 +12,29 @@
 		:root {
 			--main: #1d2786	;
 		}
+
+		/* width */
+		.wrapper::-webkit-scrollbar {
+		  width: 1px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		  background: #f1f1f1; 
+		   width: 1px;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		  background: #aaaaaa; 
+		  width: 1px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		  background: #555; 
+		  width: 1px;
+		}
 		.header {
 			background-color: var(--main);
 			height: 50px;
@@ -34,7 +57,8 @@
 			justify-content: space-between;
 			-ms-align-items: center;
 			align-items: center;
-			overflow: auto;
+			overflow-x: auto;
+			overflow-y: hidden;
 			white-space: nowrap;
 		}
 
@@ -122,11 +146,15 @@
 			box.style.maxWidth = '600px';
 			box.style.margin = '60px auto';
 			box.style.flexWrap = 'wrap';
-			// box.style.justifyContent = 'space-between';
+			
+			
+			let size = window.innerWidth < 450 ? parseInt((window.innerWidth - 46) / 3) : 100;
+			
+
 			for (let color of colors) {
 				let el = document.createElement('div');
-				el.style.width = 100 + 'px';
-				el.style.height = '100px';
+				el.style.width = size + 'px';
+				el.style.height = size + 'px';
 				el.style.margin = '5px';
 				el.style.cursor = 'pointer';
 				el.style.color = '#fff';
