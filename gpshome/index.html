@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Header</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+		}
+		:root {
+			--main: #1d2786	;
+		}
+		.header {
+			background-color: var(--main);
+			height: 50px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0 3%;
+			transition: 0.3s;
+			box-shadow: 0 0 15px 3px rgba(0,0,0,0.4);
+		}
+
+		.wrapper {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			justify-content: space-between;
+			-ms-align-items: center;
+			align-items: center;
+		}
+
+		.topnav {
+			
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			min-width: 450px;
+			-ms-align-items: center;
+			align-items: center;
+			height: 100%;
+
+		}
+		.link {
+			text-decoration: none;
+			color: white;
+			font-size: 15px;
+			line-height: 1;
+			display: block;
+		}
+		.nav-link {	
+			width: 25%;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			font-weight: 500;
+			height: 100%;
+			transition: color 0.2s, background-color 0.4s, font-size 0.3s;
+		}
+
+		.enter {
+			width: auto;
+			padding: 0 20px;
+		}
+
+		.logo {
+			font-size: 19px;
+			line-height: 1;
+			
+			
+		}
+		.main-logo {
+			font-weight: 600;
+			letter-spacing: 1px;
+			font-size: 30px;
+			
+		}
+
+		@media (pointer: fine) {
+			.nav-link:hover {
+				color: var(--main);
+				background-color: #fff;
+				font-size: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link">Мониторинг</a>
+				<a href="#" class="nav-link link">Настройки</a>
+				<a href="#" class="nav-link link">Финансы</a>
+				<a href="#" class="nav-link link">Отчёты</a>
+			</div>
+			<a href="#" class="link nav-link enter">Вход</a>
+		</div>
+	</div>
+
+	<div class="box">
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			let box = document.querySelector('.box');
+			let colors = ['#1a237e','#283593','#191970','#000080','indigo','#00008B',
+			'#241178','#3a0088','#00204a','#163172','#1e56a0', '#284184', '#1d2786', '#0092ca', '#052555', '#3F0B81', '#2D1457', '#231F20','#2F3640']
+			colors.sort((a,b) => parseInt(a.slice(5),16) > parseInt(b.slice(5),16) ? -1 : 1)
+			let header = document.querySelector('.header')
+			box.style.display = 'flex';
+			box.style.maxWidth = '600px';
+			box.style.margin = '60px auto';
+			box.style.flexWrap = 'wrap';
+			// box.style.justifyContent = 'space-between';
+			for (let color of colors) {
+				let el = document.createElement('div');
+				el.style.width = 100 + 'px';
+				el.style.height = '100px';
+				el.style.margin = '5px';
+				el.style.cursor = 'pointer';
+				el.style.color = '#fff';
+				el.style.backgroundColor = color;
+				el.style.display = 'flex';
+				el.style.justifyContent = 'center';
+				el.style.alignItems = 'center';
+				el.style.fontSize = '10px';
+				let span = document.createElement('span')
+				span.textContent = 'Скопировано'
+				span.style.opacity = '0';
+				span.style.transition = '0.3s';
+				el.appendChild(span)
+				el.addEventListener('click', function() {
+					// header.style.backgroundColor = el.style.backgroundColor;
+					document.documentElement.style.setProperty('--main', color);
+					copyToClipboard(el.style.backgroundColor);
+					span.style.opacity = '1';
+					setTimeout(function() {
+						span.style.opacity = '0';
+					}, 500)
+				})
+
+				box.appendChild(el)
+			}
+
+			const copyToClipboard = str => {
+			  const el = document.createElement('textarea');
+			  el.value = str;
+			  document.body.appendChild(el);
+			  el.select();
+			  document.execCommand('copy');
+			  document.body.removeChild(el);
+			};
+		})
+	</script>
+</body>
+</html>
