@@ -5,122 +5,34 @@
 	<title>Header</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
-	<style>
-		body {
-			font-family: 'Montserrat', sans-serif;
-		}
-		:root {
-			--main: #1d2786	;
-		}
-
-		/* width */
-		.wrapper::-webkit-scrollbar {
-		  width: 1px;
-		}
-
-		/* Track */
-		::-webkit-scrollbar-track {
-		  background: #f1f1f1; 
-		   width: 1px;
-		}
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-		  background: #aaaaaa; 
-		  width: 1px;
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-		  background: #555; 
-		  width: 1px;
-		}
-		.header {
-			background-color: var(--main);
-			height: 50px;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			padding: 0 3%;
-			transition: 0.3s;
-			box-shadow: 0 0 15px 3px rgba(0,0,0,0.4);
-		}
-
-		.wrapper {
-			display: flex;
-			height: 100%;
-			width: 100%;
-			justify-content: space-between;
-			-ms-align-items: center;
-			align-items: center;
-			overflow-x: auto;
-			overflow-y: hidden;
-			white-space: nowrap;
-		}
-
-		.topnav {
-			
-			display: flex;
-			justify-content: space-between;
-			width: 50%;
-			min-width: 450px;
-			-ms-align-items: center;
-			align-items: center;
-			height: 100%;
-			padding: 0 20px;
-
-		}
-		.link {
-			text-decoration: none;
-			color: white;
-			font-size: 15px;
-			line-height: 1;
-			display: inline-block;
-		}
-		.nav-link {	
-			width: 25%;
-			display: flex;
-			justify-content: center;
-			-ms-align-items: center;
-			align-items: center;
-			font-weight: 500;
-			height: 100%;
-			transition: color 0.2s, background-color 0.4s, font-size 0.3s;
-		}
-
-		.enter {
-			width: auto;
-			padding: 0 20px;
-		}
-
-		.logo {
-			font-size: 19px;
-			line-height: 1;
-			
-			
-		}
-		.main-logo {
-			font-weight: 600;
-			letter-spacing: 1px;
-			font-size: 30px;
-			
-		}
-
-		@media (pointer: fine) {
-			.nav-link:hover {
-				color: var(--main);
-				background-color: #fff;
-				font-size: 15px;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<div class="header">
+	<div class="header header1">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
+		</div>
+	</div>
+	<div class="header header2">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header3">
 		<div class="wrapper">
 			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
 			<div class="topnav">
@@ -129,22 +41,57 @@
 				<a href="#" class="nav-link link">Финансы</a>
 				<a href="#" class="nav-link link">Отчёты</a>
 			</div>
-			<a href="#" class="link nav-link enter">Вход</a>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header4">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header5">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
 		</div>
 	</div>
 
+	<div class="header header6">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			
+			<a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
+			<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
+			<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
+			<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
+			
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
+		</div>
+	</div>
 	<div class="box">
 	</div>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			let box = document.querySelector('.box');
-			let colors = ['#1a237e','#283593','#191970','#000080','indigo','#00008B',
-			'#241178','#3a0088','#00204a','#163172','#1e56a0', '#284184', '#1d2786', '#0092ca', '#052555', '#3F0B81', '#2D1457', '#231F20','#2F3640']
-			colors.sort((a,b) => parseInt(a.slice(5),16) > parseInt(b.slice(5),16) ? -1 : 1)
+			let colors = ['#1a237e', '#3F0B81', '#2D1457', '#231F20','#2F3640','#283593','#241178','#0092ca', '#fff', '#010059', '#313131','#064acb', '#010059','#010101']
+			// colors.sort((a,b) => parseInt(a.slice(5),16) > parseInt(b.slice(5),16) ? -1 : 1)
 			let header = document.querySelector('.header')
 			box.style.display = 'flex';
 			box.style.maxWidth = '600px';
-			box.style.margin = '60px auto';
+			box.style.margin = '420px auto';
 			box.style.flexWrap = 'wrap';
 			
 			
@@ -169,13 +116,15 @@
 				span.style.transition = '0.3s';
 				el.appendChild(span)
 				el.addEventListener('click', function() {
-					// header.style.backgroundColor = el.style.backgroundColor;
-					document.documentElement.style.setProperty('--main', color);
-					copyToClipboard(el.style.backgroundColor);
-					span.style.opacity = '1';
-					setTimeout(function() {
-						span.style.opacity = '0';
-					}, 500)
+					if (color != '#fff') {
+						document.documentElement.style.setProperty('--main', color);
+						copyToClipboard(el.style.backgroundColor);
+						span.style.opacity = '1';
+						setTimeout(function() {
+							span.style.opacity = '0';
+						}, 500)
+					}
+					
 				})
 
 				box.appendChild(el)
