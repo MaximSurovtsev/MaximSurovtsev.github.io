@@ -223,6 +223,7 @@ img {
 	width: 100%;
 	background-color: var(--main);
 	height: 50px;	
+	font-family: 'Montserrat', sans-serif;
 	font-size:16px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
@@ -537,6 +538,12 @@ img {
 	img {
 		width: 36px;
 		height: auto;
+	}
+}
+
+@media (pointer: coarse) {
+	html, body {
+		cursor: pointer;
 	}
 }
 
