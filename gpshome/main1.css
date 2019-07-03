@@ -541,4 +541,10 @@ img {
 		width: 100%;
 	}
 	
+	.help-popup {
+		top: 55px;
+		width: 85%;
+		left: 7.5%;
+		box-shadow: 0 0 30px 4px rgba(0,0,0,0.4)
+	}
 }

@@ -81,15 +81,15 @@
 				</div>
 			</div>
 			<!-- <div class="form_wrapper">
-								<form action="" class="form">
-													<h2 class="form_title">Регистрация</h2>
-													<input type="email" class='form_input'  name='email'>
-													<input type="text" class='form_input' name='firstname'>
-													<input type="text" class='form_input' name='lastname'>
-													<input type="text" class='form_input' name='company'>
-													<input type="password" name='password'>
-													<input type="submit" class='submit'>
-								</form>
+									<form action="" class="form">
+															<h2 class="form_title">Регистрация</h2>
+															<input type="email" class='form_input'  name='email'>
+															<input type="text" class='form_input' name='firstname'>
+															<input type="text" class='form_input' name='lastname'>
+															<input type="text" class='form_input' name='company'>
+															<input type="password" name='password'>
+															<input type="submit" class='submit'>
+									</form>
 			</div> -->
 			<div class="request">
 				<h2 class="content-title" style='margin-bottom: 30px;'>Войти в аккаунт</h2>
@@ -125,17 +125,27 @@
 		
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
+				function isDescendant(parent, child) {
+					var node = child.parentNode;
+					while (node != null) {
+						if (node == parent) {
+							return true;
+						}
+						node = node.parentNode;
+					}
+					return false;
+				}
 				let helpBtn = document.getElementById('help-btn');
 				let helpPopup = document.getElementById('help-popup')
-				helpBtn.addEventListener('click', function() {
-					helpPopup.classList.toggle('visible');
-				});
-
-				// document.body.addEventListener('click', function(e) {
-				// 	if (e.target != helpPopup) {
-				// 		console.log('test');
-				// 	}
-				// }, tur)
+				document.body.addEventListener('click', function(e) {
+					if (e.target != helpPopup && !isDescendant(helpPopup, e.target) && helpPopup.classList.contains('visible') && e.target != helpBtn)
+							helpPopup.classList.remove('visible');
+					
+					else if (e.target == helpBtn.parentNode || isDescendant(helpBtn, e.target)) 
+						helpPopup.classList.add('visible');
+					
+				}, true)
+			
 			});
 		</script>
 	</body>
