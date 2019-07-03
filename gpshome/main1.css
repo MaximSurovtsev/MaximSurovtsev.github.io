@@ -189,6 +189,7 @@ img {
 	box-sizing: border-box;
 	outline: none;	
 	box-shadow: none;
+	-webkit-appearance: none;
 }
 
 
@@ -209,6 +210,7 @@ img {
 	padding:10px;
 	-webkit-box-sizing: border-box;
 	box-shadow: none;
+	-webkit-appearance: none;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
