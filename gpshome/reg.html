@@ -151,7 +151,7 @@
 				}
 				let helpBtn = document.getElementById('help-btn');
 				let helpPopup = document.getElementById('help-popup')
-				document.body.addEventListener('click', function(e) {
+				document.addEventListener('click', function(e) {
 					if (e.target != helpPopup && !isDescendant(helpPopup, e.target) && helpPopup.classList.contains('visible') && e.target != helpBtn)
 							helpPopup.classList.remove('visible');
 					
