@@ -139,11 +139,27 @@
 		
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
+				function isDescendant(parent, child) {
+					var node = child.parentNode;
+					while (node != null) {
+						if (node == parent) {
+							return true;
+						}
+						node = node.parentNode;
+					}
+					return false;
+				}
 				let helpBtn = document.getElementById('help-btn');
 				let helpPopup = document.getElementById('help-popup')
-				helpBtn.addEventListener('click', function() {
-					helpPopup.classList.toggle('visible');
-				});
+				document.body.addEventListener('click', function(e) {
+					if (e.target != helpPopup && !isDescendant(helpPopup, e.target) && helpPopup.classList.contains('visible') && e.target != helpBtn)
+							helpPopup.classList.remove('visible');
+					
+					else if (e.target == helpBtn.parentNode || isDescendant(helpBtn, e.target)) 
+						helpPopup.classList.add('visible');
+					
+				}, false)
+			
 			});
 		</script>
 	</body>
