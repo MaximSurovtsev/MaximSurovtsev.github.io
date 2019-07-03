@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="main1.css">
 	</head>
 	<body>
+		<!--  -->
 		<div class="help-popup" id='help-popup'>
 			<h2 class="help-title" >Возник вопрос?</h2>
 			<form class='help-form'>
@@ -34,8 +35,8 @@
 				<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
 				<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
 				<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
-				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a> -->
-				
+				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
+				-->
 			</div>
 			<!-- <a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a> -->
 			<a href="#" class="help" id='help-btn'>
@@ -81,45 +82,58 @@
 				</div>
 			</div>
 			<!-- <div class="form_wrapper">
-								<form action="" class="form">
-													<h2 class="form_title">Регистрация</h2>
-													<input type="email" class='form_input'  name='email'>
-													<input type="text" class='form_input' name='firstname'>
-													<input type="text" class='form_input' name='lastname'>
-													<input type="text" class='form_input' name='company'>
-													<input type="password" name='password'>
-													<input type="submit" class='submit'>
-								</form>
+													<form action="" class="form">
+																							<h2 class="form_title">Регистрация</h2>
+																							<input type="email" class='form_input'  name='email'>
+																							<input type="text" class='form_input' name='firstname'>
+																							<input type="text" class='form_input' name='lastname'>
+																							<input type="text" class='form_input' name='company'>
+																							<input type="password" name='password'>
+																							<input type="submit" class='submit'>
+													</form>
 			</div> -->
 			<div class="request">
-				<h2 class="content-title" style='margin-bottom: 30px;'>Войти в аккаунт</h2>
+				<h2 class="content-title" style='margin-bottom: 30px;'>Регистрация</h2>
 				<!-- <p class="icon_text mb w100">Мы ответим на любой интересующий вас вопрос</p> -->
 				<input type="hidden" name="project_name" value="Site Name">
 				<input type="hidden" name="admin_email" value="admin@mail.com">
 				<input type="hidden" name="form_subject" value="Form Subject">
 				<!-- END Hidden Required Fields -->
 				<form class='callback'>
-					<input type="text" name="Name" class='common-input' placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]" >
+					<input type="text" name="Name" class='common-input' placeholder="Логин" required pattern="[A-Za-zА-Яа-яЁё]" >
 					<input type="tel" name="first" class='common-input' placeholder="Пароль" pattern="+7[0-9]{10}">
-					<div class="resets">
-						<a href="#"  class="reset">Забыли пароль?</a>
-						<a href="#"  class="reset">Забыли логин?</a>
+					<input type="tel" name="first" class='common-input' placeholder="Повторите пароль" pattern="+7[0-9]{10}">
+					<input type="tel" name="first" class='common-input' placeholder="E-mail" pattern="+7[0-9]{10}">
+					<div class="radios">
+						<label class="container radio">Физическое лицо
+							<input type="radio" checked="checked" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label class="container radio">Юридическое лицо
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 					</div>
+					<!-- <div class="resets">
+													<a href="#"  class="reset">Забыли пароль?</a>
+													<a href="#"  class="reset">Забыли логин?</a>
+					</div> -->
 					
 					<!-- <input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}"> -->
 					<!-- <textarea  placeholder="Сообщение" style="resize: none"></textarea> -->
 					<!-- <input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
 					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}"> -->
-					<!-- <label class="container"><a href="#" class="checkbox-link">Условия использования</a>
-					<input type="checkbox">
-					<span class="checkmark"></span>
-					</label><label class="container"><a href="#" class="checkbox-link">Политика конфидециальности</a>
-					<input type="checkbox">
-					<span class="checkmark"></span>
-				</label>	 -->
-				
-				<button class='add'>Войти</button>
-				<a href='reg.html' class='add grey'>Регистрация</a>
+					<div class="checks">
+						<label class="container"><a href="#" class="checkbox-link">Условия использования</a>
+						<input type="checkbox">
+						<span class="checkmark"></span>
+						</label><label class="container"><a href="#" class="checkbox-link">Политика конфидециальности</a>
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<button class='add'>Зарегистрироваться</button>
+				<a href='form.html' class='add grey'>Вход в аккаунт</a>
 			</form>
 		</div>
 		
@@ -130,12 +144,6 @@
 				helpBtn.addEventListener('click', function() {
 					helpPopup.classList.toggle('visible');
 				});
-
-				// document.body.addEventListener('click', function(e) {
-				// 	if (e.target != helpPopup) {
-				// 		console.log('test');
-				// 	}
-				// }, tur)
 			});
 		</script>
 	</body>
