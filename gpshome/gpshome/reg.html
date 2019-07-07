@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Header</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="main1.css">
+	</head>
+	<body>
+		<div class="modal micromodal-slide " id="modal-2" aria-hidden="true">
+			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-2'>
+				<div class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+					<h2 class="help-title" >Введите свою почту</h2>
+					<p class="icon_text small">Мы вышлем вам на почту ссылку для восстановления пароля</p>
+					<input type="email" class='common-input small' name="Email" placeholder="Email" required pattern="[A-Za-zА-Яа-яЁё]" >
+					<button class='add small'>Отправить</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+			<div class="modal__overlay" tabindex="-1" data-custom-close='modal-1'>
+				<div class="help-popup" id='help-popup' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<h2 class="help-title" >Возник вопрос?</h2>
+					<form class='help-form'>
+						<input type="text" class='common-input ' name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]" >
+						<input type="tel" class='common-input ' name="first" placeholder="Телефон" pattern="+7[0-9]{10}">
+						<textarea  placeholder="Сообщение" class='common-text' style="resize: none"></textarea>
+						<div class="uploader">
+							Загрузить файл
+							<input type="file" class='common-input upload' name="first" placeholder="Телефон">
+						</div>
+						<button class='add'>Отправить</button>
+						<div class="help-texts">
+							<p class="help-text">+7 (499) 372-50-93</p>
+							<p class="help-text">support@globalsat.ru</p>
+						</div>
+						<a href="#" class="instruction">Руководство пользователя</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+		<div class="header header6">
+			<a href="#" class="link logo"><img class='logo-image' src="logo.png" alt=""></a>
+			<div class="wrapper">
+				
+				<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
+				<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
+				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
+				-->
+			</div>
+			<!-- <a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a> -->
+			<a href="#" class="help" id='help-btn' data-custom-open='modal-1' data-custom-close='modal-1' >
+				<svg enable-background="new 0 0 40.124 40.124" version="1.1" viewBox="0 0 40.124 40.124" 	 xmlns="http://www.w3.org/2000/svg">
+					<path d="m19.938 12.141c1.856 0 2.971 0.99 2.971 2.66 0 3.033-5.414 3.869-5.414 7.55 0 0.99 0.648 2.072 1.979 2.072 2.042 0 1.795-1.516 2.538-2.6 0.989-1.453 5.6-3 5.6-7.023 0-4.361-3.897-6.188-7.858-6.188-3.773 0-7.24 2.692-7.24 5.725 0 1.237 0.929 1.887 2.012 1.887 2.999 1e-3 1.453-4.083 5.412-4.083z"/>
+					<path d="m22.135 28.973c0-1.393-1.145-2.537-2.537-2.537s-2.537 1.146-2.537 2.537c0 1.393 1.145 2.537 2.537 2.537s2.537-1.144 2.537-2.537z"/>
+					<path d="m40.124 20.062c0-11.062-9-20.062-20.062-20.062s-20.062 9-20.062 20.062 9 20.062 20.062 20.062 20.062-8.999 20.062-20.062zm-38.124 0c0-9.959 8.103-18.062 18.062-18.062s18.062 8.103 18.062 18.062-8.103 18.062-18.062 18.062-18.062-8.103-18.062-18.062z"/>
+				</svg>
+			</a>
+		</div>
+		<div class="box">
+			<div class="content">
+				<h2 class="content-title">Сервис мониторинга</h2>
+				<div class="content-points">
+					<div class="content-point">
+						<div class="icon">
+							<img src="gps.png" alt="">
+						</div>
+						<h4 class="icon_title">Местоположение</h4>
+						<p class="icon_text">Контролируйте местоположение техники и персонала в режиме реального времени</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="fuel.png" alt="">
+						</div>
+						<h4 class="icon_title">Расход топлива</h4>
+						<p class="icon_text">Контролируйте расход топлива</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="graph.png" alt="">
+						</div>
+						<h4 class="icon_title">Эффективность</h4>
+						<p class="icon_text">Получайте необходимые  графики и отчеты о работе сотрудников и техники. Повышайте эффективность работы</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="house.png" alt="">
+						</div>
+						<h4 class="icon_title">Контроль</h4>
+						<p class="icon_text">Контролируйте технику и персонал  внутри зданий и складов на производстве и строительстве</p>
+					</div>
+				</div>
+			</div>
+			<div class="request">
+				<h2 class="content-title" style='margin-bottom: 30px;'>Регистрация</h2>
+				<!-- <p class="icon_text mb w100">Мы ответим на любой интересующий вас вопрос</p> -->
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+				<form class='callback'>
+					<input type="text" name="Name" class='common-input' placeholder="Логин" required pattern="[A-Za-zА-Яа-яЁё]" >
+					<input type="tel" name="first" class='common-input' placeholder="Пароль" pattern="+7[0-9]{10}">
+					<input type="tel" name="first" class='common-input' placeholder="Повторите пароль" pattern="+7[0-9]{10}">
+					<input type="tel" name="first" class='common-input' placeholder="E-mail" pattern="+7[0-9]{10}">
+					<div class="radios">
+						<label class="container radio">Физическое лицо
+							<input type="radio" checked="checked" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label class="container radio">Юридическое лицо
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="checks">
+						<label class="container"><a href="#" class="checkbox-link">Условия использования</a>
+						<input type="checkbox">
+						<span class="checkmark"></span>
+						</label><label class="container"><a href="#" class="checkbox-link">Политика конфидециальности</a>
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<button class='add'>Зарегистрироваться</button>
+				<a href='form.html' class='add grey'>Вход в аккаунт</a>
+			</form>
+		</div>
+		
+		<script src='MicroModal.js'></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				MicroModal.init({
+				onShow: modal => console.info(`${modal.id} is shown`), // [1]
+				onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+				openTrigger: 'data-custom-open', // [3]
+				closeTrigger: 'data-custom-close', // [4]
+				disableScroll: false, // [5]
+				disableFocus: true, // [6]
+				awaitCloseAnimation: true, // [7]
+				debugMode: true // [8]
+				});
+			});
+		</script>
+	</body>
+</html>

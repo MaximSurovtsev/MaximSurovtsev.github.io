@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Header</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="header header1">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
+		</div>
+	</div>
+	<div class="header header2">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header3">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link">Мониторинг</a>
+				<a href="#" class="nav-link link">Настройки</a>
+				<a href="#" class="nav-link link">Финансы</a>
+				<a href="#" class="nav-link link">Отчёты</a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header4">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'>Вход</a>
+		</div>
+	</div>
+	<div class="header header5">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<div class="topnav">
+				<a href="#" class="nav-link link"><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link"><span>Настройки</span></a>
+				<a href="#" class="nav-link link"><span>Финансы</span></a>
+				<a href="#" class="nav-link link"><span>Отчёты</span></a>
+			</div>
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
+		</div>
+	</div>
+
+	<div class="header header6">
+		<div class="wrapper">
+			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			
+			<a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
+			<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
+			<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
+			<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
+			
+			<a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a>
+		</div>
+	</div>
+	<div class="box">
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			let box = document.querySelector('.box');
+			let colors = ['#1a237e', '#3F0B81', '#2D1457', '#231F20','#2F3640','#283593','#241178','#0092ca', '#fff', '#010059', '#313131','#064acb', '#010059','#010101']
+			// colors.sort((a,b) => parseInt(a.slice(5),16) > parseInt(b.slice(5),16) ? -1 : 1)
+			let header = document.querySelector('.header')
+			box.style.display = 'flex';
+			box.style.maxWidth = '600px';
+			box.style.margin = '420px auto';
+			box.style.flexWrap = 'wrap';
+			
+			
+			let size = window.innerWidth < 450 ? parseInt((window.innerWidth - 46) / 3) : 100;
+			
+
+			for (let color of colors) {
+				let el = document.createElement('div');
+				el.style.width = size + 'px';
+				el.style.height = size + 'px';
+				el.style.margin = '5px';
+				el.style.cursor = 'pointer';
+				el.style.color = '#fff';
+				el.style.backgroundColor = color;
+				el.style.display = 'flex';
+				el.style.justifyContent = 'center';
+				el.style.alignItems = 'center';
+				el.style.fontSize = '10px';
+				let span = document.createElement('span')
+				span.textContent = 'Скопировано'
+				span.style.opacity = '0';
+				span.style.transition = '0.3s';
+				el.appendChild(span)
+				el.addEventListener('click', function() {
+					if (color != '#fff') {
+						document.documentElement.style.setProperty('--main', color);
+						copyToClipboard(el.style.backgroundColor);
+						span.style.opacity = '1';
+						setTimeout(function() {
+							span.style.opacity = '0';
+						}, 500)
+					}
+					
+				})
+
+				box.appendChild(el)
+			}
+
+			const copyToClipboard = str => {
+			  const el = document.createElement('textarea');
+			  el.value = str;
+			  document.body.appendChild(el);
+			  el.select();
+			  document.execCommand('copy');
+			  document.body.removeChild(el);
+			};
+		})
+	</script>
+</body>
+</html>
