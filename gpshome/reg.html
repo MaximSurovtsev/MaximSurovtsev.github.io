@@ -8,28 +8,41 @@
 		<link rel="stylesheet" href="main1.css">
 	</head>
 	<body>
-		<!--  -->
-		<div class="help-popup" id='help-popup'>
-			<h2 class="help-title" >Возник вопрос?</h2>
-			<form class='help-form'>
-				<input type="text" class='common-input ' name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]" >
-				<input type="tel" class='common-input ' name="first" placeholder="Телефон" pattern="+7[0-9]{10}">
-				<textarea  placeholder="Сообщение" class='common-text' style="resize: none"></textarea>
-				<div class="uploader">
-					Загрузить файл
-					<input type="file" class='common-input upload' name="first" placeholder="Телефон">
+		<div class="modal micromodal-slide " id="modal-2" aria-hidden="true">
+			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-2'>
+				<div class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+					<h2 class="help-title" >Введите свою почту</h2>
+					<p class="icon_text small">Мы вышлем вам на почту ссылку для восстановления пароля</p>
+					<input type="email" class='common-input small' name="Email" placeholder="Email" required pattern="[A-Za-zА-Яа-яЁё]" >
+					<button class='add small'>Отправить</button>
 				</div>
-				<button class='add'>Отправить</button>
-				<div class="help-texts">
-					<p class="help-text">+7 (499) 372-50-93</p>
-					<p class="help-text">support@globalsat.ru</p>
+			</div>
+		</div>
+		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+			<div class="modal__overlay" tabindex="-1" data-custom-close='modal-1'>
+				<div class="help-popup" id='help-popup' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<h2 class="help-title" >Возник вопрос?</h2>
+					<form class='help-form'>
+						<input type="text" class='common-input ' name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]" >
+						<input type="tel" class='common-input ' name="first" placeholder="Телефон" pattern="+7[0-9]{10}">
+						<textarea  placeholder="Сообщение" class='common-text' style="resize: none"></textarea>
+						<div class="uploader">
+							Загрузить файл
+							<input type="file" class='common-input upload' name="first" placeholder="Телефон">
+						</div>
+						<button class='add'>Отправить</button>
+						<div class="help-texts">
+							<p class="help-text">+7 (499) 372-50-93</p>
+							<p class="help-text">support@globalsat.ru</p>
+						</div>
+						<a href="#" class="instruction">Руководство пользователя</a>
+					</form>
 				</div>
-				<a href="#" class="instruction">Руководство пользователя</a>
-			</form>
+			</div>
 		</div>
 		<!--  -->
 		<div class="header header6">
-			<a href="#" class="link logo"><span class="main-logo">GPS</span>home.ru</a>
+			<a href="#" class="link logo"><img class='logo-image' src="logo.png" alt=""></a>
 			<div class="wrapper">
 				
 				<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
@@ -39,7 +52,7 @@
 				-->
 			</div>
 			<!-- <a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a> -->
-			<a href="#" class="help" id='help-btn'>
+			<a href="#" class="help" id='help-btn' data-custom-open='modal-1' data-custom-close='modal-1' >
 				<svg enable-background="new 0 0 40.124 40.124" version="1.1" viewBox="0 0 40.124 40.124" 	 xmlns="http://www.w3.org/2000/svg">
 					<path d="m19.938 12.141c1.856 0 2.971 0.99 2.971 2.66 0 3.033-5.414 3.869-5.414 7.55 0 0.99 0.648 2.072 1.979 2.072 2.042 0 1.795-1.516 2.538-2.6 0.989-1.453 5.6-3 5.6-7.023 0-4.361-3.897-6.188-7.858-6.188-3.773 0-7.24 2.692-7.24 5.725 0 1.237 0.929 1.887 2.012 1.887 2.999 1e-3 1.453-4.083 5.412-4.083z"/>
 					<path d="m22.135 28.973c0-1.393-1.145-2.537-2.537-2.537s-2.537 1.146-2.537 2.537c0 1.393 1.145 2.537 2.537 2.537s2.537-1.144 2.537-2.537z"/>
@@ -81,17 +94,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="form_wrapper">
-													<form action="" class="form">
-																							<h2 class="form_title">Регистрация</h2>
-																							<input type="email" class='form_input'  name='email'>
-																							<input type="text" class='form_input' name='firstname'>
-																							<input type="text" class='form_input' name='lastname'>
-																							<input type="text" class='form_input' name='company'>
-																							<input type="password" name='password'>
-																							<input type="submit" class='submit'>
-													</form>
-			</div> -->
 			<div class="request">
 				<h2 class="content-title" style='margin-bottom: 30px;'>Регистрация</h2>
 				<!-- <p class="icon_text mb w100">Мы ответим на любой интересующий вас вопрос</p> -->
@@ -114,15 +116,6 @@
 							<span class="checkmark"></span>
 						</label>
 					</div>
-					<!-- <div class="resets">
-													<a href="#"  class="reset">Забыли пароль?</a>
-													<a href="#"  class="reset">Забыли логин?</a>
-					</div> -->
-					
-					<!-- <input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}"> -->
-					<!-- <textarea  placeholder="Сообщение" style="resize: none"></textarea> -->
-					<!-- <input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
-					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}"> -->
 					<div class="checks">
 						<label class="container"><a href="#" class="checkbox-link">Условия использования</a>
 						<input type="checkbox">
@@ -137,29 +130,19 @@
 			</form>
 		</div>
 		
+		<script src='MicroModal.js'></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
-				function isDescendant(parent, child) {
-					var node = child.parentNode;
-					while (node != null) {
-						if (node == parent) {
-							return true;
-						}
-						node = node.parentNode;
-					}
-					return false;
-				}
-				let helpBtn = document.getElementById('help-btn');
-				let helpPopup = document.getElementById('help-popup')
-				document.addEventListener('click', function(e) {
-					if (e.target != helpPopup && !isDescendant(helpPopup, e.target) && helpPopup.classList.contains('visible') && e.target != helpBtn)
-							helpPopup.classList.remove('visible');
-					
-					else if (e.target == helpBtn.parentNode || isDescendant(helpBtn, e.target)) 
-						helpPopup.classList.add('visible');
-					
-				}, false)
-			
+				MicroModal.init({
+				onShow: modal => console.info(`${modal.id} is shown`), // [1]
+				onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+				openTrigger: 'data-custom-open', // [3]
+				closeTrigger: 'data-custom-close', // [4]
+				disableScroll: false, // [5]
+				disableFocus: false, // [6]
+				awaitCloseAnimation: true, // [7]
+				debugMode: true // [8]
+				});
 			});
 		</script>
 	</body>
