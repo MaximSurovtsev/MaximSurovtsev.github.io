@@ -40,7 +40,7 @@
 			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-2'>
 				<div class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
 					<h2 class="help-title rtitle" >Введите свою почту</h2>
-					<p class="icon_text small">Мы вышлем вам на почту ссылку для восстановления пароля</p>
+					<p class="icon_text small pas-log">Мы вышлем вам на почту ссылку для восстановления пароля</p>
 					<input type="email" class='common-input email small rtext' name="Email" placeholder="Email" required pattern="[A-Za-zА-Яа-яЁё]" >
 					<input type="hidden" class='common-input imei small' name="Email" placeholder="IMEI" required pattern="[A-Za-zА-Яа-яЁё]" >
 					<div class="recovery" data-select='email'>Восстановить с помощью IMEI</div>
@@ -200,8 +200,8 @@
 	<input type="text" name="Login" class='common-input' placeholder="Логин" required >
 	<input type="password" name="Password" class='common-input' placeholder="Пароль">
 	<div class="resets">
-		<a href="#"  data-custom-open='modal-2' class="reset">Забыли пароль?</a>
-		<a href="#"  data-custom-open='modal-2'  id='reset-log' class="reset">Забыли логин?</a>
+		<a href="#"  data-custom-open='modal-2' class="reset" data-reset='password'>Забыли пароль?</a>
+		<a href="#"  data-custom-open='modal-2'  id='reset-log' class="reset" data-reset='login'>Забыли логин?</a>
 	</div>
 	
 	<!-- <input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}"> -->
@@ -237,7 +237,8 @@
 		let imei = document.querySelector('.imei');
 		let demo = document.querySelector('.demo');
 		let form = document.querySelector('.callback');
-		
+		let passLog = document.querySelector('.pas-log');
+		let resets = document.querySelectorAll('.reset');
 	
 		function isDescendant(parent, child) {
 			let node = child;
@@ -271,11 +272,21 @@
 				langModal.classList.add('opacity');
 			}
 		});
+
+		for (let r of resets) {
+			r.addEventListener('click', function() {
+				let t = passLog.textContent;
+				passLog.textContent = r.getAttribute('data-reset') == 'password'? t.slice(0, -6) + "пароля" : t.slice(0, -6) + "логина" ;
+			})
+		}
+
+
 		recovery.addEventListener('click', function() {
+			
+			
 			if (email.getAttribute('type') == 'hidden') {
 				recovery.textContent = recovery.textContent.slice(0, -5) + 'IMEI';
 				rtitle.textContent = rtitle.textContent.slice(0, -6) + 'ю почту';
-				
 				email.setAttribute('type', 'text');
 				imei.setAttribute('type', 'hidden');
 			} else {
