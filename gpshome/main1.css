@@ -230,12 +230,39 @@ body {
 	visibility: hidden;
 	transform: translateY(5px);
 	z-index: 10;
+	
 }
 
+.flags {
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px 12px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+}
+
+
+
 .flag {
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin: 5px 0;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+.flag-img {
 	min-width: 31px;
 	min-height: 31px;
-	background-image: url(rus.png);
+	/*background-image: url(rus.png);*/
 	background-position: center;
 	background-size: 105%;
 	display: block;
@@ -244,17 +271,24 @@ body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	z-index: 1;
-	opacity: 0.6;
-	transition: 0.3s;
+	
+	
 }
 
-.flag+.help {
+.flag-text {
+	padding-left: 5px;
+	text-decoration: none;
+	color: #000;
+	font-size: 12px;
+}
+
+.flag-img+.help {
 	margin-left: 10px;
 }
 
-.flag+.flag {
+/*.flag+.flag {
 	margin-left: 5px;
-}
+}*/
 .visibity {
 	visibility: visible;
 	
@@ -639,29 +673,6 @@ img {
 }
 
 
-.flags {
-	display: flex;
-	justify-content: center;
-	-ms-align-items: center;
-	align-items: center;
-	padding: 5px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
-}
-
-.flags svg {
-	width: 28px;
-	height: 28px;
-	margin: 5px;
-	border-radius: 50%;
-	display: block;
-	opacity: 0.5;
-	transition: 0.3s;
-}
 
 
 
