@@ -881,8 +881,8 @@ a.basic-btn__login {
 		margin-bottom: 4px;
 	}
 
-	img {
-		width: 36px;
+	.logo-image {
+		width: 80%;
 		height: auto;
 	}
 
