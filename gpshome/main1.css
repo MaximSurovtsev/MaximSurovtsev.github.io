@@ -39,7 +39,7 @@ body {
 }
 
 .modal-overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	background-color: #00002040;
@@ -908,7 +908,7 @@ a.basic-btn__login {
 		width: 100%;
 	}
 	
-	.help-popup {
+	.modal-content {
 		top: 55px;
 		width: 95%;
 		left: 2.5%;
