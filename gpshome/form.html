@@ -2,22 +2,30 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Header</title>
+		<title>GPShome.ru</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="main1.css">
 	</head>
 	<body>
-		<div class="lang-modal">
+		<div class="flags_modal">
 			<div class="flags">
-				<a href="#" class="flag active"></a>
+				<a href="#" class="flag flag__active"></a>
 				<a href="#" class="flag" style='background-image: url(uk.png);'></a>
 				<a href="#" class="flag" style='background-image: url(ukr.png);'></a>
 			</div>
 		</div>
-		<div class="modal micromodal-slide" id="modal-6" aria-hidden="true">
-			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-6'>
-				<div style='width:auto; padding: 40px;' class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-6-title">
+		<div class="modal modal__slide"
+			id="modal-6"
+			aria-hidden="true">
+			<div class="modal-overlay"
+				tabindex="-1"
+				data-custom-close='modal-6'>
+				<div
+					style='width:auto; padding: 40px;'
+					class="modal-content modal-content__center"
+					role="dialog" aria-modal="true"
+					aria-labelledby="modal-6-title">
 					<div class="success">
 						<svg enable-background="new 0 0 52 52" version="1.1" viewBox="0 0 52 52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 							<path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26   S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"/>
@@ -27,41 +35,75 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal micromodal-slide " id="modal-5" aria-hidden="true">
-			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-5'>
-				<div class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
-					<h2 class="help-title">Возникла проблема</h2>
-					<p class="icon_text small">Почта не найдена, проверьте правильность введенных данных</p>
-					<button class='add small'>Попробовать еще раз</button>
+		<div class="modal modal__slide"
+			id="modal-5"
+			aria-hidden="true">
+			<div class="modal-overlay"
+				tabindex="-1"
+				data-custom-close='modal-5'>
+				<div class="modal-content modal-content__center"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="modal-5-title">
+					<h2 class="modal-title modal-title__reset">Возникла проблема</h2>
+					<p class="modal-text modal-text__small">Почта не найдена, проверьте правильность введенных данных</p>
+					<button class='basic-btn modal-text__small basic-btn__reset'>Попробовать еще раз</button>
 				</div>
 			</div>
 		</div>
-		<div class="modal micromodal-slide " id="modal-2" aria-hidden="true">
-			<div class="modal__overlay flex" tabindex="-1" data-custom-close='modal-2'>
-				<div class="reset-popup" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
-					<h2 class="help-title rtitle" >Введите свою почту</h2>
-					<p class="icon_text small pas-log">Мы вышлем вам на почту ссылку для восстановления пароля</p>
-					<input type="email" class='common-input email small rtext' name="Email" placeholder="Email" required pattern="[A-Za-zА-Яа-яЁё]" >
-					<input type="hidden" class='common-input imei small' name="Email" placeholder="IMEI" required pattern="[A-Za-zА-Яа-яЁё]" >
+		<div class="modal modal__slide" id="modal-2" aria-hidden="true">
+			<div class="modal-overlay"
+				tabindex="-1"
+				data-custom-close='modal-2'>
+				<div class="modal-content modal-content__center"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="modal-2-title">
+					<h2 class="modal-title modal-title__reset js-password-login-title" >Введите свою почту</h2>
+					<p class="modal-text modal-text__small js-password-login-text">Мы вышлем вам на почту ссылку для восстановления пароля</p>
+					<input type="email"
+					class='input email modal-text__small'
+					name="Email"
+					placeholder="Email"
+					required
+					pattern="[A-Za-zА-Яа-яЁё]" >
+					<input type="hidden"
+					class='input imei modal-text__small' name="Email" placeholder="IMEI"
+					required pattern="[A-Za-zА-Яа-яЁё]" >
 					<div class="recovery" data-select='email'>Восстановить с помощью IMEI</div>
-					<button class='add small'>Отправить</button>
+					<button class='basic-btn modal-text__small basic-btn__reset'>Отправить</button>
 				</div>
 			</div>
 		</div>
 		
-		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-			<div class="modal__overlay" tabindex="-1" data-custom-close='modal-1'>
-				<div class="help-popup" id='help-popup' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-					<h2 class="help-title" >Возник вопрос?</h2>
+		<div class="modal modal__slide" id="modal-1" aria-hidden="true">
+			<div class="modal-overlay" tabindex="-1" data-custom-close='modal-1'>
+				<div class="modal-content modal-content__absolute" id='help-popup' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<h2 class="modal-title" >Возник вопрос?</h2>
 					<form class='help-form'>
-						<input type="text" class='common-input ' name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]" >
-						<input type="tel" class='common-input ' name="first" placeholder="Телефон" pattern="+7[0-9]{10}">
-						<textarea  placeholder="Сообщение" class='common-text' style="resize: none"></textarea>
+						<input type="text"
+						class='input '
+						name="Name"
+						placeholder="Имя"
+						required
+						pattern="[A-Za-zА-Яа-яЁё]" >
+						<input type="tel"
+						class='input'
+						name="first"
+						placeholder="Телефон"
+						pattern="+7[0-9]{10}">
+						<textarea
+						placeholder="Сообщение"
+						class='textarea'
+						style="resize: none"></textarea>
 						<div class="uploader">
 							Загрузить файл
-							<input type="file" class='common-input upload' name="first" placeholder="Телефон">
+							<input type="file"
+							class='input upload'
+							name="first"
+							placeholder="Телефон">
 						</div>
-						<button class='add'>Отправить</button>
+						<button class='basic-btn'>Отправить</button>
 						<div class="help-texts">
 							<p class="help-text">+7 (499) 372-50-93</p>
 							<p class="help-text">support@globalsat.ru</p>
@@ -72,255 +114,235 @@
 			</div>
 		</div>
 		
-		<div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
-			<div class="modal__overlay" tabindex="-1" data-custom-close='modal-1'>
-				<div class="help-popup login-popup" id='login-popup' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-					
-					
-					<a href="#" class="login-link add">Мой профиль</a>
-					<span href="#" class="login-link">Номер счета: <span class="count">12438</span></span>
-					<span href="#" class="login-link">Баланс:<span class="digits">999.00</span></span>
-					
-					<a href="#" class="login-link add green">Пополнить счет</a>
-					<a href="#" class="login-link add">Финансы</a>
-					<!-- <div class="flags">
-								<a href="#" class="flag active flag-btn">
-											<svg class='active' enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-														<circle cx="256" cy="256" r="256" fill="#F0F0F0"/>
-														<path d="M496.077,345.043C506.368,317.31,512,287.314,512,256s-5.632-61.31-15.923-89.043H15.923  C5.633,194.69,0,224.686,0,256s5.633,61.31,15.923,89.043L256,367.304L496.077,345.043z" fill="#0052B4"/>
-														<path d="M256,512c110.071,0,203.906-69.472,240.077-166.957H15.923C52.094,442.528,145.929,512,256,512z" fill="#D80027"/>
-											</svg>
-								</a>
-								<a href="#" class="flag">
-											<svg class='' enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-														<circle cx="256" cy="256" r="256" fill="#F0F0F0"/>
-														<g fill="#0052B4">
-																	<path d="m52.92 100.14c-20.109 26.163-35.272 56.318-44.101 89.077h133.18l-89.077-89.077z"/>
-																	<path d="m503.18 189.22c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076h133.18z"/>
-																	<path d="m8.819 322.78c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075h-133.18z"/>
-																	<path d="m411.86 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.18l89.076-89.075z"/>
-																	<path d="m100.14 459.08c26.163 20.109 56.318 35.272 89.076 44.102v-133.18l-89.076 89.074z"/>
-																	<path d="M189.217,8.819c-32.758,8.83-62.913,23.993-89.075,44.101l89.075,89.075V8.819z"/>
-																	<path d="m322.78 503.18c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075v133.18z"/>
-																	<path d="m370 322.78l89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076h-133.18z"/>
-														</g>
-														<g fill="#D80027">
-																	<path d="m509.83 222.61h-220.44v-220.44c-10.931-1.423-22.075-2.167-33.392-2.167-11.319 0-22.461 0.744-33.391 2.167v220.44h-220.44c-1.423 10.931-2.167 22.075-2.167 33.392 0 11.319 0.744 22.461 2.167 33.391h220.44v220.44c10.931 1.423 22.073 2.167 33.392 2.167 11.317 0 22.461-0.743 33.391-2.167v-220.44h220.44c1.423-10.931 2.167-22.073 2.167-33.392 0-11.317-0.744-22.461-2.167-33.391z"/>
-																	<path d="m322.78 322.78l114.24 114.24c5.254-5.252 10.266-10.743 15.048-16.435l-97.802-97.802h-31.482v1e-3z"/>
-																	<path d="m189.22 322.78h-2e-3l-114.24 114.24c5.252 5.254 10.743 10.266 16.435 15.048l97.802-97.804v-31.479z"/>
-																	<path d="m189.22 189.22v-2e-3l-114.24-114.24c-5.254 5.252-10.266 10.743-15.048 16.435l97.803 97.803h31.481z"/>
-																	<path d="m322.78 189.22l114.24-114.24c-5.252-5.254-10.743-10.266-16.435-15.047l-97.802 97.803v31.482z"/>
-														</g>
-											</svg>
-								</a>
-					</div>
-					<a href="#" class="login-link add">Выйти</a>
+		<div class="modal modal__slide" id="modal-3" aria-hidden="true">
+			<div class="modal-overlay" tabindex="-1" data-custom-close='modal-1'>
+				<div class="modal-content modal-content__login" id='modal-content__login' role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+					<a href="#" class="basic-btn__login basic-btn">Мой профиль</a>
+					<span href="#" class="basic-btn__login">Номер счета:
+						<span class="count">12438</span>
+					</span>
+					<span href="#" class="basic-btn__login">Баланс:
+						<span class="digits">999.00</span>
+					</span>
+					<a href="#" class="basic-btn__login basic-btn green">Пополнить счет</a>
+					<a href="#" class="basic-btn__login basic-btn">Финансы</a>
+					<a href="#" class="basic-btn__login basic-btn">Выйти</a>
 				</div>
 			</div>
 		</div>
-		 </login-linkdiv> -->
-		 <a href="#" class="login-link add">Выйти</a>
-	</div>
-</div>
-</div>
-
-<div class="header header6">
-<a href="#" class="link logo"><img class='logo-image' src="logo.png" alt=""></a>
-<div class="wrapper">
-	
-	<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
-	<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
-	<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
-	<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a> -->
-	
-</div>
-
-<!-- <a href="#" class="link nav-link enter" id='enter'><span>Вход</span></a> -->
-<a href="#" class="active flag" id='flag-btn'></a>
-<a class="help" id='help-btn' data-custom-open='modal-1' data-custom-close='modal-1' >
-	<svg enable-background="new 0 0 40.124 40.124" version="1.1" viewBox="0 0 40.124 40.124" 	 xmlns="http://www.w3.org/2000/svg">
-		<path d="m19.938 12.141c1.856 0 2.971 0.99 2.971 2.66 0 3.033-5.414 3.869-5.414 7.55 0 0.99 0.648 2.072 1.979 2.072 2.042 0 1.795-1.516 2.538-2.6 0.989-1.453 5.6-3 5.6-7.023 0-4.361-3.897-6.188-7.858-6.188-3.773 0-7.24 2.692-7.24 5.725 0 1.237 0.929 1.887 2.012 1.887 2.999 1e-3 1.453-4.083 5.412-4.083z"/>
-		<path d="m22.135 28.973c0-1.393-1.145-2.537-2.537-2.537s-2.537 1.146-2.537 2.537c0 1.393 1.145 2.537 2.537 2.537s2.537-1.144 2.537-2.537z"/>
-		<path d="m40.124 20.062c0-11.062-9-20.062-20.062-20.062s-20.062 9-20.062 20.062 9 20.062 20.062 20.062 20.062-8.999 20.062-20.062zm-38.124 0c0-9.959 8.103-18.062 18.062-18.062s18.062 8.103 18.062 18.062-8.103 18.062-18.062 18.062-18.062-8.103-18.062-18.062z"/>
-	</svg>
-</a>
-<!-- <a class="login-wrapper demo"><span class="login-name ">Demo</span> -->
-<a class="login-wrapper" data-custom-open='modal-3'><span class="login-name">UserLogin</span>
-<div class="help" id='login'  >
-	<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="640px" height="640px" viewBox="0 0 6400 6400" preserveAspectRatio="xMidYMid meet">
-		<g id="layer101" stroke="none">
-			<path d="M2870 6389 c-1031 -112 -1921 -689 -2445 -1582 -218 -373 -358 -803 -411 -1257 -22 -199 -15 -626 14 -815 111 -708 412 -1306 907 -1800 500 -501 1107 -803 1830 -912 173 -26 697 -26 870 0 723 109 1330 411 1830 912 520 519 835 1172 919 1905 10 84 16 221 16 360 0 245 -15 412 -56 624 -192 985 -853 1836 -1768 2271 -290 138 -571 223 -911 277 -103 16 -189 21 -420 23 -159 2 -328 -1 -375 -6z m620 -330 c586 -54 1198 -324 1624 -717 l46 -43 -52 -102 c-314 -613 -927 -1045 -1618 -1142 -151 -21 -432 -21 -576 0 -701 101 -1307 528 -1622 1142 l-52 102 46 43 c310 286 745 522 1165 633 356 93 666 118 1039 84z m-2485 -1200 c106 -174 212 -307 379 -475 269 -269 543 -451 868 -579 l96 -38 -57 -43 c-83 -62 -213 -195 -284 -290 -120 -159 -219 -382 -264 -594 -28 -131 -25 -481 5 -606 139 -585 570 -1011 1152 -1139 118 -26 400 -31 535 -10 608 95 1091 560 1222 1175 26 121 26 459 0 580 -77 361 -276 679 -559 892 l-46 35 96 38 c316 123 598 310 858 569 188 188 283 308 404 510 l53 88 19 -23 c10 -13 54 -76 97 -139 197 -290 327 -581 410 -923 50 -202 70 -339 80 -534 39 -833 -255 -1600 -839 -2183 -465 -465 -1046 -747 -1700 -826 -163 -19 -497 -19 -660 0 -654 79 -1235 361 -1700 826 -465 465 -747 1046 -826 1700 -19 163 -19 497 0 660 46 381 167 756 348 1073 84 149 237 372 247 361 3 -3 33 -50 66 -105z m2394 -1255 c424 -76 774 -425 855 -854 20 -105 20 -295 0 -400 -81 -429 -425 -772 -855 -855 -115 -22 -300 -20 -414 4 -424 89 -759 429 -839 851 -20 105 -20 294 0 400 89 470 490 831 964 868 106 9 181 5 289 -14z"/>
-		</g>
-	</svg>
-</div>
-</a>
-</div>
-<div class="box">
-<div class="content">
-<h2 class="content-title">Сервис мониторинга</h2>
-<div class="content-points">
-	<div class="content-point">
-		<div class="icon">
-			<img src="gps.png" alt="">
+		<div class="header header6">
+			<a href="#" class="link logo">
+				<img class='logo-image' src="logo.png" alt="">
+			</a>
+			<div class="wrapper">
+				<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
+				<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
+				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a> -->
+			</div>
+			<a href="#" class="flag flag__active" id='flag-btn'></a>
+			<a class="help" id='help-btn' data-custom-open='modal-1' data-custom-close='modal-1' >
+				<svg enable-background="new 0 0 40.124 40.124" version="1.1" viewBox="0 0 40.124 40.124" 	 xmlns="http://www.w3.org/2000/svg">
+					<path d="m19.938 12.141c1.856 0 2.971 0.99 2.971 2.66 0 3.033-5.414 3.869-5.414 7.55 0 0.99 0.648 2.072 1.979 2.072 2.042 0 1.795-1.516 2.538-2.6 0.989-1.453 5.6-3 5.6-7.023 0-4.361-3.897-6.188-7.858-6.188-3.773 0-7.24 2.692-7.24 5.725 0 1.237 0.929 1.887 2.012 1.887 2.999 1e-3 1.453-4.083 5.412-4.083z"/>
+					<path d="m22.135 28.973c0-1.393-1.145-2.537-2.537-2.537s-2.537 1.146-2.537 2.537c0 1.393 1.145 2.537 2.537 2.537s2.537-1.144 2.537-2.537z"/>
+					<path d="m40.124 20.062c0-11.062-9-20.062-20.062-20.062s-20.062 9-20.062 20.062 9 20.062 20.062 20.062 20.062-8.999 20.062-20.062zm-38.124 0c0-9.959 8.103-18.062 18.062-18.062s18.062 8.103 18.062 18.062-8.103 18.062-18.062 18.062-18.062-8.103-18.062-18.062z"/>
+				</svg>
+			</a>
+			<a class="login-wrapper" data-custom-open='modal-3'>
+				<span class="login-name">UserLogin</span>
+				<div class="help" id='login'>
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="640px" height="640px" viewBox="0 0 6400 6400" preserveAspectRatio="xMidYMid meet">
+						<g id="layer101" stroke="none">
+							<path d="M2870 6389 c-1031 -112 -1921 -689 -2445 -1582 -218 -373 -358 -803 -411 -1257 -22 -199 -15 -626 14 -815 111 -708 412 -1306 907 -1800 500 -501 1107 -803 1830 -912 173 -26 697 -26 870 0 723 109 1330 411 1830 912 520 519 835 1172 919 1905 10 84 16 221 16 360 0 245 -15 412 -56 624 -192 985 -853 1836 -1768 2271 -290 138 -571 223 -911 277 -103 16 -189 21 -420 23 -159 2 -328 -1 -375 -6z m620 -330 c586 -54 1198 -324 1624 -717 l46 -43 -52 -102 c-314 -613 -927 -1045 -1618 -1142 -151 -21 -432 -21 -576 0 -701 101 -1307 528 -1622 1142 l-52 102 46 43 c310 286 745 522 1165 633 356 93 666 118 1039 84z m-2485 -1200 c106 -174 212 -307 379 -475 269 -269 543 -451 868 -579 l96 -38 -57 -43 c-83 -62 -213 -195 -284 -290 -120 -159 -219 -382 -264 -594 -28 -131 -25 -481 5 -606 139 -585 570 -1011 1152 -1139 118 -26 400 -31 535 -10 608 95 1091 560 1222 1175 26 121 26 459 0 580 -77 361 -276 679 -559 892 l-46 35 96 38 c316 123 598 310 858 569 188 188 283 308 404 510 l53 88 19 -23 c10 -13 54 -76 97 -139 197 -290 327 -581 410 -923 50 -202 70 -339 80 -534 39 -833 -255 -1600 -839 -2183 -465 -465 -1046 -747 -1700 -826 -163 -19 -497 -19 -660 0 -654 79 -1235 361 -1700 826 -465 465 -747 1046 -826 1700 -19 163 -19 497 0 660 46 381 167 756 348 1073 84 149 237 372 247 361 3 -3 33 -50 66 -105z m2394 -1255 c424 -76 774 -425 855 -854 20 -105 20 -295 0 -400 -81 -429 -425 -772 -855 -855 -115 -22 -300 -20 -414 4 -424 89 -759 429 -839 851 -20 105 -20 294 0 400 89 470 490 831 964 868 106 9 181 5 289 -14z"/>
+						</g>
+					</svg>
+				</div>
+			</a>
 		</div>
-		<h4 class="icon_title">Местоположение</h4>
-		<p class="icon_text">Контролируйте местоположение техники и персонала в режиме реального времени</p>
-	</div>
-	<div class="content-point">
-		<div class="icon">
-			<img src="fuel.png" alt="">
+		<div class="box">
+			<div class="content">
+				<h2 class="content-title">Сервис мониторинга</h2>
+				<div class="content-points">
+					<div class="content-point">
+						<div class="icon">
+							<img src="gps.png" alt="">
+						</div>
+						<h4 class="icon_title">Местоположение</h4>
+						<p class="modal-text">Контролируйте местоположение техники и персонала в режиме реального времени</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="fuel.png" alt="">
+						</div>
+						<h4 class="icon_title">Расход топлива</h4>
+						<p class="modal-text">Контролируйте расход топлива</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="graph.png" alt="">
+						</div>
+						<h4 class="icon_title">Эффективность</h4>
+						<p class="modal-text">Получайте необходимые  графики и отчеты о работе сотрудников и техники. Повышайте эффективность работы</p>
+					</div>
+					<div class="content-point">
+						<div class="icon">
+							<img src="house.png" alt="">
+						</div>
+						<h4 class="icon_title">Контроль</h4>
+						<p class="modal-text">Контролируйте технику и персонал  внутри зданий и складов на производстве и строительстве</p>
+					</div>
+				</div>
+			</div>
+			<div class="request">
+				<h2 class="content-title" style='margin-bottom: 30px;'>Войти в аккаунт <span class="demo" style='color: var(--main); font-size: 13px;'>Демо-вход</span></h2>
+				<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="admin_email" value="admin@mail.com">
+				<input type="hidden" name="form_subject" value="Form Subject">
+				<!-- END Hidden Required Fields -->
+				<form class='callback'>
+					<input type="text"
+					name="Login"
+					class='input'
+					placeholder="Логин"
+					required >
+					<input type="password"
+					name="Password"
+					class='input'
+					placeholder="Пароль">
+					<div class="resets">
+						<a href="#"
+							data-custom-open='modal-2'
+							class="reset"
+						data-reset='password'>Забыли пароль?</a>
+						<a href="#"
+							data-custom-open='modal-2'
+							id='reset-log'
+							class="reset"
+						data-reset='login'>Забыли логин?</a>
+					</div>
+					
+					<!-- <input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}"> -->
+					<!-- <textarea  placeholder="Сообщение" style="resize: none"></textarea> -->
+					<!-- <input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
+					<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}"> -->
+					<!-- <label class="container"><a href="#" class="checkbox-link">Условия использования</a>
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					</label><label class="container"><a href="#" class="checkbox-link">Политика конфидециальности</a>
+					<input type="checkbox">
+					<span class="checkmark"></span>
+				</label>	 -->
+				<button class='basic-btn'>Войти</button>
+				<a href='reg.html' class='basic-btn grey'>Регистрация</a>
+				<div class="resets">
+					<a href="#"  data-custom-open='modal-6' class="reset">Успешное завершение</a>
+					<a href="#"  data-custom-open='modal-5'  id='reset-log' class="reset">Ошибка восстановления</a>
+				</div>
+			</form>
 		</div>
-		<h4 class="icon_title">Расход топлива</h4>
-		<p class="icon_text">Контролируйте расход топлива</p>
 	</div>
-	<div class="content-point">
-		<div class="icon">
-			<img src="graph.png" alt="">
-		</div>
-		<h4 class="icon_title">Эффективность</h4>
-		<p class="icon_text">Получайте необходимые  графики и отчеты о работе сотрудников и техники. Повышайте эффективность работы</p>
-	</div>
-	<div class="content-point">
-		<div class="icon">
-			<img src="house.png" alt="">
-		</div>
-		<h4 class="icon_title">Контроль</h4>
-		<p class="icon_text">Контролируйте технику и персонал  внутри зданий и складов на производстве и строительстве</p>
-	</div>
-</div>
-</div>
-
-<div class="request">
-<h2 class="content-title" style='margin-bottom: 30px;'>Войти в аккаунт <span class="demo" style='color: var(--main); font-size: 13px;'>Демо-вход</span></h2>
-<input type="hidden" name="project_name" value="Site Name">
-<input type="hidden" name="admin_email" value="admin@mail.com">
-<input type="hidden" name="form_subject" value="Form Subject">
-<!-- END Hidden Required Fields -->
-<form class='callback'>
-	<input type="text" name="Login" class='common-input' placeholder="Логин" required >
-	<input type="password" name="Password" class='common-input' placeholder="Пароль">
-	<div class="resets">
-		<a href="#"  data-custom-open='modal-2' class="reset" data-reset='password'>Забыли пароль?</a>
-		<a href="#"  data-custom-open='modal-2'  id='reset-log' class="reset" data-reset='login'>Забыли логин?</a>
-	</div>
-	
-	<!-- <input type="e-mail" name="first" placeholder="E-mail" pattern="+7[0-9]{10}"> -->
-	<!-- <textarea  placeholder="Сообщение" style="resize: none"></textarea> -->
-	<!-- <input type="text" name="second" placeholder="977" required maxlength="3" pattern="[0-9]{3}">
-	<input type="text" name="Phone" placeholder="3582901" required maxlength="7"  pattern="[0-9]{7}"> -->
-	<!-- <label class="container"><a href="#" class="checkbox-link">Условия использования</a>
-	<input type="checkbox">
-	<span class="checkmark"></span>
-	</label><label class="container"><a href="#" class="checkbox-link">Политика конфидециальности</a>
-	<input type="checkbox">
-	<span class="checkmark"></span>
-</label>	 -->
-
-<button class='add'>Войти</button>
-<a href='reg.html' class='add grey'>Регистрация</a>
-<div class="resets">
-		<a href="#"  data-custom-open='modal-6' class="reset">Успешное завершение</a>
-		<a href="#"  data-custom-open='modal-5'  id='reset-log' class="reset">Ошибка восстановления</a>
-	</div>
-</form>
-</div>
-<script src='MicroModal.js'></script>
-<script>
-	document.addEventListener('DOMContentLoaded', function() {
-		let flagBtn = document.getElementById('flag-btn');
-		let langModal = document.querySelector('.lang-modal');
-		let header = document.querySelector('.wrapper');
-		let recovery = document.querySelector('.recovery');
-		let rtext = document.querySelector('.rtext');
-		let rtitle = document.querySelector('.rtitle');
-		let email = document.querySelector('.email');
-		let imei = document.querySelector('.imei');
-		let demo = document.querySelector('.demo');
-		let form = document.querySelector('.callback');
-		let passLog = document.querySelector('.pas-log');
-		let resets = document.querySelectorAll('.reset');
-	
-		function isDescendant(parent, child) {
-			let node = child;
-			while (node != null) {
-				if (node == parent) {
-				return true;
+	<!-- <div class="cookie">
+								<a href="" class="basic-btn ">ОК</a>
+	</div> -->
+	<script src='MicroModal.js'></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			let flagBtn = document.getElementById('flag-btn');
+			let langModal = document.querySelector('.flags_modal');
+			let header = document.querySelector('.wrapper');
+			let recovery = document.querySelector('.recovery');
+			let passLogTitle= document.querySelector('.js-password-login-title');
+			let email = document.querySelector('.email');
+			let imei = document.querySelector('.imei');
+			let demo = document.querySelector('.demo');
+			let form = document.querySelector('.callback');
+			let passLog = document.querySelector('.js-password-login-text');
+			let resets = document.querySelectorAll('.reset');
+		
+			function isDescendant(parent, child) {
+				let node = child;
+				while (node != null) {
+					if (node == parent) {
+						return true;
+					}
+					node = node.parentNode;
 				}
-				node = node.parentNode;
+				return false;
 			}
-			return false;
-		}
-		function showModal() {
-			let posx = flagBtn.getBoundingClientRect().x;
-			let width = flagBtn.clientWidth;
-			let modalWidth = langModal.offsetWidth;
-			langModal.style.left = posx + width/2 - modalWidth/2+ 'px'
-		}
-		
-		window.addEventListener('resize', function() {
-			showModal();
-		});
-		flagBtn.addEventListener('click',function() {
-			if (langModal.classList.contains("visibity")) {
-				langModal.classList.remove('opacity');
-				setTimeout(function() {
-					langModal.classList.remove('visibity');
-				}, 500);
-			} else {
+			function showModal() {
+				let posx = flagBtn.getBoundingClientRect().x;
+				let width = flagBtn.clientWidth;
+				let modalWidth = langModal.offsetWidth;
+				langModal.style.left = posx + width/2 - modalWidth/2+ 'px'
+			}
+			
+			window.addEventListener('resize', function() {
 				showModal();
-				langModal.classList.add('visibity');
-				langModal.classList.add('opacity');
-			}
-		});
-
-		for (let r of resets) {
-			r.addEventListener('click', function() {
-				let t = passLog.textContent;
-				passLog.textContent = r.getAttribute('data-reset') == 'password'? t.slice(0, -6) + "пароля" : t.slice(0, -6) + "логина" ;
+			});
+			document.body.addEventListener('click', function(e) {
+				if ( !isDescendant(flagBtn, e.target) && !isDescendant(langModal, e.target) && langModal.classList.contains("visibity")) {
+					langModal.classList.remove('opacity');
+					setTimeout(function() {
+						langModal.classList.remove('visibity');
+					}, 10);
+				}
 			})
-		}
-
-
-		recovery.addEventListener('click', function() {
-			
-			
-			if (email.getAttribute('type') == 'hidden') {
-				recovery.textContent = recovery.textContent.slice(0, -5) + 'IMEI';
-				rtitle.textContent = rtitle.textContent.slice(0, -6) + 'ю почту';
-				email.setAttribute('type', 'text');
-				imei.setAttribute('type', 'hidden');
-			} else {
-				recovery.textContent = recovery.textContent.slice(0, -4) + 'Email';
-				rtitle.textContent = rtitle.textContent.slice(0, -7) + 'й IMEI';
-				email.setAttribute('type', 'hidden');
-				imei.setAttribute('type', 'text');
+			flagBtn.addEventListener('click',function() {
+				if (langModal.classList.contains("visibity")) {
+					langModal.classList.remove('opacity');
+					setTimeout(function() {
+						langModal.classList.remove('visibity');
+					}, 10);
+				} else {
+					showModal();
+					langModal.classList.add('visibity');
+					langModal.classList.add('opacity');
+				}
+			});
+			for (let r of resets) {
+				r.addEventListener('click', function() {
+					let t = passLog.textContent;
+					passLog.textContent = r.getAttribute('data-reset') == 'password'? t.slice(0, -6) + "пароля" : t.slice(0, -6) + "логина" ;
+				})
 			}
-		});
-		demo.addEventListener('click', function() {
-			if (form['Login'].value == 'demo') {
-				demo.textContent = 'Демо-вход'
-				form['Login'].value = '';
-				form['Password'].value = '';
-			} else {
-				demo.textContent = 'Сброс'
-				form['Login'].value = 'demo';
-				form['Password'].value = 'password';
-			}
+			recovery.addEventListener('click', function() {
+				if (email.getAttribute('type') == 'hidden') {
+					recovery.textContent = recovery.textContent.slice(0, -5) + 'IMEI';
+					passLogTitle.textContent = passLogTitle.textContent.slice(0, -6) + 'ю почту';
+					email.setAttribute('type', 'text');
+					imei.setAttribute('type', 'hidden');
+				} else {
+					recovery.textContent = recovery.textContent.slice(0, -4) + 'Email';
+					passLogTitle.textContent = passLogTitle.textContent.slice(0, -7) + 'й IMEI';
+					email.setAttribute('type', 'hidden');
+					imei.setAttribute('type', 'text');
+				}
+			});
+			demo.addEventListener('click', function() {
+				if (form['Login'].value == 'demo') {
+					demo.textContent = 'Демо-вход'
+					form['Login'].value = '';
+					form['Password'].value = '';
+				} else {
+					demo.textContent = 'Сброс'
+					form['Login'].value = 'demo';
+					form['Password'].value = 'password';
+				}
+				
+			});
+			
+			let a = MicroModal.init({
+				onShow: modal => console.info(`${modal.id} is shown`),
+				onClose: modal => console.info(`${modal.id} is hidden`),
+				openTrigger: 'data-custom-open',
+				closeTrigger: 'data-custom-close',
+				disableScroll: false,
+				disableFocus: true,
+				awaitCloseAnimation: true,
+				debugMode: true
+			});
 			
 		});
-		
-		let a = MicroModal.init({
-			onShow: modal => console.info(`${modal.id} is shown`),
-			onClose: modal => console.info(`${modal.id} is hidden`),
-			openTrigger: 'data-custom-open',
-			closeTrigger: 'data-custom-close',
-			disableScroll: false,
-			disableFocus: true,
-			awaitCloseAnimation: true,
-			debugMode: true
-		});
-		
-	});
-</script>
+	</script>
 </body>
 </html>
