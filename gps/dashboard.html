@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Панель администратора</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+		<!-- <meta name="description" content="">
+		<meta name="keywords" content=""> -->
+	</head>
+	<body>
+		<div class="flags_modal">
+			<div class="flags">
+				<a href="#" class="flag flag__active"><span class="flag-img" style='background-image: url(rus.png);'></span><span class="flag-text">RU</span></a>
+				<a href="#" class="flag"><span class="flag-img" style='background-image: url(uk.png);'></span><span class="flag-text">EN</span></a>
+				<a href="#" class="flag"><span class="flag-img" style='background-image: url(ukr.png);'></span><span class="flag-text">UR</span></a>
+			</div>
+		</div>
+		<div class="modal-overlay modal" data-modal='help'>
+			<div class="modal-content modal-content__absolute" id='help-popup' role="dialog">
+				<h2 class="modal-title" >Возник вопрос?</h2>
+				<form class='help-form'>
+					<input type="text" class='input ' name="Name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]+" >
+					<input type="tel" class='input' name="phone" placeholder="+7(499)-893-32-71" pattern="[?\+]\d+[?\(]?\d+[?\)]\d+[?\-]\d+[?\-]\d+" required />
+					<!-- [\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4} -->
+					<!-- +99(99)9999-9999 -->
+					<textarea placeholder="Сообщение" class='textarea' style="resize: none"></textarea>
+					<div class="uploader">
+						Загрузить файл
+						<input type="file" class='input upload' name="first" placeholder="Телефон">
+					</div>
+					<input type='submit' class='basic-btn' value='Отправить'>
+					<div class="help-texts">
+						<p class="help-text">+7 (499) 372-50-93</p>
+						<p class="help-text">support@globalsat.ru</p>
+					</div>
+					<a href="#" class="instruction">Руководство пользователя</a>
+				</form>
+			</div>
+		</div>
+		<div class="header header6">
+			<a href="#" class="link logo">
+				<img class='logo-image' src="logo.png" alt="">
+			</a>
+			<div class="wrapper">
+				
+				<!-- <a href="#" class="nav-link link" data-hover='Мониторинг'><span>Мониторинг</span></a>
+				<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
+				<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
+				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
+				-->
+			</div>
+			<a href="#" class="flag-img flag__active" style='background-image: url(rus.png);' id='flag-btn'></a>
+			<a class="help button" id='help-btn' data-open='help' data-custom-close='modal-1' >
+				<svg enable-background="new 0 0 40.124 40.124" version="1.1" viewBox="0 0 40.124 40.124" 	 xmlns="http://www.w3.org/2000/svg">
+					<path d="m19.938 12.141c1.856 0 2.971 0.99 2.971 2.66 0 3.033-5.414 3.869-5.414 7.55 0 0.99 0.648 2.072 1.979 2.072 2.042 0 1.795-1.516 2.538-2.6 0.989-1.453 5.6-3 5.6-7.023 0-4.361-3.897-6.188-7.858-6.188-3.773 0-7.24 2.692-7.24 5.725 0 1.237 0.929 1.887 2.012 1.887 2.999 1e-3 1.453-4.083 5.412-4.083z"/>
+					<path d="m22.135 28.973c0-1.393-1.145-2.537-2.537-2.537s-2.537 1.146-2.537 2.537c0 1.393 1.145 2.537 2.537 2.537s2.537-1.144 2.537-2.537z"/>
+					<path d="m40.124 20.062c0-11.062-9-20.062-20.062-20.062s-20.062 9-20.062 20.062 9 20.062 20.062 20.062 20.062-8.999 20.062-20.062zm-38.124 0c0-9.959 8.103-18.062 18.062-18.062s18.062 8.103 18.062 18.062-8.103 18.062-18.062 18.062-18.062-8.103-18.062-18.062z"/>
+				</svg>
+			</a>
+		</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const flagBtn = document.getElementById('flag-btn');
+			const langModal = document.querySelector('.flags_modal');
+			const header = document.querySelector('.wrapper');
+			const demo = document.querySelector('.demo');
+			
+			const buttonsList = {};
+			const overlaysList = {};
+			document.querySelectorAll('.button').forEach(function(item) {
+				if (buttonsList[item.dataset.open] == undefined) {
+					buttonsList[item.dataset.open] = [item];
+				} else {
+					buttonsList[item.dataset.open].push(item);
+				}
+			});
+			document.querySelectorAll('.modal').forEach(function(item) {
+				overlaysList[item.dataset.modal] = item;
+			});
+			(() => {
+				for (let key in buttonsList) {
+					for (let button of buttonsList[key]) {
+						button.addEventListener('click', (e) => {
+							overlaysList[key].style.display = 'flex';
+							setTimeout(() => {
+								overlaysList[key].classList.add('modal-overlay__open');
+									}, 10);
+						});
+					}
+					overlaysList[key].addEventListener('click', (e) => {
+						if (e.target == overlaysList[key]) {
+							overlaysList[key].classList.add('modal-overlay__close');
+							setTimeout(() => {
+								overlaysList[key].style.display = 'none';
+								overlaysList[key].classList.remove('modal-overlay__close');
+								overlaysList[key].classList.remove('modal-overlay__open');
+							}, 100);
+						}
+								});
+				}
+			})();
+			// _____________________
+			function isDescendant(parent, child) {
+				let node = child;
+				while (node != null) {
+					if (node == parent) {
+						return true;
+					}
+					node = node.parentNode;
+				}
+				return false;
+			}
+			function showModal() {
+				let posx = flagBtn.getBoundingClientRect().x;
+				let width = flagBtn.clientWidth;
+				let modalWidth = langModal.offsetWidth;
+				langModal.style.left = posx + width/2 - modalWidth/2+ 'px'
+			}
+			
+			window.addEventListener('resize', function() {
+				showModal();
+			});
+			// _____________________
+			document.body.addEventListener('click', function(e) {
+				if ( !isDescendant(flagBtn, e.target)
+					&& !isDescendant(langModal, e.target)
+					&& langModal.classList.contains("visibity")
+				) {
+					langModal.classList.remove('opacity');
+					setTimeout(function() {
+						langModal.classList.remove('visibity');
+					}, 10);
+				}
+			});
+			flagBtn.addEventListener('click',function() {
+				if (langModal.classList.contains("visibity")) {
+					langModal.classList.remove('opacity');
+					setTimeout(function() {
+						langModal.classList.remove('visibity');
+					}, 10);
+				} else {
+					showModal();
+					langModal.classList.add('visibity');
+					langModal.classList.add('opacity');
+				}
+			});
+			
+			
+			const successModal = document.querySelector('.modal-overlay__success');
+			const failureModal = document.querySelector('.modal-overlay__failure');
+			failureModal.addEventListener('click', function(e) {
+				if (e.target == failureModal) {
+					failureModal.classList.add('modal-overlay__close');
+					setTimeout(() => {
+						failureModal.style.display = 'none';
+						failureModal.classList.remove('modal-overlay__close');
+						failureModal.classList.remove('modal-overlay__open');
+					}, 100);
+				}
+			});
+			// Функция удачного ответа сервера
+			const success = () => {
+				successModal.style.display = 'flex';
+				setTimeout(() => {
+					successModal.classList.add('modal-overlay__open');
+					}, 10);
+				setTimeout(() => {
+					successModal.classList.add('modal-overlay__close');
+					setTimeout(() => {
+						successModal.style.display = 'none';
+						successModal.classList.remove('modal-overlay__close');
+						successModal.classList.remove('modal-overlay__open');
+					}, 100);
+				}, 700);
+			}
+			// Функция неудачного ответа сервера
+			const failure = () => {
+				failureModal.style.display = 'flex';
+				setTimeout(() => {
+					failureModal.classList.add('modal-overlay__open');
+				}, 10);
+			}
+			const cookieButton = document.querySelector('.basic-btn__cookie');
+			const cookie = document.querySelector('.cookie');
+			if (localStorage.acceptCookie != undefined) {
+				cookie.style.display = 'none';
+			}
+			cookieButton.addEventListener('click', function(e) {
+				e.preventDefault();
+				cookie.classList.add('modal-overlay__close');
+				localStorage.setItem('acceptCookie', true);
+				setTimeout(() => {
+					cookie.style.display = 'none';
+					cookie.classList.remove('modal-overlay__close');
+				}, 300);
+			})
+		});
+	
+	</script>
+	</body>
+</html>
