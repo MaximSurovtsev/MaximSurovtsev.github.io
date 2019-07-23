@@ -960,9 +960,12 @@ a.basic-btn__login {
     .content,.request {
         width: 100%
     }
-
-    .logo-imag {
-        max-height: 100%;
+    .logo {
+        height: 20px;
+        padding: 0;
+    }
+    .logo-image {
+        height: 20px;
     }
 
     .modal-content {
