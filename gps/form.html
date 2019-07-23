@@ -178,7 +178,7 @@
 		<div class="modal-content modal-content__center" role="dialog">
 			<h2 class="modal-title modal-title__reset">Возникла проблема</h2>
 			<p class="modal-text modal-text__small">Почта не найдена, проверьте правильность введенных данных</p>
-			<button class='basic-btn modal-text__small basic-btn__reset'>Попробовать еще раз</button>
+			<button class='basic-btn modal-text__small basic-btn__reset failure-btn'>Попробовать еще раз</button>
 		</div>
 	</div>
 	<div class="cookie">
@@ -201,6 +201,7 @@
 			
 			const buttonsList = {};
 			const overlaysList = {};
+
 			document.querySelectorAll('.button').forEach(function(item) {
 				if (buttonsList[item.dataset.open] == undefined) {
 					buttonsList[item.dataset.open] = [item];
@@ -208,6 +209,7 @@
 					buttonsList[item.dataset.open].push(item);
 				}
 			});
+
 			document.querySelectorAll('.modal').forEach(function(item) {
 				overlaysList[item.dataset.modal] = item;
 			});
@@ -233,7 +235,7 @@
 								});
 				}
 			})();
-			// _____________________
+
 			function isDescendant(parent, child) {
 				let node = child;
 				while (node != null) {
@@ -244,6 +246,8 @@
 				}
 				return false;
 			}
+
+
 			function showModal() {
 				let posx = flagBtn.getBoundingClientRect().x;
 				let width = flagBtn.clientWidth;
@@ -254,7 +258,7 @@
 			window.addEventListener('resize', function() {
 				showModal();
 			});
-			// _____________________
+			
 			document.body.addEventListener('click', function(e) {
 				if ( !isDescendant(flagBtn, e.target)
 					&& !isDescendant(langModal, e.target)
@@ -325,6 +329,32 @@
 					}, 100);
 				}
 			});
+
+			const resetButton = document.querySelector('.failure-btn');
+			console.log('resetButton: ', resetButton);
+			resetButton.addEventListener('click', function(e) {
+				failureModal.classList.add('modal-overlay__close');
+				setTimeout(() => {
+					failureModal.style.display = 'none';
+					failureModal.classList.remove('modal-overlay__close');
+					failureModal.classList.remove('modal-overlay__open');
+				}, 100);
+			})
+
+
+			const cookieButton = document.querySelector('.basic-btn__cookie');
+			const cookie = document.querySelector('.cookie');
+			cookieButton.addEventListener('click', function(e) {
+				e.preventDefault();
+				cookie.classList.add('modal-overlay__close');
+				setTimeout(() => {
+					cookie.style.display = 'none';
+					cookie.classList.remove('modal-overlay__close');
+				}, 300);
+			});
+
+
+
 			// Функция удачного ответа сервера
 			const success = () => {
 				successModal.style.display = 'flex';
@@ -340,6 +370,8 @@
 					}, 100);
 				}, 700);
 			}
+
+
 			// Функция неудачного ответа сервера
 			const failure = () => {
 				failureModal.style.display = 'flex';
@@ -347,18 +379,9 @@
 					failureModal.classList.add('modal-overlay__open');
 				}, 10);
 			}
-			const cookieButton = document.querySelector('.basic-btn__cookie');
-			const cookie = document.querySelector('.cookie');
-			cookieButton.addEventListener('click', function(e) {
-				e.preventDefault();
-				cookie.classList.add('modal-overlay__close');
-				setTimeout(() => {
-					cookie.style.display = 'none';
-					cookie.classList.remove('modal-overlay__close');
-				}, 300);
-			})
+			
 		});
-	
+		
 	</script>
 </body>
 </html>
