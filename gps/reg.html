@@ -276,9 +276,13 @@
 			}
 			const cookieButton = document.querySelector('.basic-btn__cookie');
 			const cookie = document.querySelector('.cookie');
+			if (localStorage.acceptCookie != undefined) {
+				cookie.style.display = 'none';
+			}
 			cookieButton.addEventListener('click', function(e) {
 				e.preventDefault();
 				cookie.classList.add('modal-overlay__close');
+				localStorage.setItem('acceptCookie', true);
 				setTimeout(() => {
 					cookie.style.display = 'none';
 					cookie.classList.remove('modal-overlay__close');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"> 
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<title>Вход в личный кабинет</title>
@@ -344,8 +344,15 @@
 
 			const cookieButton = document.querySelector('.basic-btn__cookie');
 			const cookie = document.querySelector('.cookie');
+
+			// Получаем информацию о согласии использования куков из локального хранилища браузера
+			if (localStorage.acceptCookie != undefined) {
+				cookie.style.display = 'none';
+			}
+
 			cookieButton.addEventListener('click', function(e) {
 				e.preventDefault();
+				localStorage.setItem('acceptCookie', true);
 				cookie.classList.add('modal-overlay__close');
 				setTimeout(() => {
 					cookie.style.display = 'none';
