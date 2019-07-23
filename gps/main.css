@@ -438,6 +438,7 @@ img {
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 15px
+    -webkit-appearance: none;
 }
 
 .resets {
@@ -958,6 +959,10 @@ a.basic-btn__login {
 
     .content,.request {
         width: 100%
+    }
+
+    .logo-imag {
+        max-height: 100%;
     }
 
     .modal-content {
