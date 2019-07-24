@@ -44,7 +44,8 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
-    outline: 0
+    outline: 0;
+    position: relative;
 }
 
 :root {
@@ -132,7 +133,7 @@ body {
 }
 
 .header {
-    background-color: var(--main);
+    background-color: #3e516f;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -143,7 +144,9 @@ body {
     display: inline-flex;
     justify-content: space-between;
     outline: 0;
-    height: 50px
+    height: 50px;
+    z-index: 10;
+    position: relative;
 }
 
 .topnav,.wrapper {
@@ -222,7 +225,7 @@ body {
 }
 
 .help {
-    width: 32px;
+    min-width: 32px;
     padding: 0 5px;
     display: flex;
     justify-content: center;
@@ -234,6 +237,7 @@ body {
 
 .help svg {
     fill: #fff;
+    min-width: 32px;
     width: 32px;
     height: 32px;
     transition: .3s
@@ -247,7 +251,7 @@ body {
     transition: .3s opacity,.5s transform;
     visibility: hidden;
     transform: translateY(5px);
-    z-index: 10
+    z-index: 100;
 }
 
 .flag,.flags {
@@ -397,9 +401,9 @@ img {
 .input:focus,.textarea:focus {
     outline-color: #222;
     background-color: #f8f8f8;
-    background-color: var(--input);
+    background-color: #f7f7fb;
     border: 1.2px solid #7f7f7f;
-    border: 1.2px solid var(--if)
+    border: 1.2px solid #98a3c3
 }
 
 ::placeholder {
@@ -426,7 +430,7 @@ img {
 }
 
 .basic-btn {
-    background-color: var(--main);
+    background-color: #3e516f;
     height: 50px;
     font-size: 16px;
     z-index: 0;
@@ -450,7 +454,7 @@ img {
 .reset {
     height: 35px;
     background-color: #bfbfbf;
-    background-color: var(--grey);
+    background-color: #b9b9c9;
     color: #fff;
     display: inline-block;
     text-decoration: none;
@@ -477,7 +481,7 @@ img {
     -ms-align-items: center;
     align-items: center;
     background-color: #bfbfbf;
-    background-color: var(--grey);
+    background-color: #b9b9c9;
     height: 35px;
     color: #fff;
     outline: 0
@@ -513,7 +517,7 @@ img {
 
 .container input:checked~.checkmark {
     background-color: #231f20;
-    background-color: var(--main)
+    background-color: #3e516f
 }
 
 .checkmark:after {
@@ -539,7 +543,7 @@ img {
 }
 
 .checkbox-link {
-    color: var(--main);
+    color: #3e516f;
     transition: .15s;
     padding: 3px 9px;
     border-radius: 2px
@@ -552,7 +556,7 @@ img {
     height: 16px;
     width: 16px;
     background-color: #eee;
-    background-color: var(--grey);
+    background-color: #b9b9c9;
     border-radius: 50%
 }
 
@@ -601,7 +605,7 @@ img {
 
 .uploader {
     background-color: #bfbfbf;
-    background-color: var(--grey);
+    background-color: #b9b9c9;
     border-radius: 5px;
     position: relative;
     display: flex;
@@ -645,7 +649,7 @@ img {
 
 .instruction {
     font-size: 14px;
-    color: var(--main);
+    color: #3e516f;
     text-align: center;
     display: block
 }
@@ -685,7 +689,7 @@ img {
 
 .count {
     padding-left: 5px;
-    color: var(--main)
+    color: #3e516f
 }
 
 .green {
@@ -712,7 +716,7 @@ img {
 .success svg {
     width: 128px;
     height: 128px;
-    fill: var(--main)
+    fill: #3e516f
 }
 
 .demo {
@@ -827,17 +831,17 @@ a.basic-btn__login {
 @media (pointer:fine) {
     .nav-link:hover {
         background-color: #fff;
-        color: var(--main)
+        color: #3e516f
     }
 
     .basic-btn:hover {
         background-color: #404040;
-        background-color: var(--hover)
+        background-color: #455a7c
     }
 
     .grey:hover,.reset:hover,.uploader:hover {
         background-color: #a9a9a9;
-        background-color: var(--hover_grey)
+        background-color: #a9a9b9
     }
 
     .checkbox-link:hover,.instruction:hover {
@@ -873,7 +877,7 @@ a.basic-btn__login {
     }
 
     .demo:hover {
-        border-bottom-color: var(--main);
+        border-bottom-color: #3e516f;
         user-select: none
     }
 }
