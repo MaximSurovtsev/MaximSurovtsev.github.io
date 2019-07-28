@@ -19,11 +19,7 @@
 	font-size: 15px;
 }
 
-.sidebar:after {
-	
-}
-
-tr:nth-child(2n) {
+tr:nth-child(2n + 1) {
 	background-color: #f1f1f1;
 }
 
@@ -40,6 +36,7 @@ th {
 	cursor: pointer;
 	text-align: left;
 	font-size: 13px;
+	background-color: #fff;
 
 }
 
