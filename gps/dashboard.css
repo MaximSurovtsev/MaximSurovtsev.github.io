@@ -1,0 +1,182 @@
+.header {
+	box-shadow: 1px 0px 10px 1px rgba(0,0,0,.4);
+}
+.sidebar-wrapper {
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+.sidebar-link {
+	border-bottom: 1px solid white;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 0 0 10px;
+	font-size: 15px;
+}
+
+.sidebar:after {
+	
+}
+
+tr:nth-child(2n) {
+	background-color: #f1f1f1;
+}
+
+th, td {
+	/* border-bottom: 1px solid  #ccc; */
+	padding: 6px;
+}
+
+/* td {
+	padding: 3px;
+} */
+
+th {
+	cursor: pointer;
+	text-align: left;
+	font-size: 13px;
+
+}
+
+th svg {
+	transition: 0.1s;
+	display: none;
+}
+
+#myTable, table {
+	font-size: 12px;
+	width: 100%;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+.visible {
+	display: inline-block;
+}
+
+.icon {
+	width: 7px;
+	height: 7px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin: 0;
+	background: #f9f9f9;
+}
+.sidebar {
+	max-width: 400px;
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;		
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+.tabs {
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;		
+	
+	border-left: 1px solid #ccc;
+}
+
+.tabs1 {
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;		
+	
+	border-left: 1px solid #ccc;
+}
+.tab {
+	-webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
+    border-bottom: 1px solid #ccc;
+    transition: 0.1s;
+    user-select: none;
+    font-size: 13px;
+
+
+}
+
+.tab-title {
+	width: 100%;
+	display: block;
+	background: #f9f9f9; /* Цвет фона */
+	padding: 10px 15px; /* Поля вокруг текста */
+
+	border-bottom: none; /* Снизу линию убираем */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	transition: 0.1s;
+	cursor: pointer;
+	background: #f9f9f9;
+}	
+
+.paddingLeft10px {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.paddingLeft10px .container {
+	margin-bottom: 5px;
+}
+
+.tab+ .tab {
+	border-left: 1px solid #ccc;
+}
+.tab-content {
+	width: 100%;
+	position: absolute;
+	padding-top: 10px;
+	left: 0;
+	
+	display: none; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.1s;
+}
+	
+.tab__active {
+	border-bottom-color: transparent;
+
+}
+
+.border-top {
+	border-top: 1px solid  #ccc;
+	margin-top: 30px;
+}
+.tab__active > .tab-title {
+	position: relative;
+	background: #fff; 
+	z-index: 1;
+}
+
+.tab__active > .tab-content {
+	display: block;
+}

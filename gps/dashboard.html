@@ -6,6 +6,7 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="dashboard.css">
 		<!-- <meta name="description" content="">
 		<meta name="keywords" content=""> -->
 	</head>
@@ -49,7 +50,7 @@
 				<a href="#" class="nav-link link" data-hover='Настройки'><span>Настройки</span></a>
 				<a href="#" class="nav-link link" data-hover='Финансы'><span>Финансы</span></a>
 				<a href="#" class="nav-link link" data-hover='Отчёты'><span>Отчёты</span></a>
-				-->
+				 -->
 			</div>
 			<a href="#" class="flag-img flag__active" style='background-image: url(rus.png);' id='flag-btn'></a>
 			<a class="help button" id='help-btn' data-open='help' data-custom-close='modal-1' >
@@ -60,144 +61,251 @@
 				</svg>
 			</a>
 		</div>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const flagBtn = document.getElementById('flag-btn');
-			const langModal = document.querySelector('.flags_modal');
-			const header = document.querySelector('.wrapper');
-			const demo = document.querySelector('.demo');
+		<div class="modal-overlay modal-overlay__success" tabindex="-1">
+			<div style='width:auto; padding: 40px;' class="modal-content modal-content__center" role="dialog">
+				<div class="success">
+					<svg enable-background="new 0 0 52 52" version="1.1" viewBox="0 0 52 52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+						<path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26   S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"/>
+						<path d="m38.252 15.336l-15.369 17.29-9.259-7.407c-0.43-0.345-1.061-0.274-1.405 0.156-0.345 0.432-0.275 1.061 0.156 1.406l10 8c0.184 0.147 0.405 0.219 0.625 0.219 0.276 0 0.551-0.114 0.748-0.336l16-18c0.367-0.412 0.33-1.045-0.083-1.411-0.414-0.368-1.045-0.331-1.413 0.083z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<div class="sidebar-wrapper">
+				<div class="sidebar-link">Мониторинг</div>
+				<div class="sidebar-link">Настройки</div>
+				<div class="sidebar-link">Финансы</div>
+				<div class="sidebar-link">Отчеты</div>
+			</div>
+		</div>
+		<!--  -->
+		<div class="modal-overlay modal-overlay__failure">
+			<div class="modal-content modal-content__center" role="dialog">
+				<h2 class="modal-title modal-title__reset">Возникла проблема</h2>
+				<p class="modal-text modal-text__small">Почта не найдена, проверьте правильность введенных данных</p>
+				<button class='basic-btn modal-text__small basic-btn__reset'>Попробовать еще раз</button>
+			</div>
+		</div>
+		<div class="cookie">
+			<span class="cookie-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut soluta ullam ex, blanditiis omnis fuga, inventore illo esse molestiae dignissimos quibusdam molestias, tempora obcaecati quasi odio vitae repellat autem! Facilis minima quibusdam delectus, doloremque nesciunt ut maxime, ab assumenda, facere numquam cupiditate ipsam at totam obcaecati corporis, id ducimus! Animi.</span>
+			<button class="basic-btn basic-btn__cookie">ОК</button>
+		</div>
+		<div class="sidebar">
+			<div class="tabs">
+				<div class="tab tab__active">
+					<span class="tab-title">Объекты</span>
+					<section class="tab-content">
+						<table id="myTable">
+							<tr>
+								<th class='table-header '>Наименование<svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3l12 18h-24z"/></svg></th>
+								<th class='table-header'>Отчет<svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3l12 18h-24z"/></svg></th>
+							</tr>
+							<tr>
+								<td>Berglunds snabbkop</td>
+								<td>Sweden</td>
+							</tr>
+							<tr>
+								<td>North/South</td>
+								<td>UK</td>
+							</tr>
+							<tr>
+								<td>Alfreds Futterkiste</td>
+								<td>Germany</td>
+							</tr>
+							
+						</table>
+						<div class="paddingLeft10px">
+							<div class="checks">
+								<label class="container"><span href="#" class="checkbox-link">Следить за отмеченными объектами</span>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								</label><label class="container"><span href="#" class="checkbox-link">Скрыть неотмеченные</span>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<div class="tabs border-top">
+						<div class="tab tab__active">
+							<span class="tab-title">Инфо</span>
+						<section class="tab-content">
+							<table id="myTable1">
+							<tr>
+								<th class='table-header '>Наименование<svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3l12 18h-24z"/></svg></th>
+								<th class='table-header'>Отчет<svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3l12 18h-24z"/></svg></th>
+							</tr>
+							<tr>
+								<td>Berglunds snabbkop</td>
+								<td>Sweden</td>
+							</tr>
+							<tr>
+								<td>North/South</td>
+								<td>UK</td>
+							</tr>
+							<tr>
+								<td>Alfreds Futterkiste</td>
+								<td>Germany</td>
+							</tr>
+							<tr>
+								<td>Koniglich Essen</td>
+								<td>Germany</td>
+							</tr>
+							<tr>
+								<td>Magazzini Alimentari Riuniti</td>
+								<td>Italy</td>
+							</tr>
+							<tr>
+								<td>Paris specialites</td>
+								<td>France</td>
+							</tr>
+							<tr>
+								<td>Island Trading</td>
+								<td>UK</td>
+							</tr>
+							<tr>
+								<td>Laughing Bacchus Winecellars</td>
+								<td>Canada</td>
+							</tr>
+						</table>
+						</section>
+					</div>
+					<div class="tab">
+						<span class="tab-title">История</span>
+					<section class="tab-content">some word</section>
+				</div>
+				<div class="tab">
+					<span class="tab-title">Поездки</span>
+				<section class="tab-content">some word</section>
+			</div>
+			<div class="tab">
+				<span class="tab-title">События</span>
+			<section class="tab-content">some word</section>
+		</div>
+	</div>
+</section>
+</div>
+<div class="tab">
+<span class="tab-title">Контроль</span>
+<section class="tab-content">Два</section>
+</div>
+<div class="tab">
+<span class="tab-title">Отчеты</span>
+<section class="tab-content">Три</section>
+</div>
+</div>
+</div>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		let tBox = document.querySelectorAll('.tabs');
+		for (var l = tBox.length - 1; l >= 0; l--) {
 			
-			const buttonsList = {};
-			const overlaysList = {};
-			document.querySelectorAll('.button').forEach(function(item) {
-				if (buttonsList[item.dataset.open] == undefined) {
-					buttonsList[item.dataset.open] = [item];
-				} else {
-					buttonsList[item.dataset.open].push(item);
-				}
-			});
-			document.querySelectorAll('.modal').forEach(function(item) {
-				overlaysList[item.dataset.modal] = item;
-			});
-			(() => {
-				for (let key in buttonsList) {
-					for (let button of buttonsList[key]) {
-						button.addEventListener('click', (e) => {
-							overlaysList[key].style.display = 'flex';
-							setTimeout(() => {
-								overlaysList[key].classList.add('modal-overlay__open');
-									}, 10);
-						});
-					}
-					overlaysList[key].addEventListener('click', (e) => {
-						if (e.target == overlaysList[key]) {
-							overlaysList[key].classList.add('modal-overlay__close');
-							setTimeout(() => {
-								overlaysList[key].style.display = 'none';
-								overlaysList[key].classList.remove('modal-overlay__close');
-								overlaysList[key].classList.remove('modal-overlay__open');
-							}, 100);
+
+			let tabs = tBox[l].children;
+			for (let i = tabs.length - 1; i >= 0; i--) {
+				console.log('i: ', i);
+				tabs[i].addEventListener('click', function() {
+					this.classList.add('tab__active');
+					console.log('1: ', 1);
+					for (let k = tabs.length - 1; k >= 0; k--) {
+						if (this != tabs[k]) {
+							tabs[k].classList.remove('tab__active');
 						}
-								});
-				}
-			})();
-			// _____________________
-			function isDescendant(parent, child) {
-				let node = child;
-				while (node != null) {
-					if (node == parent) {
-						return true;
 					}
-					node = node.parentNode;
-				}
-				return false;
+				});
 			}
-			function showModal() {
-				let posx = flagBtn.getBoundingClientRect().x;
-				let width = flagBtn.clientWidth;
-				let modalWidth = langModal.offsetWidth;
-				langModal.style.left = posx + width/2 - modalWidth/2+ 'px'
-			}
-			
-			window.addEventListener('resize', function() {
-				showModal();
-			});
-			// _____________________
-			document.body.addEventListener('click', function(e) {
-				if ( !isDescendant(flagBtn, e.target)
-					&& !isDescendant(langModal, e.target)
-					&& langModal.classList.contains("visibity")
-				) {
-					langModal.classList.remove('opacity');
-					setTimeout(function() {
-						langModal.classList.remove('visibity');
-					}, 10);
-				}
-			});
-			flagBtn.addEventListener('click',function() {
-				if (langModal.classList.contains("visibity")) {
-					langModal.classList.remove('opacity');
-					setTimeout(function() {
-						langModal.classList.remove('visibity');
-					}, 10);
-				} else {
-					showModal();
-					langModal.classList.add('visibity');
-					langModal.classList.add('opacity');
-				}
-			});
-			
-			
-			const successModal = document.querySelector('.modal-overlay__success');
-			const failureModal = document.querySelector('.modal-overlay__failure');
-			failureModal.addEventListener('click', function(e) {
-				if (e.target == failureModal) {
-					failureModal.classList.add('modal-overlay__close');
-					setTimeout(() => {
-						failureModal.style.display = 'none';
-						failureModal.classList.remove('modal-overlay__close');
-						failureModal.classList.remove('modal-overlay__open');
-					}, 100);
-				}
-			});
-			// Функция удачного ответа сервера
-			const success = () => {
-				successModal.style.display = 'flex';
-				setTimeout(() => {
-					successModal.classList.add('modal-overlay__open');
-					}, 10);
-				setTimeout(() => {
-					successModal.classList.add('modal-overlay__close');
-					setTimeout(() => {
-						successModal.style.display = 'none';
-						successModal.classList.remove('modal-overlay__close');
-						successModal.classList.remove('modal-overlay__open');
-					}, 100);
-				}, 700);
-			}
-			// Функция неудачного ответа сервера
-			const failure = () => {
-				failureModal.style.display = 'flex';
-				setTimeout(() => {
-					failureModal.classList.add('modal-overlay__open');
-				}, 10);
-			}
-			const cookieButton = document.querySelector('.basic-btn__cookie');
-			const cookie = document.querySelector('.cookie');
-			if (localStorage.acceptCookie != undefined) {
-				cookie.style.display = 'none';
-			}
-			cookieButton.addEventListener('click', function(e) {
-				e.preventDefault();
-				cookie.classList.add('modal-overlay__close');
-				localStorage.setItem('acceptCookie', true);
-				setTimeout(() => {
-					cookie.style.display = 'none';
-					cookie.classList.remove('modal-overlay__close');
-				}, 300);
-			})
-		});
+		}
+		
+	})
 	
-	</script>
-	</body>
+	
+	let tables = document.querySelectorAll('table');
+
+	for (let p = tables.length - 1;p >= 0; p--) {
+		var tableHeaders = tables[p].querySelectorAll('.table-header');
+		
+		var tableHeadersSVG = tables[p].querySelectorAll('.table-header svg');
+		
+		for (let i = tableHeaders.length - 1; i >= 0; i--) {
+			
+			tableHeaders[i].addEventListener('click', function() {
+				var icon = this.firstElementChild;
+				
+				for (var j = tableHeadersSVG.length - 1; j >= 0; j--) {
+					if (icon != tableHeadersSVG[j]) {
+						tableHeadersSVG[j].classList.remove('visible');
+						tableHeadersSVG[j].classList.remove('rotate');
+					}
+				}
+				
+				if (icon.classList.contains('rotate') && icon.classList.contains('visible')) {
+					icon.classList.remove('rotate');
+				} else {
+					icon.classList.add('rotate');
+				}
+				icon.classList.add('visible');
+				sortTable(i, tables[p]);
+			});
+		}
+	}
+	
+	function sortTable(n, table) {
+		var rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		// table = document.getElementById("myTable");
+		console.log('table: ', table);
+		switching = true;
+		//Set the sorting direction to ascending:
+		dir = "asc";
+		/*Make a loop that will continue until
+		no switching has been done:*/
+		while (switching) {
+			//start by saying: no switching is done:
+			switching = false;
+			rows = table.rows;
+			/*Loop through all table rows (except the
+			first, which contains table headers):*/
+			for (i = 1; i < (rows.length - 1); i++) {
+				//start by saying there should be no switching:
+				shouldSwitch = false;
+				/*Get the two elements you want to compare,
+				one from current row and one from the next:*/
+				x = rows[i].getElementsByTagName("TD")[n];
+				y = rows[i + 1].getElementsByTagName("TD")[n];
+				/*check if the two rows should switch place,
+				based on the direction, asc or desc:*/
+				if (dir == "asc") {
+					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+						//if so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				} else if (dir == "desc") {
+					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+						//if so, mark as a switch and break the loop:
+						shouldSwitch = true;
+						break;
+					}
+				}
+			}
+			if (shouldSwitch) {
+				/*If a switch has been marked, make the switch
+				and mark that a switch has been done:*/
+				rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+				switching = true;
+				//Each time a switch is done, increase this count by 1:
+				switchcount++;
+			} else {
+				/*If no switching has been done AND the direction is "asc",
+				set the direction to "desc" and run the while loop again.*/
+				if (switchcount == 0 && dir == "asc") {
+					dir = "desc";
+					switching = true;
+				}
+			}
+		}
+	}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+<script src='index.js'></script>
+</body>
 </html>
