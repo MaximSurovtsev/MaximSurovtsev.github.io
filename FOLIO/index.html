@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FOLIO</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<nav class="topnav">
+			<div class="logo lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self">FO<span>L</span>IO</div>
+			<div class="menu lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		</nav>
+		<div class="hello lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self"><span>Hello,</span><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, molestias sunt vel eius laudantium. Fugiat?</div>
+		
+		<div class="box">
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #baecee;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #fae1ef;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #fefbe5;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+			<div class="item lax" data-lax-opacity="(document.body.scrollHeight*0.05) 1, (-document.body.scrollHeight*0.35) 0" data-lax-anchor="self" style='background-color: #e8bdf5;'><span class="readmore"><span class="text-box"></span><span class="text">read more</span></span></div>
+		</div>
+
+		<div class="phone-box">
+			<div class="loading lax" data-lax-preset="fadeIn">LOADING</div>
+			<img src="phone.png" class="phone lax" data-lax-preset="fadeIn" alt="">
+			<div class="phone-number lax" data-lax-preset="fadeIn">+7 (977) 368-48-08</div>
+			<div class="phone-inf lax" data-lax-preset="fadeIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aliquam eligendi rerum placeat vel quam facere adipisci deserunt rem aliquid.</div>
+			<div class="social lax" data-lax-preset="fadeIn">
+				<a href="#" class="social-link">Facebook</a>
+				<a href="#" class="social-link">Twitter</a>
+				<a href="#" class="social-link">Dribble</a>
+			</div>
+			
+		</div>
+		<div class="vertical lax" data-lax-preset="fadeIn"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+	<script>
+		window.onload = function() {
+			lax.setup() // init
+
+			const updateLax = () => {
+				lax.update(window.scrollY)
+				window.requestAnimationFrame(updateLax)
+			}
+
+			window.requestAnimationFrame(updateLax)
+		}
+	</script>
+</body>
+</html>
