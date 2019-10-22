@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INSITE|WEB</title>
+	<meta name='viewport' content='initial-scale=1, width=device-width'>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+	<main class="main">
+		<div class="screen first active " style='background-image: url(img/i1.png)'>
+			<h1 class="title">INSITE|WEB</h1>
+			<h3 class="subtitle">Архитекторы вашего сайта</h3>
+		</div>
+		<div class="screen second js-screen scroll" style='background-image: url(img/i2.png)'>
+			<h2 class="title">агенство</h2>
+		</div>
+		<div class="screen third js-screen scroll" style='background-image: url(img/i3.png)'>
+			<h2 class="title">работы</h2>
+		</div>
+		<div class="screen fourth js-screen scroll" style='background-image: url(img/i4.png)'>
+			<h2 class="title">команда</h2>
+		</div>
+		<div class="screen fifth js-screen scroll" style='background-image: url(img/i5.png)'>
+			<h2 class="title">контакты</h2>
+		</div>
+	</main>
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  console.log('12: ', 12);
+	  const screens = [].slice.call(document.querySelectorAll('.js-screen'));
+	  console.log('screens: ', screens);
+	  for (let screen of screens) {
+	    screen.addEventListener('click', function (e) {
+	      let elem = screen;
+	      console.log('12: ', 12);
+	      if (screen.style.height != '100vh') {
+
+	            var w = window.pageYOffset,
+	            // hash = scrollBut.href.replace(/[^#]*(.*)/, '$1'),
+	            t = screen.getBoundingClientRect().top; // отступ
+
+	          scroll = function (progress) {
+	            var animationPercent = progress / (1 / 100);
+	            var scrollPercent = w + (t / 100) * animationPercent;
+	            if (scrollPercent > 0) window.scrollTo(0, scrollPercent);
+	          };
+	          if (t) {
+	            var coefTime = (t > 0 ? Math.round(t / 500) : Math.round((-t) / 500)) // добавочное время на количество скрола
+	            animate({
+	              draw: scroll,
+	              timing(timeFraction) {
+	            return timeFraction;
+	          },
+	              duration: 200 + (coefTime * 100)
+	            });
+	          }
+	        
+	        animate({
+	          duration: 300,
+	          timing(timeFraction) {
+	            return timeFraction;
+	          },
+	          draw(progress) {
+	            screen.style.height = 50 * progress + 50 + 'vh';
+	          }
+	        });
+	      } else {
+	        animate({
+	          duration: 300,
+	          timing(timeFraction) {
+	            return timeFraction;
+	          },
+	          draw(progress) {
+	            screen.style.height = 100 - 50 * progress + 'vh';
+	          }
+	        });
+	      }
+	    })
+	  }
+
+	  var animate = function (options) {
+	    var start = performance.now();
+	    requestAnimationFrame(function animate(time) {
+	      var timeFraction = (time - start) / options.duration;
+	      if (timeFraction > 1) timeFraction = 1;
+	      var progress = options.timing(timeFraction);
+	      options.draw(progress);
+	      if (timeFraction < 1) requestAnimationFrame(animate);
+	    });
+	  };
+
+	  var circ = function (timeFraction) {
+	    return 1 - Math.sin(Math.acos(timeFraction))
+	  };
+	});
+
+		
+	</script>
+</body>
+</html>
