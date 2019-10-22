@@ -67,6 +67,26 @@
 	          }
 	        });
 	      } else {
+		var w = window.pageYOffset,
+	            // hash = scrollBut.href.replace(/[^#]*(.*)/, '$1'),
+	            t = screen.getBoundingClientRect().top - w/4; // отступ
+
+	          scroll = function (progress) {
+	            var animationPercent = progress / (1 / 100);
+	            var scrollPercent = w + (t / 100) * animationPercent;
+	            if (scrollPercent > 0) window.scrollTo(0, scrollPercent);
+	          };
+	          if (t) {
+	            var coefTime = (t > 0 ? Math.round(t / 500) : Math.round((-t) / 500)) // добавочное время на количество скрола
+	            animate({
+	              draw: scroll,
+	              timing(timeFraction) {
+	            return timeFraction;
+	          },
+	              duration: 200 + (coefTime * 100)
+	            });
+	          }
+	        
 	        animate({
 	          duration: 300,
 	          timing(timeFraction) {
