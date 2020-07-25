@@ -1,0 +1,19 @@
+.auth {
+	margin: auto;
+}
+
+.transparent {
+	opacity: 0.5;
+	transition: 0.2s;
+	width: calc(50% - 3px);
+}
+.btn-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+@media (pointer: fine) {
+	.transparent:hover {
+		opacity: 1;
+	}
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.big {
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			transition: 0.5s;
+
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+
+			font-family: monospace;
+			font-size: 60px;
+			color: white;
+			text-shadow: 1px 1px 1px black;
+		}
+
+		.blue {
+			background-color: dodgerblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="big"></div>
+	<button>Stop</button>
+	<script>
+		const div = document.querySelector('.big');
+		const button = document.querySelector('button');
+
+		// setTimeout(function() {
+		// 	div.style.backgroundColor = 'orange';
+		// 	console.log('DONE');
+		// }, 1000);
+
+
+
+		// let i = 0;
+		// let myInterval = setInterval(function() {
+		// 	div.textContent = i++;
+		// }, 10);
+
+		// button.onclick = function() {
+		// 	clearInterval(myInterval);
+		// }
+
+		button.onclick = function() {
+			if (div.classList.contains('blue')) div.classList.remove('blue');
+			else div.classList.add('blue');
+		}
+
+		console.log('Hello world');
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

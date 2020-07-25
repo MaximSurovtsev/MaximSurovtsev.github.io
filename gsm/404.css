@@ -1,0 +1,20 @@
+.box-404 {
+	min-height: 400px;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.title-404 {
+	font-size: 120px;
+	margin: 0;
+	line-height: 1;
+}
+
+.text-404 {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 25px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<button onClick='findAndRemoveElements(".box")'>Remove</button>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+
+	<script>
+		function randomColor() {
+			let r = parseInt(Math.random() * 255);	
+			let g = parseInt(Math.random() * 255);	
+			let b = parseInt(Math.random() * 255);	
+			return 'rgb(' + r + ',' + g + ',' + b + ')'
+		}
+
+		function removeElementFromArray(elements) {
+			const arrayFromElements = [].slice.call(elements);
+			let removing = arrayFromElements.pop();
+			if (removing != undefined) {
+				document.body.removeChild(removing);
+			}
+		}
+
+		function findAndRemoveElements(selector) {		
+			const elements = document.querySelectorAll(selector);
+			removeElementFromArray(elements);
+		}
+
+		const boxes = document.querySelectorAll('.box');
+		for (let i=0; i < boxes.length; ++i) {
+			boxes[i].style.backgroundColor = randomColor();
+		}
+
+	
+	</script>
+</body>
+</html>
