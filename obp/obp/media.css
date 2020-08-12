@@ -248,6 +248,17 @@
 		font-size: 11px;
 	}
 
+	.input-row {
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+
+	}
+
+	.input-row  .input-wrapper {
+		margin-bottom: 0;
+	} 
+
 }
 
 

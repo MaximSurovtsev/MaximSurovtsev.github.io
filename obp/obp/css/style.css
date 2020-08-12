@@ -656,3 +656,40 @@ input[type="submit"] {
 .slick-list {
 	margin: 0 -10px;
 }
+
+.inputs-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.input-row {
+	width: calc(50% - 5px);
+
+}
+
+.input-row .input-wrapper {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.input-row .input {
+	width: 100%;
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
