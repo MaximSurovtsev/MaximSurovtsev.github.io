@@ -1,0 +1,109 @@
+.service {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	background-color: #fff;
+
+	padding-left: 25px;
+	padding-right: 25px;
+
+	box-shadow: 0 0 7px 0px rgba(0,0,0,0.06	);
+
+	margin-bottom: 15px;
+
+	box-sizing: border-box;
+}
+
+.service-name {
+	width: 40%;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+
+.service-price {
+	font-size: 14px;
+	font-weight: 600;
+	width: 10%;
+	text-align: right;
+	white-space: nowrap;
+}
+
+
+.service-button {
+	border: none;
+	background-color: #8886F9;
+
+	color: #fff;
+	padding: 10px 15px;
+
+	min-width: 150px;
+
+	box-sizing: border-box;
+	width: 20%;
+
+	font-size: 13px;
+}
+
+
+.back-link {
+	color: #8886F9;
+	padding: 0px 0;
+	display: inline-block;
+	/*margin-top: 10px;*/
+	/*margin-bottom: 10px;*/
+	font-size: 13px;
+	text-decoration: none;
+	
+
+	display: inline-flex;
+	align-items: center;
+
+	padding: 10px 0;
+	border: 1px solid transparent;
+
+	box-sizing: border-box;
+}
+
+.back-link span {
+	border-bottom: 1px solid #8886F9;
+	transition: 0.3s;
+}
+
+.back-link svg {
+	fill: #8886F9;
+	height: 15px;
+	margin-top: 2px;
+	margin-right: 8px;
+	transition: 0.3s;
+}
+
+
+.back-link.right svg {
+	transform: rotate(180deg);
+	margin-right: 0;
+	margin-left: 4px;
+	height: 12px;
+	margin-top: 0;
+}
+
+.back-link.right {
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
