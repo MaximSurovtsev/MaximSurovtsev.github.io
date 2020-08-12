@@ -14,6 +14,31 @@ body, html {
 	background-color: #fafafa;
 }
 
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+	margin: 35px auto;
+}
+
+.breadcrumb {
+	text-decoration: none;
+	color: #8886F9;
+	font-size: 11px;
+}
+
+.delim {
+
+	display: inline-block;
+	fill: #999;
+	width: 10px;
+	height: 10px;
+	padding-left: 7px;
+	padding-right: 7px;
+
+}
+
+
 .body-wrapper {
 	width: 100%;
 	margin: auto;
