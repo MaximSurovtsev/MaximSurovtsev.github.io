@@ -443,6 +443,12 @@
 	.arrow-down {
 		display: none;
 	}
+
+	.breadcrumbs { 
+		margin-top: 20px;
+		margin-bottom: 25px;
+		padding-top: 0;
+	}
 }
 
 

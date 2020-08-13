@@ -19,6 +19,8 @@ body, html {
 	align-items: center;
 	padding-top: 10px;
 	margin: 35px auto;
+	line-height: 2;
+	flex-wrap: wrap;
 }
 
 .breadcrumb {
