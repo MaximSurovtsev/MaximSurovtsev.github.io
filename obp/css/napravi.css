@@ -64,12 +64,14 @@
 
 }
 
-.offer-box {
+
+/*Старая версия*/
+/*.offer-box {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 12px 25px;
 	background-color: #fff;
-	/*margin-bottom: 15px;*/
+	margin-bottom: 15px;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
 	cursor: pointer;
 	user-select: none;
@@ -77,8 +79,50 @@
 	transition: 0.5s;
 	text-decoration: none;
 	display: block;
+}
+
+.offer-title {
+	color: #5F5DD6;
+	font-weight: 600;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: 0.3s;
 
 }
+*/
+
+.offer-box {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 15px;
+	background-color: #fff;
+
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+	cursor: pointer;
+	user-select: none;
+	margin-bottom: 10px;
+	transition: 0.5s;
+	text-decoration: none;
+	display: block;
+}
+
+.offer-title {
+	color: #5F5DD6;
+	font-weight: 600;
+	font-size: 13px;
+	display: flex;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: 0.3s;
+	margin: 0;
+}
+
+
+
 
 .offer-toggle-item {
 	max-height: 0;
@@ -102,17 +146,7 @@
 	-webkit-user-select: none;
 }
 
-.offer-title {
-	color: #5F5DD6;
-	font-weight: 600;
-	font-size: 1.5rem;
-	display: flex;
-	align-items: center;
-	user-select: none;
-	-webkit-user-select: none;
-	transition: 0.3s;
 
-}
 
 .arrow-down {
 	width: 12px;
@@ -127,7 +161,7 @@
 .info {
 	font-size: 15px;
 	line-height: 1.6;
-	text-align: justify;
+	text-align: left;
 }
 
 

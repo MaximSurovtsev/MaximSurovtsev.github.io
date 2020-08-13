@@ -439,6 +439,10 @@
 	.button__widely {
 		width: 100%;
 	}
+
+	.arrow-down {
+		display: none;
+	}
 }
 
 
