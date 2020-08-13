@@ -14,6 +14,31 @@ body, html {
 	background-color: #fafafa;
 }
 
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+	margin: 35px auto;
+}
+
+.breadcrumb {
+	text-decoration: none;
+	color: #8886F9;
+	font-size: 11px;
+}
+
+.delim {
+
+	display: inline-block;
+	fill: #999;
+	width: 10px;
+	height: 10px;
+	padding-left: 7px;
+	padding-right: 7px;
+
+}
+
+
 .body-wrapper {
 	width: 100%;
 	margin: auto;
@@ -631,3 +656,40 @@ input[type="submit"] {
 .slick-list {
 	margin: 0 -10px;
 }
+
+.inputs-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.input-row {
+	width: calc(50% - 5px);
+
+}
+
+.input-row .input-wrapper {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.input-row .input {
+	width: 100%;
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
