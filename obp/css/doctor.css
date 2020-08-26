@@ -25,10 +25,11 @@
 	font-size: 14px;
 	line-height: 1.5;
 	margin-bottom: 7px;
+	font-weight: 300;
 }
 
 .doctor-bold {
-	font-weight: 600;
+	font-weight: 500;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	font-size: 16px;
@@ -37,6 +38,7 @@
 .doctor-high {
 	font-size: 14px;
 	margin-bottom: 10px;
+	font-weight: 300;
 }
 
 

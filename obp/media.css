@@ -49,6 +49,12 @@
 }
 
 @media (max-width: 900px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: inline-flex;
+	}
 	.body-wrapper {
 		padding-left: 20px;
 		padding-right: 20px;

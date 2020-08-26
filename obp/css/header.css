@@ -388,7 +388,9 @@ a {
 
 
 
-
+.mobile {
+	display: none;
+}
 
 
 
