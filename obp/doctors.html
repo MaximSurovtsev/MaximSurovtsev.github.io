@@ -4,10 +4,19 @@
 		<meta charset="UTF-8">
 		<title>Объединенная больница с поликлиникой Управления Делами Президента РФ</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/header.css">  
+		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel="stylesheet" href="css/calendar.css">
+		<link rel="stylesheet" href="css/doctor.css">
+		<link rel="stylesheet" href="css/napravi.css">
 		<link rel="stylesheet" href="media.css">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+		
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
 		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -25,7 +34,6 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
-
 				<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body>
@@ -93,10 +101,9 @@
 					</div>
 					<a href="#" class="slide_policy">Политика обработки и защиты персональных данных</a>
 					<a href="#" class="slide_policy">Лицензия № ФС-99-01-009591 от 29 ноября 2018 года</a>
-					
 				</div>
 			</div>
-			<div class="header-wrapper">
+			<div class="header-wrapper"  style=''>
 				<header class="header">
 					<div class="header-line">
 						<div class="burger-wrapper">
@@ -130,7 +137,7 @@
 									<img src="img/phone-call.png" alt="Иконка телефона" class='header-account-wrapper-logo'>
 								</div>
 							</a>
-							<a href="#" class="header-account">
+							<a href="login.html" class="header-account">
 								<div class='header-account-wrapper' style='width: 100%;'>
 									<img src="img/user (1).png" alt="Иконка личного кабинета" class='header-account-wrapper-logo'>
 								</div>
@@ -140,8 +147,8 @@
 						</div>
 						
 					</div>
-					<section class="nav-wrapper nav-wrapper__wide">
-						<nav class="midnav">
+					<section class="nav-wrapper nav-wrapper__wide" style='' >
+					<nav class="midnav">
 							<a href="promo.html" class="midnav-link">Акции</a>
 							<a href="pacient.html" class="midnav-link">Пациентам</a>
 							<a href="doctors.html" class="midnav-link">Специалисты</a>
@@ -149,43 +156,152 @@
 							<a href="poli.html" class="midnav-link">Поликлиника</a>
 							<a href="reab.html" class="midnav-link">Реабилитация</a>
 							<a href="stac.html" class="midnav-link">Стационар</a>
-							<!-- <a href="#" class="midnav-link">Стоматология</a> -->
-						</nav>
-						<a href="#" class="button button__accent" style='margin-left: 30px;'>Записаться на прием</a>
+						<!-- <a href="#" class="midnav-link">Стоматология</a> -->
+					</nav>
+						<!-- <a href="#" class="button button__accent" style='margin-left: 30px;'>Записаться на прием</a> -->
 					</section>
-				</header>
+				</header >
 			</div>
-	<section class="screen screen__login">
-		<!-- <div class="screen-logo-wrapper">
-			<img src="img/logo.png"  alt="" class="screen-logo">
-		</div> -->
-		<h1 class="screen-title">Регистрация</h1>
-		<div class="screen-text">Правильно введите свой номер телефона и ФИО</div>
-		<div class="input-wrapper">
-			<input name='phone' type="tel" class="input" placeholder="+7(977) 999-99-99" value='+7'>
-		</div>
-		<div class="input-wrapper">
-			<input name='firstname' type="text" class="input" placeholder="Имя">
-		</div>
-		<div class="input-wrapper">
-			<input name='lastname' type="text" class="input" placeholder="Фамилия">
-		</div>
-		<div class="checks">
-			<label class="container">
-				<a href="#" class="checkbox-link">Условия использования</a>
-				<input type="checkbox">
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<a href="#" class="checkbox-link">Политика конфидециальности</a>
-				<input type="checkbox">
-				<span class="checkmark"></span>
-			</label>
-		</div>
-		<input type="submit" class="button button__accent button__wide" value='Регистрация'>
-		<a href="#" class="button button__wide" style="">Войти</a>
-	</section>
-				<div class="line" style='margin-top: 40px;'></div>
+
+
+			<section class="screen__offset">
+				
+				<div class="breadcrumbs">
+					<a href="index.html" class="breadcrumb">Главная</a>
+
+					<svg class="delim" enable-background="new 0 0 404.375 404.375" version="1.1" viewBox="0 0 404.38 404.38" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m108.67 404.38c-4.18 0-7.837-1.567-10.971-4.702-6.269-6.269-6.269-16.196 0-21.943l176.06-175.54-176.06-175.54c-6.269-6.269-6.269-16.196 0-21.943 6.269-6.269 16.196-6.269 21.943 0l187.04 186.51c3.135 3.135 4.702 6.792 4.702 10.971 0 4.18-1.567 8.359-4.702 10.971l-187.04 186.52c-3.135 3.135-6.792 4.702-10.972 4.702z"/></svg>
+
+					<a href="promo.html" class="breadcrumb">Наши специалисты</a>
+				</div>
+
+				<h1 class="left-title">Наши специалисты</h1>
+				<div class="cal-line"></div>
+
+
+					<div class="doctor-row">
+						<div class="filters">
+							<div class="wrapper-select">
+								<div class="custom-select">
+									<select>
+										<option value="0">Выберите специальность...</option>
+										<option value="1">Audi</option>
+										<option value="2">BMW</option>
+										<option value="3">Citroen</option>
+										<option value="4">Ford</option>
+										<option value="5">Honda</option>
+										<option value="6">Jaguar</option>
+										<option value="7">Land Rover</option>
+										<option value="8">Mercedes</option>
+										<option value="9">Mini</option>
+										<option value="10">Nissan</option>
+										<option value="11">Toyota</option>
+										<option value="12">Volvo</option>
+									</select>
+								</div>
+
+								<div class="custom-select">
+									<select>
+										<option value="0">Выберите врача...</option>
+										<option value="1">Audi</option>
+										<option value="2">BMW</option>
+										<option value="3">Citroen</option>
+										<option value="4">Ford</option>
+										<option value="5">Honda</option>
+							
+										<option value="11">Toyota</option>
+										<option value="12">Volvo</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="wrapper-wrapper-switch">
+								<div class="switch-wrapper">
+									<input type="checkbox" class="switch" id="switch-1"/>
+									<span>Мужчина</span>
+								</div>
+								<div class="switch-wrapper">
+									<input type="checkbox" class="switch" id="switch-1"/>
+									<span>Женщина</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="reset">Сбросить фильтры</div>
+					</div>
+
+					
+
+
+				<div class="doctors-box">
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+					<div class="doctor-item">
+						<a href='doctor.html' class="doctor-item-image"></a>
+						<div class="doctor-item-direction">Терапевт-участковый</div>
+						<a href='doctor.html' class="doctor-item-name">Маркова Светлана Станиславовна</a>
+						<div class="doctor-item-exp">Стаж 15 лет</div>
+						<div class="doctor-item-info">Терапевт-участковый высшей категории. Член Российского медицинского общества терапевтов.</div>
+						<a href="appointment.html" class="button button__accent button__100">Записаться на прием</a>
+					</div>
+				</div>
+
+			</section>
+
+			<div class="line" style='margin-top: 40px;'></div>
 
 			<footer class="footer">
 				
@@ -258,20 +374,100 @@
 
 
 			</footer>
-</div>
-<script src='js/menu.js'></script>
-<script src="https://unpkg.com/imask"></script>
-<script src='js/input_mask.js'></script>
-<script>
-	(function() {
-		const element = document.querySelector('input');
-			var maskOptions = {
-			mask: '+{7} (000) 000-00-00',
-			lazy: false,
-		};
-		const mask = IMask(element, maskOptions);
-	})();
-</script>
 
-</body>
+		</div>
+		<script src='js/menu.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+		<script>
+			function make_selector(element) {}
+			var x, i, j, l, ll, selElmnt, a, b, c;
+			/*look for any elements with the class "custom-select":*/
+			x = document.getElementsByClassName("custom-select");
+			l = x.length;
+			for (i = 0; i < l; i++) {
+				selElmnt = x[i].getElementsByTagName("select")[0];
+				ll = selElmnt.length;
+
+				/*for each element, create a new DIV that will act as the selected item:*/
+				a = document.createElement("DIV");
+				a.setAttribute("class", "select-selected");
+				a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+				x[i].appendChild(a);
+
+				/*for each element, create a new DIV that will contain the option list:*/
+				b = document.createElement("DIV");
+				b.setAttribute("class", "select-items select-hide");
+				
+				for (j = 1; j < ll; j++) {
+					/*for each option in the original select element,
+					create a new DIV that will act as an option item:*/
+					c = document.createElement("DIV");
+					c.innerHTML = selElmnt.options[j].innerHTML;
+					c.addEventListener("click", function(e) {
+						/*when an item is clicked, update the original select box,
+						and the selected item:*/
+						var y, i, k, s, h, sl, yl;
+						s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+						sl = s.length;
+						h = this.parentNode.previousSibling;
+						for (i = 0; i < sl; i++) {
+							if (s.options[i].innerHTML == this.innerHTML) {
+								s.selectedIndex = i;
+								h.innerHTML = this.innerHTML;
+								y = this.parentNode.getElementsByClassName("same-as-selected");
+								yl = y.length;
+								for (k = 0; k < yl; k++) {
+									y[k].removeAttribute("class");
+								}
+							this.setAttribute("class", "same-as-selected");
+							break;
+							}	
+						}
+						h.click();
+					});
+					b.appendChild(c);
+				}
+				x[i].appendChild(b);
+				
+				a.addEventListener("click", function(e) {
+					/*when the select box is clicked, close any other select boxes,
+					and open/close the current select box:*/
+					e.stopPropagation();
+					closeAllSelect(this);
+					this.nextSibling.classList.toggle("select-hide");
+					this.classList.toggle("select-arrow-active");
+				});
+			}
+
+
+			function closeAllSelect(elmnt) {
+				/*a function that will close all select boxes in the document,
+				except the current select box:*/
+				var x, y, i, xl, yl, arrNo = [];
+				x = document.getElementsByClassName("select-items");
+				y = document.getElementsByClassName("select-selected");
+				xl = x.length;
+				yl = y.length;
+
+				for (i = 0; i < yl; i++) {
+					if (elmnt == y[i]) {
+						arrNo.push(i)
+					} else {
+						y[i].classList.remove("select-arrow-active");
+					}
+				}
+
+				for (i = 0; i < xl; i++) {
+					if (arrNo.indexOf(i)) {
+						x[i].classList.add("select-hide");
+					}
+				}
+			}
+
+			/*if the user clicks anywhere outside the select box,
+			then close all select boxes:*/
+			document.addEventListener("click", closeAllSelect);
+</script>
+		
+	</body>
 </html>
