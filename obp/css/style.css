@@ -852,3 +852,36 @@ input[type="submit"] {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.accordion-item__promo-page {
+	margin-bottom: 50px;
+}
+
+
+
+.accordion-item__promo-page:last-child {
+	margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="css/header.css">  
 		<link rel="stylesheet" href="css/datepicker.css">
 		<link rel="stylesheet" href="css/calendar.css">
-		<link rel="stylesheet" href="media.css">
 		<link rel="stylesheet" href="css/napravi.css">
+		<link rel="stylesheet" href="media.css">
 
 		
 		<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
@@ -32,6 +32,8 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div class="body-wrapper">
@@ -75,7 +77,7 @@
 					<a href="#" class="slide_policy">Лицензия № ФС-99-01-009591 от 29 ноября 2018 года</a>
 				</div>
 			</div>
-			<div class="header-wrapper"  style='padding-bottom: 0;'>
+			<div class="header-wrapper" >
 				<header class="header">
 					<div class="header-line">
 						<div class="burger-wrapper">
@@ -89,12 +91,12 @@
 							<a href="info.html" class="header-item-link">О больнице</a>
 						</div>
 						<div class="header-item middle-screen">
-							<a href="index.html" class="header-item-link">Контакты</a>
+							<a href="#" class="header-item-link">Контакты</a>
 						</div>
 						
-						<div class="logo-wrapper">
+						<a href='index.html' class="logo-wrapper">
 							<img class="logo" alt='Логотип ОБП' src="img/logo.png">
-						</div>
+						</a>
 						<div class="header-item middle-screen">
 							<div class="text-small text-right">Запись к врачу</div>
 							<div class="text-phone text-right">8 (499) 333-30-00</div>
@@ -109,7 +111,7 @@
 									<img src="img/phone-call.png" alt="Иконка телефона" class='header-account-wrapper-logo'>
 								</div>
 							</a>
-							<a href="#" class="header-account">
+							<a href="login.html" class="header-account">
 								<div class='header-account-wrapper' style='width: 100%;'>
 									<img src="img/user (1).png" alt="Иконка личного кабинета" class='header-account-wrapper-logo'>
 								</div>
@@ -119,8 +121,8 @@
 						</div>
 						
 					</div>
-					<section class="nav-wrapper nav-wrapper__wide" style='border-bottom-color: #ccc; height: 70px;' >
-						<nav class="midnav"style='border-bottom-color: #ccc;' >
+					<section class="nav-wrapper nav-wrapper__wide" >
+						<nav class="midnav">
 							<a href="promo.html" class="midnav-link">Акции</a>
 							<a href="pacient.html" class="midnav-link">Пациентам</a>
 							<a href="specialists.html" class="midnav-link">Специалисты</a>
@@ -130,7 +132,7 @@
 							<a href="stac.html" class="midnav-link">Стационар</a>
 							<!-- <a href="#" class="midnav-link">Стоматология</a> -->
 						</nav>
-						<a href="#" class="button button__accent" style='margin-left: 30px;'>Записаться на прием</a>
+						<!-- <a href="#" class="button button__accent" style='margin-left: 30px;'>Записаться на прием</a> -->
 					</section>
 				</header>
 			</div>
@@ -138,32 +140,213 @@
 
 			<section class="screen__offset">
 				
-				<h1 class="left-title">Направления</h1>
+				
+
+				<div class="breadcrumbs">
+					<a href="index.html" class="breadcrumb">Главная</a>
+
+					<svg class="delim" enable-background="new 0 0 404.375 404.375" version="1.1" viewBox="0 0 404.38 404.38" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m108.67 404.38c-4.18 0-7.837-1.567-10.971-4.702-6.269-6.269-6.269-16.196 0-21.943l176.06-175.54-176.06-175.54c-6.269-6.269-6.269-16.196 0-21.943 6.269-6.269 16.196-6.269 21.943 0l187.04 186.51c3.135 3.135 4.702 6.792 4.702 10.971 0 4.18-1.567 8.359-4.702 10.971l-187.04 186.52c-3.135 3.135-6.792 4.702-10.972 4.702z"/></svg>
+
+					<a href="promo.html" class="breadcrumb">Пациентам</a>
+				</div>
+
+				<h1 class="left-title">Пациентам</h1>
 
 
 				<div class="cal-line" style='margin-bottom: 40px;'></div>
 
-				<div class="offer-wrapper">
-
-					<div class="offer-boxes">
-
-					<!-- <h2 class="left-subtitle">Лаборные исследования</h2> -->
-					
+							
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Анкета для пациента
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Высокотехнологичная медицинская помощь по квотам ВМП
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Диспансеризация
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Личный кабинет пациента (возможности, правила, соглашение)
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Медицинские программы
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Памятки для пациентов
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Пациентам по ОМС
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Платные медицинские услуги
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Полезная информация
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Порядок и сроки получения копий медицинских документов
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Права и обязанности граждан в сфере охраны здоровья
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Правила внутреннего распорядка для пациентов, их представителей и посетителей.
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Правила записи на первичный прием
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Правила подготовки к диагностическим исследованиям
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Рекламные материалы
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Страховые компании и партнеры ДМС
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
+						<div>
+							<a href='article.html' class="offer-box">
+								<h3 class="offer-title">
+									Школа пациента
+									<svg class="arrow-down" enable-background="new 0 0 213.333 213.333" version="1.1" viewBox="0 0 213.33 153.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+										<polygon points="0 53.333 106.67 160 213.33 53.333"></polygon>
+									</svg>
+								</h3>
+							</a>
+						</div>
+				
 						
-					</div>
-
-					<div class="offer-menu">
-						
-						<h4 class="offer-menu-title">Направления</h4>
-
-						
-
-					</div>
-					
-				</div>
-
 			</section>
-						<div class="line" style='margin-top: 40px;'></div>
+
+			<div class="line" style='margin-top: 40px;'></div>
 
 			<footer class="footer">
 				
@@ -241,6 +424,9 @@
 		<script src='js/offers.js'></script>
 		<script src="https://unpkg.com/imask"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+		<script src='js/menu-select.js'></script>
+
 		<script>
 			(function() {
 
@@ -254,39 +440,39 @@
 				keys.sort();
 				
 
-				for (let key of keys) {
-					const div = document.createElement('div');
-					const offer_box = document.createElement('div');
-					offer_box.classList.add('offer-box');
-					const h3 = document.createElement('h3');
-					h3.classList.add('offer-title');
-					h3.innerHTML = key + svg;
-					offer_box.appendChild(h3);
+				// for (let key of keys) {
+				// 	const div = document.createElement('div');
+				// 	const offer_box = document.createElement('div');
+				// 	offer_box.classList.add('offer-box');
+				// 	const h3 = document.createElement('h3');
+				// 	h3.classList.add('offer-title');
+				// 	h3.innerHTML = key + svg;
+				// 	offer_box.appendChild(h3);
 
-					// const wrapper = document.createElement('div');
-					// wrapper.classList.add('offer-toggle-item');
-					// const offer = document.createElement('div');
-					// offer.classList.add('offer-toggle-item-content');
-					// for (let item of data[key]) {
-					// 	const el = document.createElement('div');
-					// 	// item.classList.add('');
-					// 	el.innerHTML = item.id + ' ' + item.title + ' ' + item.price;
-					// 	offer.appendChild(el);
-					// }
-					// wrapper.appendChild(offer);
+				// 	// const wrapper = document.createElement('div');
+				// 	// wrapper.classList.add('offer-toggle-item');
+				// 	// const offer = document.createElement('div');
+				// 	// offer.classList.add('offer-toggle-item-content');
+				// 	// for (let item of data[key]) {
+				// 	// 	const el = document.createElement('div');
+				// 	// 	// item.classList.add('');
+				// 	// 	el.innerHTML = item.id + ' ' + item.title + ' ' + item.price;
+				// 	// 	offer.appendChild(el);
+				// 	// }
+				// 	// wrapper.appendChild(offer);
 
-					div.appendChild(offer_box);
-					// div.appendChild(wrapper);
+				// 	div.appendChild(offer_box);
+				// 	// div.appendChild(wrapper);
 
-					box.appendChild(div);
+				// 	box.appendChild(div);
 
 
-					const a = document.createElement('a');
-					a.setAttribute('href', '#');
-					a.classList.add('offer-menu-item');
-					a.innerHTML = key;
-					menu.appendChild(a);
-				}
+				// 	const a = document.createElement('a');
+				// 	a.setAttribute('href', '#');
+				// 	a.classList.add('offer-menu-item');
+				// 	a.innerHTML = key;
+				// 	menu.appendChild(a);
+				// }
 
 
 				
@@ -315,12 +501,7 @@
 				  	});
 				}
 
-				const element = document.querySelector('input');
-					var maskOptions = {
-					mask: '+{7} (000) 000-00-00',
-					lazy: false,
-				};
-				const mask = IMask(element, maskOptions);
+				
 			})();
 		</script>
 		
