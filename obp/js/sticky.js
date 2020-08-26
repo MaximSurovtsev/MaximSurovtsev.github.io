@@ -11,6 +11,7 @@
 	
 	const sticky = document.querySelector('.nav-wrapper');
 	const button = document.querySelector('.js-button');
+	const header = document.querySelector('.header-wrapper');
 
 	let sticky_pos = getCoords(sticky).top;
 
@@ -19,12 +20,15 @@
 			button.style.opacity = '1';
 			button.style.width = '250px';
 			button.style.marginLeft = '30px';
-			sticky.classList.add('sticky');
+			// sticky.classList.add('sticky');
+			sticky.style.borderBottomColor = '#ccc';
+
 		} else if (window.pageYOffset < sticky_pos - 200) {
 			button.style.opacity = '0';
 			button.style.width = '0px';
 			button.style.marginLeft = '0px';
 			sticky.classList.remove('sticky');
+			sticky.style.borderBottomColor = 'transparent';
 		}
 	});
 

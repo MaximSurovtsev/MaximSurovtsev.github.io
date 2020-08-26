@@ -32,9 +32,11 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="body-wrapper">
+		<div class="body-wrapper" style='padding-bottom: 300px;'>
 			<div class="slide_menu-overlay" style='display: none;opacity: 0;'>
 				
 				<div class="slide_menu-wrapper">
@@ -155,6 +157,13 @@
 
 				<div class="offer-wrapper">
 
+					<div class="offer-menu">
+						<a href="#" data-name='Специалисты поликлинических отделений' class="offer-menu-item offer-menu-item__active">Специалисты поликлинических отделений</a>
+						<a href="#" data-name='Специалисты диагностических отделений' class="offer-menu-item">Специалисты диагностических отделений</a>
+						<a href="#" data-name='Специалисты отделений стационара' class="offer-menu-item">Специалисты отделений стационара</a>
+						<a href="#" data-name='Специалисты отделений реабилитации' class="offer-menu-item">Специалисты отделений реабилитации</a>
+					</div>
+
 					<div class="offer-boxes">
 
 						<!-- <h2 class="left-subtitle">Лаборные исследования</h2> -->
@@ -164,7 +173,7 @@
 
 						
 
-					<h2 class="left-subtitle">Специалисты поликлинических отделений</h2>
+					<h2 class="left-subtitle" data-name='Специалисты поликлинических отделений'>Специалисты поликлинических отделений</h2>
 
 			
 						<div>
@@ -311,7 +320,7 @@
 						</div>
 	
 
-					<h2 class="left-subtitle">Специалисты диагностических отделений</h2>
+					<h2 class="left-subtitle" data-name='Специалисты диагностических отделений'>Специалисты диагностических отделений</h2>
 
 			
 						<div>
@@ -425,7 +434,7 @@
 						</div>
 	
 
-					<h2 class="left-subtitle">Специалисты отделений стационара</h2>
+					<h2 class="left-subtitle" data-name='Специалисты отделений стационара'>Специалисты отделений стационара</h2>
 
 			
 						<div>
@@ -583,7 +592,7 @@
 						</div>
 	
 
-					<h2 class="left-subtitle">Специалисты отделений реабилитации</h2>
+					<h2 class="left-subtitle" data-name='Специалисты отделений реабилитации'>Специалисты отделений реабилитации</h2>
 
 			
 						<div>
@@ -624,6 +633,9 @@
 		<script src='js/offers.js'></script>
 		<script src="https://unpkg.com/imask"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+		<script src='js/menu-select.js'></script>
+
 		<script>
 			(function() {
 
@@ -698,12 +710,7 @@
 				  	});
 				}
 
-				const element = document.querySelector('input');
-					var maskOptions = {
-					mask: '+{7} (000) 000-00-00',
-					lazy: false,
-				};
-				const mask = IMask(element, maskOptions);
+				
 			})();
 		</script>
 		

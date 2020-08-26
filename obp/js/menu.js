@@ -1,3 +1,5 @@
+
+
 (function() {
 
 	const open = document.querySelector('.burger');
@@ -5,6 +7,25 @@
 	const overlay = document.querySelector('.slide_menu-overlay');
 	const menu = document.querySelector('.slide_menu-wrapper');
 	
+
+
+
+	overlay.style.height = window.innerHeight +'px';
+	menu.style.height =  window.innerHeight  + 'px';
+
+	window.addEventListener('resize', function() {
+		if (window.innerHeight > 600) {
+
+			overlay.style.height = window.innerHeight + 'px';
+			menu.style.height =  window.innerHeight  + 'px';
+		} else {
+			overlay.style.height = '650px';
+			menu.style.height = '650px';
+		}
+		
+	});
+		
+
 
 	open.addEventListener('click', function(e) {
 		overlay.style.display = 'block';
@@ -38,6 +59,3 @@
 	});
 
 })();
-
-
-
