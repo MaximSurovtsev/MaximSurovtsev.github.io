@@ -1,10 +1,11 @@
 $(document).ready(function(){
   var $sections = $('.left-subtitle');
   var previousSection = $sections[0];
-  console.log($sections);
+
+
   $(window).scroll(function(){
-    
-    var currentScroll = $(this).scrollTop() + 190;
+
+    var currentScroll = $(this).scrollTop() + (window.innerWidth > 900 ? 160 : 80);
     var $currentSection
     
     $sections.each(function(){
@@ -15,7 +16,6 @@ $(document).ready(function(){
       }
       
       if ($currentSection != previousSection) {
-      	console.log(previousSection);
       	$('.offer-menu-item').removeClass('offer-menu-item__active');
    	    var sect = $currentSection || $sections;
    	    $("a[data-name='"+sect[0].innerHTML+"']").addClass('offer-menu-item__active');
@@ -37,9 +37,8 @@ $(document).ready(function(){
 
 			let name = 'h2[data-name="' + item.text + '"]';
 
-			
 
-			const pos = $(name).offset().top - 160;
+			const pos = $(name).offset().top -  (window.innerWidth > 900 ? 160 : 80);
 			const speed = Math.min( Math.abs($(window).scrollTop() - pos), 900 );
 
 			$('html, body').animate({
@@ -48,7 +47,6 @@ $(document).ready(function(){
 
 			item.classList.add('offer-menu-item__active');
 
-			console.log(item.text);
 		});
 	});
 });
