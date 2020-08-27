@@ -1241,3 +1241,49 @@ input.switch:active:checked::before, input.switch.touch:hover:checked::before {
 	-webkit-user-select: none;
 }
 
+.contact-box {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.contact-title {
+	margin-top: 0;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 8px;
+	line-height: 1.5;
+
+}
+
+.contact-phone {
+	text-decoration: none;
+	color: #222;
+	font-size: 19px;
+	font-weight: 500;
+	margin-bottom: 8px;
+	margin-top: 8px;	
+	line-height: 1.5;
+}
+
+.contact-time {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.5;
+}
+ .contact-geo	 {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+
+.contact-text {
+	font-weight: 400;
+	font-size: 18px;
+
+	line-height: 1.5;
+}
+
+
+
+
