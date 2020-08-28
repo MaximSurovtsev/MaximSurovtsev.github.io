@@ -20,6 +20,7 @@
 			<span>Записаться на прием</span>
 		</button>
 	</div>
+
 	<div style='margin-bottom: 20px;'>
 		<button class="button button__primary button__small">
 			<div class="icon icon__button">
@@ -29,6 +30,8 @@
 			<span>Записаться на прием</span>
 		</button>
 	</div>
+
+
 	<div style='margin-bottom: 20px;'>
 		<button class="button button__primary button__small">
 			<span>Записаться на прием</span>
@@ -38,14 +41,62 @@
 	<div style='margin-bottom: 20px;'>
 		<a href='#' class="button button__primary">Записаться на прием</a>
 	</div>
+
 	<div style='margin-bottom: 20px;'>
 		<a href='#' class="button">Записаться на прием</a>
 	</div>
+
+
 	<div style='margin-bottom: 20px;'>
 		<a href='#' class="button button__wide-mobile">
 			<span>Записаться на прием</span>
 		</a>
 	</div>
+
+	<div style='margin-bottom: 20px;'>
+		<div class="input-wrapper">
+			<label class='input-label' for="firstname">Имя</label>
+			<input class='input' type="text" name="firstname" id="" placeholder="Имя">
+		</div>
+	</div>
+
+
+	<div style='margin-bottom: 20px;'>
+		<div class="input-wrapper">
+			<label class='input-label' id='label' for="firstname">Фамилия</label>
+			<input class='input' type="text" name="firstname" id="surname" placeholder="Фамилия">
+		</div>
+	</div>
+
+
+	<div style='margin-bottom: 20px;'>
+		<div class="input-wrapper">
+			<label class='input-label input__error-label' style='opacity: 1;' for="firstname">Отчество</label>
+			<input class='input input__error' type="text" name="firstname" id="" placeholder="Отчество">
+		</div>
+	</div>
 </main>
+
+<script>
+	const surname = document.getElementById('surname')
+	const surnameLabel = document.getElementById('label')
+
+	if (surname.value == '')
+			surnameLabel.classList.remove('opacity');
+	else
+		surnameLabel.classList.add('opacity');
+
+	surname.addEventListener('input', function() {
+		if (surname.value == '')
+			surnameLabel.classList.remove('opacity');
+		else
+			surnameLabel.classList.add('opacity');
+	})
+
+
+	// surname.addEventListener('change', function() {
+	// 	if (surname.value == '') surnameLabel.classList.remove('opacity');
+	// })
+</script>
 
 { footer }

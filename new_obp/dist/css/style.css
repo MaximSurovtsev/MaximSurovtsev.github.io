@@ -387,6 +387,61 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 45px;
+  width: 200px;
+  font-family: Roboto;
+  border: 1px solid #0e4194;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0e4194;
+  padding-left: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+}
+.input:focus {
+  background-color: #fcfcfc;
+  border-color: #0a3884;
+}
+.input-label {
+  font-size: 10px;
+  display: block;
+  color: #0e4194;
+  font-weight: 400;
+  margin-bottom: 1px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.input__error {
+  border: 1px solid #c00;
+  color: #c00;
+}
+.input__error::placeholder {
+  color: #c00;
+}
+.input__error-label {
+  color: #c00;
+}
+::placeholder {
+  font-family: Roboto;
+  color: #0e4194;
+  font-size: 13px;
+}
+.opacity {
+  opacity: 1;
+}
 .footer {
   margin-left: auto;
   margin-right: auto;

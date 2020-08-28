@@ -66,6 +66,8 @@ active = #5856AF
 black = #1F1F45
 light = #CCCBFF
 
+red = #cc0000
+
 grey = #e9e9e9
 grey-hover = #e2e2e2
 
@@ -385,10 +387,124 @@ body
 	box-width()
 
 
+.input 
+	disable()
 
+	height 45px
+	width 200px
+
+	font-family Roboto
+	border 1px solid primary
+	font-size 13px
+	font-weight 400
+	color primary
+
+	padding-left 10px
+	border-radius 4px
+	box-shadow 0 0 10px rgba(0,0,0,0.0.05)
+	
+	&:focus
+		background-color #fcfcfc
+		border-color hover
+
+	&-label 
+		font-size 10px
+		display block
+		color primary
+		font-weight 400
+		margin-bottom 1px
+		opacity 0
+		transition 0.5s
+
+
+	&__error
+		border 1px solid red
+		color red
+		&::placeholder
+			color red
+		&-label 
+			color red
+
+::placeholder
+	font-family Roboto
+	color primary
+	font-size 13px
 		
+
+
+.opacity
+	opacity 1
+
+
+// .input {
+// 	margin: 0;
+// 	padding: 0;
+// 	-webkit-appearance: none;
+// 	border-radius: 0;
+// 	outline: none;
+
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
 	
+// 	height: 45px;
+// 	min-width: 300px;	
+
+// 	padding-left: 10px;
 	
+// 	border: 1px solid #aaa;
+
+// 	font-size: 15px;
+// 	font-family: Arial;
+// 	font-weight: 300;
+
+// 	position: relative;
+
+// 	background-color: transparent;	
+// }
+
+// .input:focus {
+// 	border-color: #8886F9;;
+// }
+
+// input[type="submit"] {
+// 	border: none;
+// 	-webkit-appearance: none;
+// 	border-radius: 0;
+// 	margin: 0;
+
+// 	min-width: 300px;	
+// 	height: 50px;
+	
+// 	margin-top: 10px;
+	
+// 	cursor: pointer;
+
+// 	font-size: 15px;
+// 	font-family: 'Montserrat', sans-serif;
+// 	letter-spacing: 0.5px;
+// }
+
+
+// .input-wrapper {
+// 	position: relative;
+// 	margin-top: 10px;
+// }
+
+
+// .phone-label {
+// 	font-family: monospace;
+// 	color: #aaa;
+
+// 	position: absolute;
+// 	top: 14px;
+// 	left: 29px;
+// }
+
+
+// ::placeholder {
+// 	font-family: Arial;
+// }
 
 
 	
