@@ -1,0 +1,612 @@
+disable()
+	-webkit-appearance none 
+	-moz-appearance none 
+	appearance none 
+	border none
+	-webkit-box-shadow none 
+	box-shadow none 
+	margin 0
+	padding 0
+	outline none 
+	-webkit-box-sizing border-box 
+	-moz-box-sizing border-box 
+	box-sizing border-box 
+	
+center()
+	display flex
+	-webkit-justify-content center
+	justify-content center
+	-webkit-align-items center
+	align-items center
+	
+font()
+	font-family Roboto
+	text-decoration none
+	color #222
+	line-height 1.5
+	
+text()
+	font-size 13px
+	font-weight 300
+	
+
+
+margin()
+	margin 0
+	
+margin15()
+	margin-top 15px
+	margin-bottom 15px
+
+title() 
+	font-size 20px
+	font-weight 500 
+	color #222 
+
+
+box-width()
+	margin-left auto
+	margin-right auto
+	max-width 1200px
+	box-sizing border-box
+	padding-left 20px
+	padding-right 20px
+
+
+primary = #8886F9
+primary = #0e4194
+bg = #fafafa
+width = 1300px
+
+hover = #6765CA
+hover = #0A1F84
+hover = #0A3884
+
+active = #5856AF
+black = #1F1F45
+light = #CCCBFF
+
+grey = #e9e9e9
+grey-hover = #e2e2e2
+
+html
+	height 100%
+
+
+body
+	margin 0
+	min-width 320px
+	height 100%
+	font-size 14px
+	position relative
+	font-family Roboto
+	color #222 
+	box-sizing border-box
+	
+	background-color bg
+	
+	
+.slide-menu
+	margin-top 50px
+	
+	display flex
+	flex-direction column
+	flex-wrap wrap
+
+	&__mobile 
+		display none
+		
+	&-overlay
+		height 100%
+		width 100%
+		
+		padding 20px 30px
+		padding-top 8vh
+		
+		position absolute
+		top 0
+		left -30%
+
+		background-color #383838
+		
+		box-sizing border-box
+		
+		transition 0.5s ease left
+		overflow-y auto
+		
+		@media screen and (min-width: 480px)
+			max-width 400px	
+
+		&-wrapper 
+			background-color rgba(0, 0, 0, 0.41)
+			width 100%
+			height 100%
+				
+			position fixed
+			top 0
+			left 0
+			
+			z-index 999
+			
+			transition 0.6s
+		
+	&-link 
+		padding 10px 0px
+		
+		font()
+		color #fff
+		font-size 16px
+		
+		@media screen and (min-height: 900px)
+			font-size 19px
+		
+		&-wrapper 
+			margin-bottom 7px
+			margin-top 7px
+		&-box
+			margin-bottom 20px
+			margin-top 20px
+			
+		&__opacity
+			color #d1d1d1
+			font-size 13px
+			font-weight 300
+			
+			@media screen and (min-height: 900px)
+				font-size 16px
+
+		
+		
+.icon
+	width 35px
+	height 35px
+	
+	padding 5px
+	
+	box-sizing border-box
+	cursor pointer
+	display block
+	
+	@media screen and (max-width: 768px)
+		width 30px
+		height 30px
+
+	&__close
+		z-index 999
+		position absolute
+		top 20px
+		left 20px
+	&__open
+		margin-right 4%
+	&__button
+		width 12px
+		height 12px
+		padding 0px
+		margin-right 6px
+
+		center()
+	
+	& img 
+		max-width 100%
+		display block
+		height auto
+		
+	&-text
+		font()
+		font-size 12px
+		font-weight 300
+		@media screen and (max-width: 900px)
+			display none
+		
+
+.button 
+	center()
+	disable()
+	font()
+	
+	box-sizing border-box
+	transition 0.3s
+	
+	white-space nowrap
+	
+	font-size 13px	
+	font-weight 400
+	
+	width 200px
+	height 50px
+	
+	background-color grey
+	
+	box-shadow 0 0 10px rgba(0,0,0,0.2)
+	
+	border-radius 3px
+	
+	cursor pointer
+ 	
+	& span 
+		line-height 1
+	@media screen and (pointer: fine)
+		&:hover
+			background-color grey-hover
+	&__primary
+		background-color primary 
+		color #fff	
+		@media screen and (pointer: fine)
+			&:hover
+				background-color hover
+				
+	&__small 
+		width 170px
+		height 45px
+		font-size 12px
+		
+	&__wide-mobile
+		@media screen and (max-width: 480px)
+			width 100%
+
+
+.header 
+	position fixed
+	top 0
+	padding-top 10px
+	padding-bottom 10px
+	width 100%
+	background-color #fff
+	z-index 10
+	left 0
+	
+	box-shadow 0 5px 10px 0 rgba(0,0,0,0.1)
+	@media screen and (max-width: 900px)
+		padding-top 15px
+		
+	&-nav
+		box-width()
+
+		display flex
+		justify-content space-between
+		align-items center
+		
+		&-logo 
+			max-width 100%
+			display block
+			&-wrapper 
+				width 50px
+				@media screen and (max-width: 768px)
+					width 45px
+				
+		&-link
+			font()
+			font-size 14px
+			@media screen and (max-width: 900px)
+				font-size 13px
+			&-text
+				font-size 12px
+				text-align right
+				font-weight 300
+				@media screen and (max-width: 768px)
+					display none
+			&__phone
+				font-weight 400
+				font-size 15px
+				text-align right
+				@media screen and (max-width: 900px)
+					font-size 13px
+			&-wrapper
+				width 15%
+				@media screen and (max-width: 600px) 
+					&__middle
+						display none
+				@media screen and (max-width: 900px) 
+					&__large
+						display none
+					width 25%
+		&-icons 
+			margin-left 0
+			@media screen and (min-width: 768px)
+				&__middle
+					display none
+				margin-left 4%
+			&__right
+				margin-right 5%
+			&__left
+				margin-left 5%
+				
+		&-icon 
+			font()
+			&__phone
+				@media screen and (min-width: 600px)
+					display none
+
+
+	&-mid
+		padding-top 25px
+		padding-bottom 10px
+		
+		overflow-x hidden
+		transition 0.3s 
+		
+		z-index 10
+		
+		box-width()
+		
+		overflow-x auto
+
+		position relative
+		@media screen and (max-width: 768px)
+			&:after 
+				content ''
+				position fixed
+				right 0
+				top 45px
+				width 25px
+				background linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,1))
+				height 40px
+
+		&__sticky
+			position sticky
+			position -webkit-sticky
+			top 75px
+			
+		@media screen and (max-width: 600px)
+			padding-top 15px
+			padding-bottom 5px
+			
+
+		&-nav 
+			min-width 100%
+			height 100%
+			
+			display inline-flex 
+			justify-content space-between
+			align-items center
+			
+			white-space nowrap
+			
+			
+			&-link 
+				padding-left 12px
+				padding-right 12px
+				
+				&:first-child
+					padding-left 5px
+				&:last-child
+					padding-right 5px
+
+				font()
+				@media screen and (max-width: 900px)
+					font-size 13px
+				@media screen and (max-width: 600px)
+					font-size 12px
+
+
+
+.main 
+	padding-top 130px + 40px
+	box-width()
+
+
+
+		
+	
+	
+
+
+	
+
+
+// .button {
+// 	text-decoration: none;
+// 	display: -webkit-inline-flex;
+// 	display: -moz-inline-flex;
+// 	display: -ms-inline-flex;
+// 	display: -o-inline-flex;
+// 	display: inline-flex;
+// 	justify-content: center;
+// 	-ms-align-items: center;
+// 	align-items: center;
+	
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
+	
+// 	-webkit-appearance: none;
+// 	border-radius: 0;
+
+// 	padding: 15px 30px;
+
+	
+// 	color: #444;
+// 	font-weight: 400;
+// 	font-size: 1.4rem;
+
+
+// 	background-color: #ececec;
+// 	color: #444;
+
+// 	transition: 0.3s;
+
+// 	white-space: nowrap;
+// }
+
+
+// .button__line {
+// 	width: calc(100% / 3 - 5px);
+// }
+
+
+// button:focus { outline:0 !important; }
+
+
+// .button__accent {
+// 	background-color: #8886F9;
+// 	color: #fff;
+// 	text-shadow: 0px 0px 2px #666;
+// }
+
+
+// .button__wide {
+// 	min-width: 240px;
+// 	margin-top: 10px;
+// 	width: 300px;
+// }
+
+
+// .js-button {
+// 	padding-left: 0;
+// 	padding-right: 0;
+// 	margin-left: 25px;
+
+// 	transition: 1s;
+// }
+
+
+
+		
+
+.footer 
+	box-width()
+	
+	display flex 
+	justify-content space-between
+	
+	@media screen and (max-width: 768px)
+		flex-wrap wrap
+		
+	&-wrapper
+		padding-top 40px
+		padding-bottom 40px
+		box-sizing border-box
+		
+		box-shadow 0 -4px 10px rgba(0,0,0,0.1)
+		
+		background-color #fff
+
+	&-column 
+		width calc(100% / 4 - 20px)
+		max-width 240px
+		
+
+
+		& + &
+			margin-left 15px
+			
+		&-title 
+			font()
+			font-weight 400
+			font-size 16px
+			margin-bottom 20px
+			@media screen and (max-width: 768px)
+				font-size 14px
+			
+		&-text 
+			font()
+			font-weight 300
+			transition 0.2s
+			margin-bottom 10px
+			display block
+			
+			@media screen and (max-width: 768px)
+				font-size 13px
+			
+		&-link 
+			font()
+			color primary
+			font-weight 300
+			transition 0.2s
+			@media screen and (max-width: 768px)
+				font-size 13px
+			
+
+		&-logo 
+			width 70px
+			height 49px
+	
+
+			margin-bottom 20px
+			& img 
+				width 70px
+				height 49px
+				
+
+		@media screen and (max-width: 768px)
+			width calc(100% / 2 - 5px)
+			margin-bottom 30px
+			& + &
+				margin-left 0
+				
+
+		&-social-link
+
+			&-wrapper
+				margin-top 15px
+				display inline-flex
+				justify-content space-between
+
+			border-radius 50%
+			padding 7px
+			border 2px solid primary
+			
+			margin-right 7px
+			background-color #fff
+			transition 0.2s
+			&-image 
+				width 18px
+				height 18px
+				display block
+				fill primary
+				transition 0.2s
+			&:last-child
+				margin-right 0
+				
+
+
+
+// 768
+
+// 	.footer {
+
+// 		padding-top: 40px;
+// 		padding-bottom: 0;
+
+
+// 		display: flex;
+// 		justify-content: space-between;
+// 		flex-wrap: wrap;
+// 	}
+
+// 	.footer-column {
+// 		width: calc(100% / 2 - 10px);
+// 		margin-bottom: 30px;
+
+// 	}
+// 	.footer-column+.footer-column {
+// 		margin-left: 0;
+// 	}
+// 	.line {
+// 		margin-top: 0;
+// 		margin-bottom: 0;
+// 	}
+
+// 	.left-subtitle {
+// 		margin-top: 40px;
+// 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
