@@ -31,11 +31,14 @@
 		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;800&display=swap" rel="stylesheet">
+
 		<style>
 			.slick-slide {
 				outline: none
 			}
 		</style>
+
 	</head>
 
 	<body>
@@ -135,13 +138,19 @@
 					<img src="img/open-menu.png" alt="Burger menu icon">
 				</div>
 
-
 				<div class="header-nav-link-wrapper header-nav-link-wrapper__middle">
-					<a href="info.html" class="header-nav-link">О больнице</a>
+					<a href="contact.html" class="header-nav-link">
+						<div class="flex-wrapper">
+							<div class='icon icon__button' >
+								<img src='img/search.png' alt="Иконка личного кабинета">
+							</div>
+							<span>Поиск по сайту</span>
+						</div>
+					</a>
 				</div>
 
-				<div class="header-nav-link-wrapper header-nav-link-wrapper__large">
-					<a href="contact.html" class="header-nav-link">Контакты</a>
+				<div class="header-nav-link-wrapper header-nav-link-wrapper__large  ">
+					<a href="info.html" class="header-nav-link">О больнице</a>
 				</div>
 
 				<div class="header-nav-icons header-nav-icons__middle header-nav-icons__right">
@@ -155,9 +164,9 @@
 
 
 				
-				<div class="header-nav-logo-wrapper">
+				<a href='index.html' class="header-nav-logo-wrapper">
 					<img class="header-nav-logo" alt='Логотип ОБП' src="img/logo.png">
-				</div>
+				</a>
 
 				<div class="header-nav-link-wrapper header-nav-link-wrapper__middle">
 					<div class="header-nav-link-text">Запись к врачу</div>
@@ -195,116 +204,317 @@
 					<a href="promo.html"   class="header-mid-nav-link">Акции</a>
 					<a href="pacient.html" class="header-mid-nav-link">Пациентам</a>
 					<a href="doctors.html" class="header-mid-nav-link">Специалисты</a>
-					<a href="diag.html"    class="header-mid-nav-link">Диагностика</a>
 					<a href="poli.html"    class="header-mid-nav-link">Поликлиника</a>
-					<a href="reab.html"    class="header-mid-nav-link">Реабилитация</a>
+					<a href="diag.html"    class="header-mid-nav-link">Диагностика</a>
 					<a href="stac.html"    class="header-mid-nav-link">Стационар</a>
+					<a href="reab.html"    class="header-mid-nav-link">Реабилитация</a>
 				</nav>	
 			</div>
 					
 		</header>
 
 
-<main class="main">
-	<div style='margin-bottom: 20px;'>
-		<button class="button">
-			<div class="icon icon__button">
-				<img src="img/pen-2.png" alt="Cross icon">
+
+<div class="first-screen" data-speed=0.4 data-parallax="scroll" data-image-src="img/DSC_3115++-min.jpg">
+	<div class="first-screen-box">
+		<div class="first-screen-text">Управление делами Президента РФ<br> Федеральное государственное бюджетное учреждение</div>
+		<h1 class="first-screen-title"><span style='color: #c61a1c;'>О</span>бъединенная <span style='color: #c61a1c;'>б</span>ольница <br>с <span style='color: #c61a1c;'>п</span>оликлиникой</h1>
+		<div class="first-screen-text first-screen-text__primary"><span style='color: #c61a1c;'>О</span>бъединяя лучшее, <span style='color: #c61a1c;'>Б</span>ыть <span style='color: #c61a1c;'>П</span>ервыми</div>
+		<div class="button-box button-box__first-screen">
+			<button class="button button__big  button__primary button__neighboors">
+				<span>Записаться на прием</span>
+			</button>
+
+			<button class="button button__big button__secondary  button__neighboors">
+				<span>Поликлиника</span>
+			</button>
+			<button class="button button__big  button__secondary button__neighboors">
+				<span>Стационар</span>
+			</button>
+
+		</div>
+	</div>
+</div>
+
+
+<main class="main" style='padding-top: 40px;'>
+	<!-- <div style='margin-bottom: 20px;'>
+			<div class="input-wrapper">
+				<label class='input-label' for="firstname">Имя</label>
+				<input class='input' type="text" name="firstname" id="" onfocus="this.removeAttribute('readonly');" readonly autocomplete="off" placeholder="Имя">
 			</div>
-				
-			<span>Записаться на прием</span>
-		</button>
-	</div>
+		</div> -->
 
-	<div style='margin-bottom: 20px;'>
-		<button class="button button__primary">
-			<div class="icon icon__button">
-				<img src="img/pen.png" alt="Cross icon">
+
+
+
+
+	<div class="slider-screen">
+		<div class="slider-tab">
+			<div class="slider-tab-item slider-tab-item__active" data-value='1'>Актуально</div>
+			<div class="slider-tab-item" data-value='2'>Акции</div>
+			<div class="slider-tab-item" data-value='3'>Новости</div>
+		</div>
+
+	<div class="slider-boxes">
+		<div class="slider-box-wrapper slider-box-wrapper--1" >
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_1442++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Госпитализация в ОБП</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
 			</div>
-				
-			<span>Записаться на прием</span>
-		</button>
-	</div>
-
-	<div style='margin-bottom: 20px;'>
-		<button class="button button__primary button__small">
-			<div class="icon icon__button">
-				<img src="img/pen.png" alt="Cross icon">
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/_DSC4945+-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Программа "Гиперторническая болезнь"</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
 			</div>
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_3115++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Тест на Covid-19</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<a href="promo.html" class="button button__primary" style='margin-left: auto; margin-right: auto;'>
+				<span>Узнать больше</span>
+				<div class="icon icon__button" style='margin-right: 0;margin-left: 4px; width: 15px; height: 15px;'>
+					<img src="img/down-arrow.png" alt="Cross icon">
+				</div>
+			</a>
+		</div>
+		
+
+
+		<div class="slider-box-wrapper slider-box-wrapper--2" >
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_3115++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Тест на Covid-19</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_1442++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Госпитализация в ОБП</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_1442++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Госпитализация в ОБП</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<a  href="promo.html" class="button button__primary" style='margin-left: auto; margin-right: auto;'>
+				<span>Больше акций</span>
+				<div class="icon icon__button" style='margin-right: 0;margin-left: 4px; width: 15px; height: 15px;'>
+					<img src="img/down-arrow.png" alt="Cross icon">
+				</div>
+			</a>
+		</div>
+		
+
+		<div class="slider-box-wrapper slider-box-wrapper--3">
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_1442++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Госпитализация в ОБП</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_1442++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Госпитализация в ОБП</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<div style='margin-bottom: 30px;'>
+				<div href='second_offer.html' class="item">
+					<a href='article.html' class="item-img" style='background-image: url(img/DSC_3115++-min.jpg);'></a>
+					<div class="item-wrapper">
+						<a href='article.html' class="subtitle subtitle__primary-hover subtitle__none-top-offset">Тест на Covid-19</a>
+						<div class="text text__only-desktop">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Заглавных вскоре, домах все! Языкового, пунктуация знаках вскоре заманивший силуэт сих. Подпоясал взобравшись свою за что его напоивший если залетают послушавшись приставка правилами злых всемогущая океана дорогу на берегу &hellip;</div>
+						
+						<a href="article.html"  class="item-link"><span>Подробнее</span><svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m492 236h-423.56l70.164-69.824c7.829-7.792 7.859-20.455 0.067-28.284-7.792-7.83-20.456-7.859-28.285-0.068l-104.5 104c-7e-3 6e-3 -0.012 0.013-0.018 0.019-7.809 7.792-7.834 20.496-2e-3 28.314 7e-3 6e-3 0.012 0.013 0.018 0.019l104.5 104c7.828 7.79 20.492 7.763 28.285-0.068 7.792-7.829 7.762-20.492-0.067-28.284l-70.162-69.824h423.56c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></path></svg></a>
+					</div>
+				</div>
+			</div>
+			<a  href="promo.html" class="button button__primary" style='margin-left: auto; margin-right: auto;'>
+				<span>Больше новостей</span>
+				<div class="icon icon__button" style='margin-right: 0;margin-left: 4px; width: 15px; height: 15px;'>
+					<img src="img/down-arrow.png" alt="Cross icon">
+				</div>
+			</a>
+		</div>
+
+	</div>
+	</div>
+</div>
+	<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-custom-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<button class="modal__close" aria-label="Close modal" data-custom-close data-micromodal-close></button>
+				<div style='height: calc(900px / 16 * 9);'>
+					<div class="image image__modal" style='height: 100%;width: 100%; background-image: url(img/light.jpg)'></div>
+				</div>
+				<div class="image-info ">Мультиспиральный рентгеновский компьютерный томограф «Light Speed VCT 64» (General Electric)</div>
 				
-			<span>Записаться на прием</span>
-		</button>
-	</div>
-
-
-	<div style='margin-bottom: 20px;'>
-		<button class="button button__primary button__small">
-			<span>Записаться на прием</span>
-		</button>
-	</div>
-
-	<div style='margin-bottom: 20px;'>
-		<a href='#' class="button button__primary">Записаться на прием</a>
-	</div>
-
-	<div style='margin-bottom: 20px;'>
-		<a href='#' class="button">Записаться на прием</a>
-	</div>
-
-
-	<div style='margin-bottom: 20px;'>
-		<a href='#' class="button button__wide-mobile">
-			<span>Записаться на прием</span>
-		</a>
-	</div>
-
-	<div style='margin-bottom: 20px;'>
-		<div class="input-wrapper">
-			<label class='input-label' for="firstname">Имя</label>
-			<input class='input' type="text" name="firstname" id="" placeholder="Имя">
+			</div>
 		</div>
 	</div>
 
+	
 
-	<div style='margin-bottom: 20px;'>
-		<div class="input-wrapper">
-			<label class='input-label' id='label' for="firstname">Фамилия</label>
-			<input class='input' type="text" name="firstname" id="surname" placeholder="Фамилия">
-		</div>
+
+	<h1 class="title title__half-margin-bottom">Запись на прием в поликлинику</h1>
+	<div class="text text__offset-all">Поликлиника оснащена современной медицинской аппаратурой, помощь пациентам оказывают врачи более 30 специальностей. Высокий профессиональный уровень, наличие в арсенале современных клинико-диагностических инструментальных и лабораторных методов исследования, уютная располагающая обстановка, чуткое и внимательное отношение к посетителям определяют высокую степень востребованности врачей поликлиники и популярность ОБП среди пациентов.</div>
+	<div class="specialist-box">
+
+
+	
+
+
+
+
+	<div class="specialist-column specialist-column__1" >
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">А</span>ллерголог-иммунолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Б</span>ариатрический хирург</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Г</span>астроэнтеролог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Г</span>ематолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Г</span>инеколог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Г</span>инеколог-репродуктолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Д</span>ерматовенеролог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Д</span>иабетолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Д</span>невной стационар</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">К</span>ардиолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">К</span>линический фармаколог</a></div>
+	</div>
+	<div class="specialist-column specialist-column__2">
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">К</span>олопроктолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">К</span>осметолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Л</span>огопед-афазиолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Л</span>ОР</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">М</span>ануальный терапевт</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Н</span>арколог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Н</span>евролог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Н</span>ефролог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">О</span>нколог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">О</span>фтальмолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>ластический хирург</a></div>
+	</div>
+	<div class="specialist-column specialist-column__3">
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>рофпатолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>сихиатр</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>сихолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>сихотерапевт</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">П</span>ульмонолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Р</span>евматолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">С</span>ердечно-сосудистый хирург</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">С</span>томатолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Т</span>ерапевт</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Т</span>равматолог-ортопед</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">У</span>ЗИ</a></div>
+	</div>
+	<div class="specialist-column specialist-column__4">
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">У</span>ролог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Ф</span>изиотерапевт</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Ф</span>леболог (ангиохирург)</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Ф</span>тизиатр</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Х</span>ирург</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Х</span>ирург-аритмолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Х</span>ирург-эндокринолог</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Ц</span>ентр мужского здоровья</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Ч</span>елюстно-лицевой хирург</a></div>
+		<div><a href="#" class="specialist-link"><span style="color: #c61a1c;">Э</span>ндокринолог</a></div>
+	</div>
 	</div>
 
-
-	<div style='margin-bottom: 20px;'>
-		<div class="input-wrapper">
-			<label class='input-label input__error-label' style='opacity: 1;' for="firstname">Отчество</label>
-			<input class='input input__error' type="text" name="firstname" id="" placeholder="Отчество">
+	<h1 class="title">Высокотехнологичное оборудование</h1>
+	<div class="text">В ОБП проводятся углубленное обследование и лечение с применением новейших лечебно-диагностических методов. Для пациентов, желающих в короткие сроки пройти комплексное обследование и получить квалифицированные рекомендации по поддержанию здоровья и профилактике заболеваний, мы предлагаем программы <a href="#" class="link">CHECK-UP</a> в условиях поликлиники и стационара.</div>
+	<div class="image-box" style='margin-top: 30px; margin-bottom: 40px;'>
+		<div class="image image__grab image__hover" data-custom-open="modal-1" style='background-image: url(img/PhilipsIngenia-obp.jpg)'>
+			<div class="image-text">Магнитно-резонансный томограф Ingenia 1,5 Теslа (Philips)</div>
+		</div>
+		<div class="image image__grab image__hover" data-custom-open="modal-1" style='background-image: url(img/Optima_128.jpg);'>
+			<div class="image-text">Мультиспиральный компьютерный томограф «Optima CT 660», 128 срезов (General Electric</div>
+		</div>
+		<div class="image image__grab image__hover" data-custom-open="modal-1" style='background-image: url(img/signa.jpg);'>
+			<div class="image-text">Магнитно-резонансный томограф «Signa HDx 1.5T» (General Electric)</div>
+		</div>
+		<div class="image image__grab image__hover" data-custom-open="modal-1" style='background-image: url(img/light.jpg);'>
+			<div class="image-text">Мультиспиральный рентгеновский компьютерный томограф «Light Speed VCT 64» (General Electric)</div>
 		</div>
 	</div>
+	<div class="button-box button-box__left">
+		<a href="#" class="button button__primary button__huge button__wide-tablet" style='margin-right: 10px;'>Записаться на прием в диагностику</a>
+		<a href="#" class="button button__secondary button__huge button__wide-tablet">Оставить заявку на обратный звонок</a>
+	</div>
+
+	<h1 class="title">Как добраться?</h1>
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5743a6623c01b47cc9e361173c5983f9285262b542e87c5e64523ca2578a0a3a&amp;source=constructor" width="100%" height="581" frameborder="0"></iframe>
+
 </main>
 
-<script>
-	const surname = document.getElementById('surname')
-	const surnameLabel = document.getElementById('label')
-
-	if (surname.value == '')
-			surnameLabel.classList.remove('opacity');
-	else
-		surnameLabel.classList.add('opacity');
-
-	surname.addEventListener('input', function() {
-		if (surname.value == '')
-			surnameLabel.classList.remove('opacity');
-		else
-			surnameLabel.classList.add('opacity');
-	})
 
 
-	// surname.addEventListener('change', function() {
-	// 	if (surname.value == '') surnameLabel.classList.remove('opacity');
-	// })
-</script>
 
-		<div class="screen" style='height: 600px;'></div>
+	<script>
+		// const surname = document.getElementById('surname')
+		// const surnameLabel = document.getElementById('label')
+
+		// if (surname.value == '')
+		// 		surnameLabel.classList.remove('opacity');
+		// else
+		// 	surnameLabel.classList.add('opacity');
+
+		// surname.addEventListener('input', function() {
+		// 	if (surname.value == '')
+		// 		surnameLabel.classList.remove('opacity');
+		// 	else
+		// 		surnameLabel.classList.add('opacity');
+		// })
+	</script>
+
+
     	<div class="footer-wrapper">
 			<footer class="footer">
 				
@@ -377,12 +587,110 @@
 		</div>
 
 		<script src='js/menu.js'></script>
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
-	</body>
-</html>
+
+
 
 
 
 	
+
+	<script src="js/parallax.min.js"></script>
+	<script src='https://unpkg.com/micromodal/dist/micromodal.min.js'></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			// $('.slider-box--1').slick({
+			// 	infinite: true,
+			// 	speed: 500,
+			// 	slidesToShow: 1,
+			// 	dots: true,
+			// 	customPadding: 30 ,
+			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
+			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
+			// });
+			// $('.slider-box--2').slick({
+			// 	infinite: true,
+			// 	speed: 500,
+			// 	slidesToShow: 1,
+			// 	dots: true,
+			// 	customPadding: 30 ,
+			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
+			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
+			// });
+			// $('.slider-box--3').slick({
+			// 	infinite: true,
+			// 	speed: 500,
+			// 	slidesToShow: 1,
+			// 	dots: true,
+			// 	customPadding: 30 ,
+			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
+			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
+			// });
+			const micromodal = MicroModal.init({
+				onShow: modal => {
+					console.log(modal);
+					console.info(`${modal.id} is shown`)
+				},
+				onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+				openTrigger: 'data-custom-open', // [3]
+				closeTrigger: 'data-custom-close', // [4]
+				openClass: 'is-open', // [5]
+				disableScroll: false, // [6]
+				disableFocus: false, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				debugMode: true // [10]
+			});
+			const images = [...document.querySelectorAll('.image__grab')];
+			const modalImage = document.querySelector('.image__modal')
+			const modalText = document.querySelector('.image-info');
+			images.forEach(image => {
+				image.addEventListener('click', event => {
+					const text = image.querySelector('div');
+					modalText.innerHTML = text.innerHTML;
+					const src = image.style.backgroundImage;
+					modalImage.style.backgroundImage = src;
+				});
+			});
+		});
+	</script>
+
+	<script>
+	function openCity(evt, idx) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("slider-box-wrapper");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("slider-tab-item");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" slider-tab-item__active", "");
+		}
+		document.querySelector(`.slider-box-wrapper--${idx}`).style.display = "block";
+		evt.currentTarget.className += " slider-tab-item__active";
+	}
+
+	const tabs = [...document.querySelectorAll('.slider-tab-item')];
+	const boxes = [...document.querySelectorAll('.slider-box-wrapper')];
+	boxes.slice(1).forEach(box => {
+		box.style.display = 'none';
+	})
+	tabs.forEach(tab => {
+		const idx = tab.dataset.value;
+		tab.addEventListener('click', event => {
+			openCity(event, idx)
+		});
+	});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

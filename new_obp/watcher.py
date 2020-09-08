@@ -36,8 +36,8 @@ class Handler(FileSystemEventHandler):
 
 
 observer = Observer()
-# observer.schedule(Handler(), path='/Users/maximsurovtsev/new_obp/', recursive=False)
-observer.schedule(Handler(), path='/home/maxim/MaximSurovtsev.github.io/new_obp', recursive=False)
+observer.schedule(Handler(), path='/Users/maximsurovtsev/new_obp/', recursive=False)
+# observer.schedule(Handler(), path='/home/maxim/MaximSurovtsev.github.io/new_obp', recursive=False)
 observer.start()
 
 try:
