@@ -291,6 +291,8 @@ body {
 @media screen and (max-width: 480px) {
   .button__neighboors {
     margin-bottom: 5px;
+    font-size: 13px;
+    height: 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2051,6 +2053,7 @@ box-sizing
   width: 100vw;
   background: transparent;
   position: relative;
+  box-sizing: border-box;
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
@@ -2058,6 +2061,11 @@ box-sizing
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+}
+@media screen and (max-width: 480px) {
+  .first-screen {
+    padding-top: 90px;
+  }
 }
 .first-screen-title {
   color: #fff;
@@ -2084,7 +2092,7 @@ box-sizing
 }
 @media screen and (max-width: 480px) {
   .first-screen-title {
-    font-size: 7.5vw;
+    font-size: 7.2vw;
   }
 }
 .first-screen-box {
@@ -2114,7 +2122,7 @@ box-sizing
   color: #0e4194;
   font-size: 16px;
   text-align: center;
-  width: 100%;
+  width: 95%;
   line-height: 1.5;
   z-index: 999;
 }
@@ -2124,7 +2132,11 @@ box-sizing
 }
 @media screen and (max-width: 768px) {
   .first-screen-text {
+    font-size: 12px;
+  }
+  .first-screen-text__primary {
     font-size: 14px;
+    font-weight: 500;
   }
 }
 .slider-box {

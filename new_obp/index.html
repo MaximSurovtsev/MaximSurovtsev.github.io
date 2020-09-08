@@ -308,33 +308,19 @@
 	
 	<script>
 		$(document).ready(function(){
-			// $('.slider-box--1').slick({
-			// 	infinite: true,
-			// 	speed: 500,
-			// 	slidesToShow: 1,
-			// 	dots: true,
-			// 	customPadding: 30 ,
-			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
-			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
-			// });
-			// $('.slider-box--2').slick({
-			// 	infinite: true,
-			// 	speed: 500,
-			// 	slidesToShow: 1,
-			// 	dots: true,
-			// 	customPadding: 30 ,
-			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
-			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
-			// });
-			// $('.slider-box--3').slick({
-			// 	infinite: true,
-			// 	speed: 500,
-			// 	slidesToShow: 1,
-			// 	dots: true,
-			// 	customPadding: 30 ,
-			// 	prevArrow: '<button type="button" class="slick-prev"><img src="img/back.png"></button>',
-			// 	nextArrow: '<button type="button" class="slick-next"><img src="img/next.png"></button>',
-			// });
+			
+			if (window.innerWidth < 768)
+				$('.first-screen').height(window.innerHeight - 90 + 'px');
+			else
+				$('.first-screen').height(window.innerHeight - 110 + 'px');
+
+			window.addEventListener('resize', event => {
+				if (window.innerWidth < 768)
+					$('.first-screen').height(window.innerHeight - 90 + 'px');
+				else
+					$('.first-screen').height(window.innerHeight - 110 + 'px');
+			})
+
 			const micromodal = MicroModal.init({
 				onShow: modal => {
 					console.log(modal);

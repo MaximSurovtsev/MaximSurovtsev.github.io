@@ -331,6 +331,8 @@ body
 			margin-bottom 7px
 		@media screen and (max-width: 480px)
 			margin-bottom 5px
+			font-size 13px
+			height 40px
 	&__wide-tablet
 		@media screen and (max-width: 768px)
 			width 100%
@@ -1678,11 +1680,12 @@ body
 	// background-size cover 
 	// background-position center
 	position relative
-	
+	box-sizing border-box
 	center()
 	flex-wrap wrap
 	align-content center
-	
+	@media screen and (max-width: 480px)
+		padding-top 90px
 	&-title 
 		color #fff
 		margin-top 0
@@ -1700,7 +1703,7 @@ body
 		@media screen and (max-width: 768px)
 			font-size 32px
 		@media screen and (max-width: 480px)
-			font-size 7.5vw
+			font-size 7.2vw
 	&-box 
 		z-index 2
 		width 100%
@@ -1722,7 +1725,7 @@ body
 
 		font-size 16px
 		text-align center
-		width 100%
+		width 95%
 		line-height 1.5
 		z-index 999
 
@@ -1730,7 +1733,10 @@ body
 			margin-top 15px
 			font-size 16px
 		@media screen and (max-width: 768px)
-			font-size 14px
+			font-size 12px
+			&__primary
+				font-size 14px
+				font-weight 500
 
 
 .slider
