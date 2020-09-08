@@ -314,11 +314,17 @@
 			else
 				$('.first-screen').height(window.innerHeight - 110 + 'px');
 
+			let width = window.innerWidth;
+
 			window.addEventListener('resize', event => {
-				if (window.innerWidth < 768)
-					$('.first-screen').height(window.innerHeight - 90 + 'px');
-				else
-					$('.first-screen').height(window.innerHeight - 110 + 'px');
+				if (Math.abs(window.innerWidth - width) > 50) {
+					if (window.innerWidth < 768)
+						$('.first-screen').height(window.innerHeight - 90 + 'px');
+					else
+						$('.first-screen').height(window.innerHeight - 110 + 'px');
+
+					width = innerWidth;
+				}
 			})
 
 			const micromodal = MicroModal.init({
