@@ -1138,10 +1138,6 @@ body
 		margin-left 0
 		
 	
-	&__wide 
-		width 100%
-		margin-left 0
-		margin-right 0
 	&__no-margin-bottom
 		margin-bottom 0
 	&__mobile-shadow
@@ -1169,6 +1165,7 @@ body
 			width 200px
 			margin-left auto
 			margin-right auto
+
 	&-name 
 		font()
 		disable()
@@ -1267,6 +1264,10 @@ body
 			margin-right auto
 
 
+	&__wide 
+		width 100%
+		margin-left 0
+		margin-right 0
 		
 
 .footer 
@@ -1617,7 +1618,8 @@ body
 .sidebar 
 	width 190px
 	margin-top 35px
-
+	&__doctor
+		width 240px
 	@media screen and (max-width: 768px)
 		width 100%
 		margin-bottom 30px
@@ -1628,6 +1630,8 @@ body
 
 .content 
 	width calc(100% - 220px)
+	&__doctor
+		width calc(100% - 270px)
 	@media screen and (max-width: 768px)
 		width 100%
 
@@ -1646,16 +1650,26 @@ body
 			padding-top 6px
 			padding-bottom 6px
 			font-weight 300
-			font-size 13px
+			font-size 14px
+			transition 0.3s
 			&:before
 				content '\2192'
 				padding-right 5px
+				transition 0.5s
+				color primary
+				font-size 15px
+				opacity 0
 			@media screen and (max-width: 480px)
 				font-size 15px
 				padding-top 8px
 				padding-bottom 8px
 				&:first-of-type
-					color primary 
+					color primary
+			@media screen and (pointer: fine)
+				&:hover 
+					color primary
+					&:before
+						opacity 1
 		@media screen and (max-width: 768px)
 			position relative
 			top auto
