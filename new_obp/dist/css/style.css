@@ -636,18 +636,37 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0,0,0,0);
 }
+.input__wide {
+  width: 100%;
+}
 .input:focus {
   background-color: #fcfcfc;
   border-color: #0a3884;
 }
+.input-wrapper__with-button {
+  width: calc(100% - 215px);
+}
+.input-wrapper__mb {
+  margin-bottom: 12px;
+}
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
 .input-label {
-  font-size: 10px;
+  font-size: 12px;
   display: block;
   color: #0e4194;
   font-weight: 400;
   margin-bottom: 1px;
-  opacity: 0;
   transition: 0.5s;
+}
+.input-screen {
+  max-width: 400px;
+  padding-bottom: 40px;
 }
 .input__error {
   border: 1px solid #c00;
@@ -2320,6 +2339,24 @@ box-sizing
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+._404 {
+  display: flex;
+  flex-direction: column;
+  color: #0e4194;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+._404-title {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+._404-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 @-moz-keyframes slide-on {
   0% {
